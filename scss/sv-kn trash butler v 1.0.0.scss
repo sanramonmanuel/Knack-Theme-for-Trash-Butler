@@ -1,0 +1,595 @@
+/*font*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+/*child scss*/
+@import "_sv-kn trash butler global.scss";
+@import "_include-media.scss";
+
+h1, h2, h3, h4, h5{
+    font-family: 'Roboto Slab', 'Merriweather', 'Source Serif Pro', Georgia, "Times New Roman", Times, serif;
+    line-height: normal;
+    margin: 0px;
+    padding: 0px;
+}
+
+body, p, a{
+    font-family: 'Source Sans Pro', 'Open Sans', sans-serif;
+    line-height: 1.5;
+    margin: 0px;
+    padding: 0px;
+}
+#knack-body{
+    background: $MainB;
+}
+
+/*============================================================================*/
+/* Knack Data View Types */
+
+/*============================================================================*/
+/*Form View */
+.kn-form{
+    @include shadows();
+    background:#ffffff;
+    border-radius:15px;
+    margin:10px auto;
+    padding:1rem 3rem;
+    text-align: left;
+    .columns,
+    .kn-submit{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        }
+    h2 {
+        background:none;
+        color:$primary;
+        font-weight:bold;
+        padding:1rem;
+        text-align:center;
+    }
+    .kn-description{
+        text-align: center;
+    }
+    .kn-form-group{
+        .kn-input{
+            .label.kn-label{
+                color:$primary;
+                font-weight:700;
+                letter-spacing:1px;
+                text-align:left;
+                text-transform:uppercase;
+            }
+        }
+        .kn-input-short_text,
+        .kn-input-number,
+        .kn-input-currency,
+        .kn-input-name,
+        .kn-input-email,
+        .kn-input-address,
+        .kn-input-phone,
+        .kn-input-link{
+            input{
+                @include form_ui();
+            }
+        }
+        .kn-input-paragraph_text{
+            .kn-textarea{
+                @include form_ui();
+            }
+        }
+        .kn-input-rich_text{
+            .redactor-box{
+                .redactor-toolbar{
+                    background:rgba(109,124,144,0.1);
+                    outline:none;
+                    transition: all .1s linear;
+                    li a{
+                        &:before{
+                            color: $primary;
+                        }
+                        &:hover{
+                            background: white;
+                            box-shadow: inset 0 2px $primary;
+                        }
+                    }
+                }
+                .redactor-editor{
+                    @include form_ui();
+                }
+            }
+        }
+        .kn-input-equation{
+            .fa{
+                color: $primary;
+            }
+            .input{
+                font-weight: bold;
+            }
+        }
+        .kn-input-file,
+        .kn-input-image{
+            input{
+                color: $primary;
+            }
+        }
+        .kn-input-address{
+            .help{
+                color: $secondary;
+            }
+        }
+        .kn-input-multiple_choice{// Muiltiple Choices - Layouts
+            .kn-select{
+                select{/* Dropdown - One Selection */
+                    @include form_ui();
+                    option{
+                        color: $primary;
+                    }
+                }
+                &:after{
+                    color: $primary;
+                }
+                .chzn-container{/* Dropdown - Multiple Selections */
+                    &.chzn-container-multi{
+                        .chzn-choices{
+                            @include form_ui();
+                            .default{
+                                background:none;
+                            }
+                            .search-field{
+                                input{
+                                    background:none;
+                                }
+                            }
+                            .search-choice {
+                                background: $primary;
+                                color:white;
+                            }
+                        }
+                        .chzn-drop{
+                            padding: 15px 5px;
+                            .chzn-results{
+                                .active-result{
+                                    border-radius: 25px;
+                                    color: $primary;
+                                    font-weight: bold;
+                                    padding: 10px 10px;
+                                    transition: all .1s linear;
+                                    &:hover{
+                                        background: $primary;
+                                        color: white;
+                                    }
+                                }
+                                .highlighted{
+                                    background:none;
+                                    &:hover{
+                                        background: $primary;
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+                        .search-choice-close{
+                            &:after{
+                                color: $secondary;
+                            }
+                        }
+                    }
+                }
+            }
+            .kn-checkbox{/* Check Boxes */
+                .option.checkbox{
+                    font-weight: bold;
+                    &:hover{
+                        color: $secondary;
+                    }
+                }
+            }
+            .kn-radio{/* Radio Buttons */
+                .control{
+                    font-weight: bold;
+                    &:hover{
+                        color: $secondary;
+                    }
+                }
+            }
+        }
+        .kn-input-boolean{// Yes/No - Input Layouts
+            select{/* Dropdown */
+                @include form_ui();
+                option{
+                    color: $primary;
+                }
+            }
+            .kn-radio{/* Radio Buttons */
+                .option{
+                    font-weight: bold;
+                    &:hover{
+                        color: $secondary;
+                    }
+                }
+            }
+            .option.checkbox{/* Check Boxes */
+                font-weight: bold;
+                &:hover{
+                    color: $secondary;
+                }
+            }
+        }
+        .kn-input-date_time{ /* Date/Time */
+            .kn-datetime{
+                .knack-date{
+                    text-align: center;
+                    @include form_ui();
+                }
+            }
+            .kn-instructions{
+                color:$secondary;
+            }
+        }
+        .kn-input-timer{ /* Timwer */
+            .knack-date,
+            .kn-time{
+                text-align: center;
+                @include form_ui();
+            }
+            .kn-datetime__to{
+                color: $primary;
+                font-weight: bold;
+            }
+        }
+        .kn-input-signature{
+            div{
+                .kn-signature{
+                    border-color: $primary;
+                    input {
+                        background:white;
+                        border:1px dashed $primary;
+                        font-weight: bold;
+                        padding: 8px 15px;
+                        &:hover{
+                            background: $primary;
+                            color: white;
+                            border-style: solid;
+                        }
+                    }
+                }
+                .kn-sig-clear{
+                    color: $primary;
+                    text-decoration: none;
+                    outline: none;
+                    &:hover{
+                        color: $secondary;
+                    }
+                }
+            }
+        }
+    }
+    .kn-submit{
+        button{
+            background: $primary;
+            color: white;
+            font-weight: bold;
+            transition: all .1s linear;
+            &:hover{
+                box-shadow: 5px 5px $secondary;
+            }
+        }
+    }
+}
+
+/*============================================================================*/
+/*Details View */
+.kn-details{
+    background: white;
+    border-radius:15px;
+    padding: 1rem;
+    .kn-detail-label{
+        background: $prima1;
+        color: $primary;
+        font-weight:bold;
+    }
+}
+
+/*============================================================================*/
+/* Table View */
+.kn-table.kn-view{
+    @include shadows();
+    background: unset;
+    border-radius: 1rem;
+    padding: 2rem;
+    h2{
+        color: $primary;
+        margin:0;
+        @include media ('<tablet'){
+            border-bottom-style: inset;
+            border-color: $secondary;
+        }
+    }
+    .kn-records-nav{
+        .js-filter-menu.tabs.is-toggle.is-flush ul li a{ /* Filter Tabs */
+            border-radius: 5px;
+            box-shadow: none;
+            margin: auto 2px;
+            &:hover{
+                background: $primary;
+                border-color: $primary;
+                color: white;
+            }
+        }
+        .js-filter-menu.tabs.is-toggle.is-flush ul li.is-active a{
+            background: $secondary;
+            border-color: $secondary;
+            color: white;
+        }
+        .kn-filters-nav{
+            .kn-add-filter.kn-button.is-small{
+                background: $primary;
+                border-color: $primary;
+                color: white;
+                &:hover{
+                    @include btnshadow();
+                }
+            }
+        }
+        .kn-filters{
+            ul li {
+                background: none;
+                border:2px dashed $primary;
+                color: $primary;
+                .remove.delete.is-small{
+                    background: $secondary;
+                    &:hover{
+                        background: $primary;
+                    }
+                }
+            }
+        }
+        .table-keyword-search{/* Search Input */
+            .input{
+                background:none;
+                border-color: transparent;
+                border-radius: 5px;
+                box-shadow: none;
+                color:$primary;
+                font-weight: bold;
+                outline:none;
+                &::placeholder{
+                    font-weight: lighter;
+                }
+                &:hover,
+                &:active,
+                &:focus{
+                    border-color: $primary;
+                    box-shadow: none;
+                    color:$primary;
+                }
+            }
+            .kn-button.search{
+                background: none;
+                border-color: $primary;
+                border-radius: 5px;
+                color:$primary;
+                &:hover,
+                &:active,
+                &:focus{
+                    background: $primary;
+                    border-color: $primary;
+                    color:white;
+                }
+            }
+        }
+    }
+    .kn-table-wrapper.is-constrained{
+        .kn-table.kn-table-table.is-bordered.is-striped{
+            thead > tr,
+            thead > tr > th,
+            tbody > tr > td{
+            background: none;
+            border:none;
+            line-height: 1.5;
+            padding:.5rem 1rem;
+            vertical-align: middle;
+            }
+            .kn-sort.level.is-compact{
+                transition: all .1s linear;
+                &:hover{
+                color: $secondary;
+                }
+            }
+            tbody > tr{
+                transition: all .1s linear;
+                vertical-align: middle;
+                &:hover{
+                    background: $prima1;
+                    // border-bottom: 1px solid $primary;
+                    // box-shadow: 0 -1px $primary;
+                }
+                .kn-table-link{
+                    a{
+                        &:hover{
+                            color: $secondary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .kn-button{
+        &:hover,
+        &:active,
+        &:focus{
+            background: $primary;
+            border-color: $primary;
+            color:white;
+        }
+    }
+}
+/*============================================================================*/
+/*List View*/
+.kn-list{
+    background: white;
+    .kn-detail-label{
+        background: $prima1;
+        color: $primary;
+        font-weight:bold;
+    }
+}
+
+/*============================================================================*/
+/*Search View*/
+.kn-search{
+    background: unset;
+}
+
+/*============================================================================*/
+/* Menu View */
+#knack-body #kn-app-header {
+    background-color: #ffffff;
+}
+.kn-info-bar {
+    background-color: #ffffff;
+    border-top-color: #cccccc;
+    border-top-width: 1px;
+    border-top-style: solid;
+    padding-bottom: 5px;
+    a {
+        background-color: #ffffff;
+        padding-left: 30px !important;
+        color: black !important;
+        font-size: 14px !important;
+        &:hover {
+            background-color: #ffffff;
+            color: #a6a6a6 !important;
+        }
+    }
+}
+
+#kn-app-menu nav.tabs li.is-active a {
+    color: LightSeaGreen !important;
+}
+
+.kn-crumbtrail {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    padding-top: 5px;
+}
+    
+header .kn-container{
+    align-items: center;
+    display:flex;
+    justify-content: left;
+}
+
+/*============================================================================*/
+/* Rich TextView */
+.kn-rich_text{
+    background: unset;
+    h1, h2, h3, h4, h5, h6{
+        color: $primary;
+    }
+    a{
+        color: $primary;
+        border-bottom: 1px solid;
+        padding: 1px 0;
+        text-decoration: none;
+        &:hover{
+            color:$secondary;
+        }
+    }
+}
+
+/*============================================================================*/
+/* Modal View*/
+.kn-modal{
+    .modal-card-head {
+        background:$primary;
+        border-radius: 0;
+        padding:1.5rem;
+        text-align:center;
+        .modal-card-title{
+            color:#ffffff;
+        }
+    }
+    .delete {
+        background: none;
+        border:2px solid #ffffff;
+        margin: auto;
+        scale: 1.5;
+        transition: all .1s linear;
+        &:hover,
+        &:active,
+        &:focus {
+            background: $secondary;
+            border:2px solid $secondary;
+            transform: rotate(90deg);
+        }
+    }
+}
+
+/*============================================================================*/
+/* Global UI */
+.ui-datepicker{
+    color: $primary;
+    .ui-datepicker-header{
+        .ui-datepicker-prev,
+        .ui-datepicker-next{
+            &:hover
+            &:focus{
+                background: $prima1;
+                color: $primary;
+            }
+        }
+        .ui-datepicker-title{
+            .ui-datepicker-year{
+                font-weight: bold;
+            }
+        }
+    }
+    .ui-datepicker-calendar{
+        tbody{
+            tr{
+                td{
+                    .ui-state-default{
+                        background: none;
+                        border:2px solid transparent;
+                        border-radius: 5px;
+                        color: $primary;
+                        font-size: 15px;
+                        padding: 2px 6px;
+                        text-align: center;
+                        &.ui-state-highlight {
+                            border:2px solid $primary;
+                            font-weight: bold;
+                        }
+                        &.ui-state-active{
+                            background: $secondary;
+                            border-radius: 25px;
+                            color: white;
+                        }
+                    }
+                    a{
+                        &:hover,
+                        &:focus{
+                            background: $primary;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.kn-required{
+    color:$secondary;
+}
+
+::selection {
+    background: $primary;
+    color: white;
+}

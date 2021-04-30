@@ -1,0 +1,32 @@
+.kn-view.kn-menu {
+    display: grid;
+    place-items: center;
+}
+
+.kn-menu .kn-link{
+    background: #15467A;
+    border: 2px solid transparent;
+    box-shadow: 5px 5px #7AC144;
+    color:white;
+    font-weight: bold;
+    transition: all 100ms ease-out;
+}
+
+.kn-menu .kn-link:hover {
+    background: #15467A;
+    box-shadow: none;
+    transform: translateY(1px);
+}
+
+
+.js-filter-menu.tabs.is-toggle.is-flush ul li a{
+    box-shadow: none;
+}
+
+.js-filter-menu.tabs.is-toggle.is-flush ul li.is-active a,
+.js-filter-menu.tabs.is-toggle.is-flush ul li a:hover{
+    background: #15467a;
+    border-color: #15467a;
+    color: white;
+    box-shadow: none;
+}
