@@ -465,7 +465,7 @@ body, p, a {
 /*============================================================================*/
 /*Details View */
 .kn-details {
-  background: white;
+  background: red;
   border-radius: 15px;
   padding: 1rem;
 }
