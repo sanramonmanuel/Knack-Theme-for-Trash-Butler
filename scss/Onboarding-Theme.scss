@@ -7,3 +7,37 @@
 /*Tags:green, green, blue, branded, customized*/
 
 @import "sv-kn trash butler v 1.0.0.scss";
+
+// Form View
+#view_78,
+#view_88{
+    background: none;
+    box-shadow: none;
+    &.kn-form .kn-submit button {
+        background:none !important;
+        border-bottom: 1px solid $primary;
+        border-radius: 0;
+        box-shadow: none;
+        color:$primary !important;
+        font-weight:bold;
+        transition:alldf .1s linear;
+    }
+}
+
+// Details View
+#view_29,
+#view_33,
+#view_109,
+#view_141,
+#view_38{
+    &.kn-details{
+        background:none;
+    }
+    &.kn-details{
+        a{
+            border-bottom: 1px solid;
+            text-align: center;
+            padding: 3px 0;
+        }
+    }
+}

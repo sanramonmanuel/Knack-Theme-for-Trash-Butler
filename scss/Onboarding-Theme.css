@@ -299,14 +299,11 @@ body, p, a {
 }
 
 .kn-form .kn-form-group .kn-input-multiple_choice .kn-checkbox .option.checkbox {
-  border-radius: 5px;
-  padding: 5px 10px;
-  width: 100%;
+  font-weight: bold;
 }
 
 .kn-form .kn-form-group .kn-input-multiple_choice .kn-checkbox .option.checkbox:hover {
-  background: #15467a;
-  color: white;
+  color: #7AC144;
 }
 
 .kn-form .kn-form-group .kn-input-multiple_choice .kn-radio {
@@ -314,14 +311,11 @@ body, p, a {
 }
 
 .kn-form .kn-form-group .kn-input-multiple_choice .kn-radio .control {
-  border-radius: 12px;
-  padding: 7px 10px;
-  width: 100%;
+  font-weight: bold;
 }
 
 .kn-form .kn-form-group .kn-input-multiple_choice .kn-radio .control:hover {
-  background: #15467a;
-  color: white;
+  color: #7AC144;
 }
 
 .kn-form .kn-form-group .kn-input-boolean select {
@@ -355,26 +349,20 @@ body, p, a {
 }
 
 .kn-form .kn-form-group .kn-input-boolean .kn-radio .option {
-  border-radius: 25px;
-  padding: 5px 10px;
-  width: 100%;
+  font-weight: bold;
 }
 
 .kn-form .kn-form-group .kn-input-boolean .kn-radio .option:hover {
-  background: #15467a;
-  color: white;
+  color: #7AC144;
 }
 
 .kn-form .kn-form-group .kn-input-boolean .option.checkbox {
   /* Check Boxes */
-  border-radius: 5px;
-  padding: 5px 10px;
-  width: 100%;
+  font-weight: bold;
 }
 
 .kn-form .kn-form-group .kn-input-boolean .option.checkbox:hover {
-  background: #15467a;
-  color: white;
+  color: #7AC144;
 }
 
 .kn-form .kn-form-group .kn-input-date_time {
@@ -485,6 +473,7 @@ body, p, a {
 /*Details View */
 .kn-details {
   background: white;
+  border-radius: 15px;
   padding: 1rem;
 }
 
@@ -775,55 +764,6 @@ header .kn-container {
           transform: rotate(90deg);
 }
 
-#view_2274,
-#view_1982,
-#view_2255,
-#view_2250,
-#view_2262,
-#view_2235,
-#view_2247,
-#view_2738,
-#view_2696 {
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-}
-
-#view_2274.kn-menu.kn-view .kn-link,
-#view_1982.kn-menu.kn-view .kn-link,
-#view_2255.kn-menu.kn-view .kn-link,
-#view_2250.kn-menu.kn-view .kn-link,
-#view_2262.kn-menu.kn-view .kn-link,
-#view_2235.kn-menu.kn-view .kn-link,
-#view_2247.kn-menu.kn-view .kn-link,
-#view_2738.kn-menu.kn-view .kn-link,
-#view_2696.kn-menu.kn-view .kn-link {
-  background: #15467a;
-  border: 2px solid transparent;
-  -webkit-box-shadow: 5px 5px #7AC144;
-          box-shadow: 5px 5px #7AC144;
-  color: white;
-  font-weight: bold;
-  -webkit-transition: all .1s linear;
-  transition: all .1s linear;
-}
-
-#view_2274.kn-menu.kn-view .kn-link:hover,
-#view_1982.kn-menu.kn-view .kn-link:hover,
-#view_2255.kn-menu.kn-view .kn-link:hover,
-#view_2250.kn-menu.kn-view .kn-link:hover,
-#view_2262.kn-menu.kn-view .kn-link:hover,
-#view_2235.kn-menu.kn-view .kn-link:hover,
-#view_2247.kn-menu.kn-view .kn-link:hover,
-#view_2738.kn-menu.kn-view .kn-link:hover,
-#view_2696.kn-menu.kn-view .kn-link:hover {
-  background: #15467a;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  -webkit-transform: translateY(1px);
-          transform: translateY(1px);
-}
-
 /*============================================================================*/
 /* Global UI */
 .ui-datepicker {
@@ -881,4 +821,42 @@ header .kn-container {
 ::selection {
   background: #15467a;
   color: white;
+}
+
+#view_78,
+#view_88 {
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#view_78.kn-form .kn-submit button,
+#view_88.kn-form .kn-submit button {
+  background: none !important;
+  border-bottom: 1px solid #15467a;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #15467a !important;
+  font-weight: bold;
+  -webkit-transition: alldf .1s linear;
+  transition: alldf .1s linear;
+}
+
+#view_29.kn-details,
+#view_33.kn-details,
+#view_109.kn-details,
+#view_141.kn-details,
+#view_38.kn-details {
+  background: none;
+}
+
+#view_29.kn-details a,
+#view_33.kn-details a,
+#view_109.kn-details a,
+#view_141.kn-details a,
+#view_38.kn-details a {
+  border-bottom: 1px solid;
+  text-align: center;
+  padding: 3px 0;
 }
