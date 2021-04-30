@@ -221,7 +221,8 @@ body, p, a{
         }
         .kn-input-date_time{ /* Date/Time */
             .kn-datetime{
-                .knack-date{
+                .knack-date,
+                .kn-time{
                     text-align: center;
                     @include form_ui();
                 }
@@ -288,7 +289,7 @@ body, p, a{
     border-radius:15px;
     padding: 1rem;
     .kn-detail-label{
-        background: $prima1;
+        background: none;
         color: $primary;
         font-weight:bold;
     }

@@ -87,7 +87,7 @@ body, p, a {
   font-weight: bold;
   height: 35px;
   line-height: 1.429;
-  margin: auto -1px;
+  margin: auto 2px;
   outline: none;
   padding: 5px 15px;
   width: 100%;
@@ -122,7 +122,7 @@ body, p, a {
   font-weight: bold;
   height: 35px;
   line-height: 1.429;
-  margin: auto -1px;
+  margin: auto 2px;
   outline: none;
   padding: 5px 15px;
   width: 100%;
@@ -160,7 +160,7 @@ body, p, a {
   font-weight: bold;
   height: 35px;
   line-height: 1.429;
-  margin: auto -1px;
+  margin: auto 2px;
   outline: none;
   padding: 5px 15px;
   width: 100%;
@@ -199,7 +199,7 @@ body, p, a {
   font-weight: bold;
   height: 35px;
   line-height: 1.429;
-  margin: auto -1px;
+  margin: auto 2px;
   outline: none;
   padding: 5px 15px;
   width: 100%;
@@ -232,7 +232,7 @@ body, p, a {
   font-weight: bold;
   height: 35px;
   line-height: 1.429;
-  margin: auto -1px;
+  margin: auto 2px;
   outline: none;
   padding: 5px 15px;
   width: 100%;
@@ -322,7 +322,7 @@ body, p, a {
   font-weight: bold;
   height: 35px;
   line-height: 1.429;
-  margin: auto -1px;
+  margin: auto 2px;
   outline: none;
   padding: 5px 15px;
   width: 100%;
@@ -362,7 +362,8 @@ body, p, a {
   /* Date/Time */
 }
 
-.kn-form .kn-form-group .kn-input-date_time .kn-datetime .knack-date {
+.kn-form .kn-form-group .kn-input-date_time .kn-datetime .knack-date,
+.kn-form .kn-form-group .kn-input-date_time .kn-datetime .kn-time {
   text-align: center;
   background: rgba(109, 124, 144, 0.1);
   border: 2px solid transparent;
@@ -373,13 +374,15 @@ body, p, a {
   font-weight: bold;
   height: 35px;
   line-height: 1.429;
-  margin: auto -1px;
+  margin: auto 2px;
   outline: none;
   padding: 5px 15px;
   width: 100%;
 }
 
-.kn-form .kn-form-group .kn-input-date_time .kn-datetime .knack-date:hover, .kn-form .kn-form-group .kn-input-date_time .kn-datetime .knack-date:focus {
+.kn-form .kn-form-group .kn-input-date_time .kn-datetime .knack-date:hover, .kn-form .kn-form-group .kn-input-date_time .kn-datetime .knack-date:focus,
+.kn-form .kn-form-group .kn-input-date_time .kn-datetime .kn-time:hover,
+.kn-form .kn-form-group .kn-input-date_time .kn-datetime .kn-time:focus {
   border: 2px solid #15467a;
   background-color: #ffffff;
 }
@@ -404,7 +407,7 @@ body, p, a {
   font-weight: bold;
   height: 35px;
   line-height: 1.429;
-  margin: auto -1px;
+  margin: auto 2px;
   outline: none;
   padding: 5px 15px;
   width: 100%;
@@ -471,7 +474,7 @@ body, p, a {
 }
 
 .kn-details .kn-detail-label {
-  background: rgba(21, 70, 122, 0.102);
+  background: none;
   color: #15467a;
   font-weight: bold;
 }
