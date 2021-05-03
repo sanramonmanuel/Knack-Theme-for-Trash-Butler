@@ -27,3 +27,23 @@
 #view_2696{
     @include sv_centered_menu();
 }
+
+// Reports Page of TB
+#view_2615,
+#view_2733,
+#view_2859,
+#view_3073,
+#view_3077,
+#view_3092,
+#view_3098,
+#view_3124,
+#view_3278,
+#view_3330{
+    @include sv_centered_menu();
+}
+
+// Scene Pages
+#kn-scene_679,
+#kn-scene_769{
+    background:none;
+}

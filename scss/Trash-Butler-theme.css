@@ -94,7 +94,7 @@ body, p, a {
   font-weight: bold;
   height: 35px;
   line-height: 1.429;
-  margin: auto -1px;
+  margin: auto 2px;
   outline: none;
   padding: 5px 15px;
   width: 100%;
@@ -129,7 +129,7 @@ body, p, a {
   font-weight: bold;
   height: 35px;
   line-height: 1.429;
-  margin: auto -1px;
+  margin: auto 2px;
   outline: none;
   padding: 5px 15px;
   width: 100%;
@@ -167,7 +167,7 @@ body, p, a {
   font-weight: bold;
   height: 35px;
   line-height: 1.429;
-  margin: auto -1px;
+  margin: auto 2px;
   outline: none;
   padding: 5px 15px;
   width: 100%;
@@ -206,7 +206,7 @@ body, p, a {
   font-weight: bold;
   height: 35px;
   line-height: 1.429;
-  margin: auto -1px;
+  margin: auto 2px;
   outline: none;
   padding: 5px 15px;
   width: 100%;
@@ -239,7 +239,7 @@ body, p, a {
   font-weight: bold;
   height: 35px;
   line-height: 1.429;
-  margin: auto -1px;
+  margin: auto 2px;
   outline: none;
   padding: 5px 15px;
   width: 100%;
@@ -299,14 +299,11 @@ body, p, a {
 }
 
 .kn-form .kn-form-group .kn-input-multiple_choice .kn-checkbox .option.checkbox {
-  border-radius: 5px;
-  padding: 5px 10px;
-  width: 100%;
+  font-weight: bold;
 }
 
 .kn-form .kn-form-group .kn-input-multiple_choice .kn-checkbox .option.checkbox:hover {
-  background: #15467a;
-  color: white;
+  color: #7AC144;
 }
 
 .kn-form .kn-form-group .kn-input-multiple_choice .kn-radio {
@@ -314,14 +311,11 @@ body, p, a {
 }
 
 .kn-form .kn-form-group .kn-input-multiple_choice .kn-radio .control {
-  border-radius: 12px;
-  padding: 7px 10px;
-  width: 100%;
+  font-weight: bold;
 }
 
 .kn-form .kn-form-group .kn-input-multiple_choice .kn-radio .control:hover {
-  background: #15467a;
-  color: white;
+  color: #7AC144;
 }
 
 .kn-form .kn-form-group .kn-input-boolean select {
@@ -335,7 +329,7 @@ body, p, a {
   font-weight: bold;
   height: 35px;
   line-height: 1.429;
-  margin: auto -1px;
+  margin: auto 2px;
   outline: none;
   padding: 5px 15px;
   width: 100%;
@@ -355,33 +349,28 @@ body, p, a {
 }
 
 .kn-form .kn-form-group .kn-input-boolean .kn-radio .option {
-  border-radius: 25px;
-  padding: 5px 10px;
-  width: 100%;
+  font-weight: bold;
 }
 
 .kn-form .kn-form-group .kn-input-boolean .kn-radio .option:hover {
-  background: #15467a;
-  color: white;
+  color: #7AC144;
 }
 
 .kn-form .kn-form-group .kn-input-boolean .option.checkbox {
   /* Check Boxes */
-  border-radius: 5px;
-  padding: 5px 10px;
-  width: 100%;
+  font-weight: bold;
 }
 
 .kn-form .kn-form-group .kn-input-boolean .option.checkbox:hover {
-  background: #15467a;
-  color: white;
+  color: #7AC144;
 }
 
 .kn-form .kn-form-group .kn-input-date_time {
   /* Date/Time */
 }
 
-.kn-form .kn-form-group .kn-input-date_time .kn-datetime .knack-date {
+.kn-form .kn-form-group .kn-input-date_time .kn-datetime .knack-date,
+.kn-form .kn-form-group .kn-input-date_time .kn-datetime .kn-time {
   text-align: center;
   background: rgba(109, 124, 144, 0.1);
   border: 2px solid transparent;
@@ -392,13 +381,15 @@ body, p, a {
   font-weight: bold;
   height: 35px;
   line-height: 1.429;
-  margin: auto -1px;
+  margin: auto 2px;
   outline: none;
   padding: 5px 15px;
   width: 100%;
 }
 
-.kn-form .kn-form-group .kn-input-date_time .kn-datetime .knack-date:hover, .kn-form .kn-form-group .kn-input-date_time .kn-datetime .knack-date:focus {
+.kn-form .kn-form-group .kn-input-date_time .kn-datetime .knack-date:hover, .kn-form .kn-form-group .kn-input-date_time .kn-datetime .knack-date:focus,
+.kn-form .kn-form-group .kn-input-date_time .kn-datetime .kn-time:hover,
+.kn-form .kn-form-group .kn-input-date_time .kn-datetime .kn-time:focus {
   border: 2px solid #15467a;
   background-color: #ffffff;
 }
@@ -423,7 +414,7 @@ body, p, a {
   font-weight: bold;
   height: 35px;
   line-height: 1.429;
-  margin: auto -1px;
+  margin: auto 2px;
   outline: none;
   padding: 5px 15px;
   width: 100%;
@@ -485,11 +476,12 @@ body, p, a {
 /*Details View */
 .kn-details {
   background: white;
+  border-radius: 15px;
   padding: 1rem;
 }
 
 .kn-details .kn-detail-label {
-  background: rgba(21, 70, 122, 0.102);
+  background: none;
   color: #15467a;
   font-weight: bold;
 }
@@ -775,55 +767,6 @@ header .kn-container {
           transform: rotate(90deg);
 }
 
-#view_2274,
-#view_1982,
-#view_2255,
-#view_2250,
-#view_2262,
-#view_2235,
-#view_2247,
-#view_2738,
-#view_2696 {
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-}
-
-#view_2274.kn-menu.kn-view .kn-link,
-#view_1982.kn-menu.kn-view .kn-link,
-#view_2255.kn-menu.kn-view .kn-link,
-#view_2250.kn-menu.kn-view .kn-link,
-#view_2262.kn-menu.kn-view .kn-link,
-#view_2235.kn-menu.kn-view .kn-link,
-#view_2247.kn-menu.kn-view .kn-link,
-#view_2738.kn-menu.kn-view .kn-link,
-#view_2696.kn-menu.kn-view .kn-link {
-  background: #15467a;
-  border: 2px solid transparent;
-  -webkit-box-shadow: 5px 5px #7AC144;
-          box-shadow: 5px 5px #7AC144;
-  color: white;
-  font-weight: bold;
-  -webkit-transition: all .1s linear;
-  transition: all .1s linear;
-}
-
-#view_2274.kn-menu.kn-view .kn-link:hover,
-#view_1982.kn-menu.kn-view .kn-link:hover,
-#view_2255.kn-menu.kn-view .kn-link:hover,
-#view_2250.kn-menu.kn-view .kn-link:hover,
-#view_2262.kn-menu.kn-view .kn-link:hover,
-#view_2235.kn-menu.kn-view .kn-link:hover,
-#view_2247.kn-menu.kn-view .kn-link:hover,
-#view_2738.kn-menu.kn-view .kn-link:hover,
-#view_2696.kn-menu.kn-view .kn-link:hover {
-  background: #15467a;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  -webkit-transform: translateY(1px);
-          transform: translateY(1px);
-}
-
 /*============================================================================*/
 /* Global UI */
 .ui-datepicker {
@@ -960,4 +903,61 @@ header .kn-container {
           box-shadow: none;
   -webkit-transform: translateY(1px);
           transform: translateY(1px);
+}
+
+#view_2615,
+#view_2733,
+#view_2859,
+#view_3073,
+#view_3077,
+#view_3092,
+#view_3098,
+#view_3124,
+#view_3278,
+#view_3330 {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+#view_2615.kn-menu.kn-view .kn-link,
+#view_2733.kn-menu.kn-view .kn-link,
+#view_2859.kn-menu.kn-view .kn-link,
+#view_3073.kn-menu.kn-view .kn-link,
+#view_3077.kn-menu.kn-view .kn-link,
+#view_3092.kn-menu.kn-view .kn-link,
+#view_3098.kn-menu.kn-view .kn-link,
+#view_3124.kn-menu.kn-view .kn-link,
+#view_3278.kn-menu.kn-view .kn-link,
+#view_3330.kn-menu.kn-view .kn-link {
+  background: #15467a;
+  border: 2px solid transparent;
+  -webkit-box-shadow: 5px 5px #7AC144;
+          box-shadow: 5px 5px #7AC144;
+  color: white;
+  font-weight: bold;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+#view_2615.kn-menu.kn-view .kn-link:hover,
+#view_2733.kn-menu.kn-view .kn-link:hover,
+#view_2859.kn-menu.kn-view .kn-link:hover,
+#view_3073.kn-menu.kn-view .kn-link:hover,
+#view_3077.kn-menu.kn-view .kn-link:hover,
+#view_3092.kn-menu.kn-view .kn-link:hover,
+#view_3098.kn-menu.kn-view .kn-link:hover,
+#view_3124.kn-menu.kn-view .kn-link:hover,
+#view_3278.kn-menu.kn-view .kn-link:hover,
+#view_3330.kn-menu.kn-view .kn-link:hover {
+  background: #15467a;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
+#kn-scene_679,
+#kn-scene_769 {
+  background: none;
 }

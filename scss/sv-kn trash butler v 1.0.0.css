@@ -473,6 +473,10 @@ body, p, a {
   padding: 1rem;
 }
 
+.kn-details .view-header h2 {
+  color: #15467a;
+}
+
 .kn-details .kn-detail-label {
   background: none;
   color: #15467a;

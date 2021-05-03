@@ -288,6 +288,11 @@ body, p, a{
     background: white;
     border-radius:15px;
     padding: 1rem;
+    .view-header{
+        h2{
+            color: $primary;
+        }
+    }
     .kn-detail-label{
         background: none;
         color: $primary;
