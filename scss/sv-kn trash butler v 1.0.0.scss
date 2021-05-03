@@ -304,6 +304,7 @@ body, p, a{
             border-bottom: 2px solid;
             padding-bottom: 1px;
             text-decoration: none;
+            transition: all .1s linear;
             &:hover{
                 color: $secondary;
             }

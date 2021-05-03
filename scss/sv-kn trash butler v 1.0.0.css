@@ -488,6 +488,8 @@ body, p, a {
   border-bottom: 2px solid;
   padding-bottom: 1px;
   text-decoration: none;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
 }
 
 .kn-details .kn-detail-body a:hover {

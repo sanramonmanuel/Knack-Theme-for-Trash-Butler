@@ -490,8 +490,27 @@ body, p, a {
   font-weight: bold;
 }
 
+.kn-details .kn-detail-body a {
+  font-weight: bold;
+  border-bottom: 2px solid;
+  padding-bottom: 1px;
+  text-decoration: none;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
 .kn-details .kn-detail-body a:hover {
   color: #7AC144;
+}
+
+.kn-details .kn-detail-body img {
+  max-width: 100%;
+}
+
+@media (min-width: 769px) {
+  .kn-details .kn-detail-body img {
+    max-width: 25%;
+  }
 }
 
 /*============================================================================*/
@@ -831,6 +850,22 @@ header .kn-container {
 
 ::selection {
   background: #15467a;
+  color: white;
+}
+
+.kn-back-link .ang-link {
+  border: 2px solid;
+  border-radius: 5px;
+  padding: 5px 10px;
+  outline: none;
+  text-decoration: none;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+.kn-back-link .ang-link:hover {
+  background: #15467a;
+  border-color: #15467a;
   color: white;
 }
 
