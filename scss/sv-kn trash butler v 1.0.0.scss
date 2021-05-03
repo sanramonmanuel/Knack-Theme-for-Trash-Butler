@@ -298,6 +298,23 @@ body, p, a{
         color: $primary;
         font-weight:bold;
     }
+    .kn-detail-body{
+        a{
+            font-weight: bold;
+            border-bottom: 2px solid;
+            padding-bottom: 1px;
+            text-decoration: none;
+            &:hover{
+                color: $secondary;
+            }
+        }
+        img{
+            max-width: 100%;
+            @include media ('>tablet') {
+                max-width: 25%;
+            }
+        }
+    }
 }
 
 /*============================================================================*/
@@ -598,4 +615,18 @@ header .kn-container{
 ::selection {
     background: $primary;
     color: white;
+}
+
+.kn-back-link .ang-link {
+    border:2px solid;
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+    text-decoration: none;
+    transition: all .1s linear;
+    &:hover{
+        background: $primary;
+        border-color: $primary;
+        color:white;
+    }
 }
