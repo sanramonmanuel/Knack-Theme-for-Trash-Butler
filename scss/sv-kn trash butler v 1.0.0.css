@@ -455,14 +455,23 @@ body, p, a {
   border-style: solid;
 }
 
-.kn-form .kn-form-group .kn-input-signature div .kn-sig-clear {
+.kn-form .kn-form-group .kn-input-signature div a.kn-sig-clear {
+  background: white;
+  border: 1px dashed;
   color: #15467a;
-  text-decoration: none;
+  font-weight: bold;
   outline: none;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
 }
 
-.kn-form .kn-form-group .kn-input-signature div .kn-sig-clear:hover {
-  color: #7AC144;
+.kn-form .kn-form-group .kn-input-signature div a.kn-sig-clear:hover {
+  background: #15467a;
+  border: 1px solid;
+  color: white;
 }
 
 .kn-form .kn-instructions {
@@ -650,7 +659,6 @@ body, p, a {
 }
 
 .kn-table.kn-view .kn-pagination .kn-select select {
-  /* Dropdown - One Selection */
   background: rgba(109, 124, 144, 0.1);
   border: 2px solid transparent;
   border-radius: .35em;
@@ -681,7 +689,7 @@ body, p, a {
 .kn-table.kn-view .kn-table-wrapper.is-constrained .kn-table.kn-table-table.is-bordered.is-striped tbody > tr > td {
   background: none;
   border: none;
-  line-height: 1.5;
+  line-height: 1;
   padding: .5rem 1rem;
   vertical-align: middle;
 }
@@ -1034,6 +1042,7 @@ header .kn-container {
 /* Global UI */
 .ui-datepicker {
   color: #15467a;
+  padding: 1rem;
 }
 
 .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:hover .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:focus,
@@ -1103,6 +1112,18 @@ header .kn-container {
 .redactor-toolbar-tooltip {
   background: #15467a;
   font-weight: bold;
+}
+
+.filters-list select:not(empty):after,
+.kn-select:not(empty):after {
+  border: 2px solid #7AC144;
+  border-right: 0;
+  border-top: 0;
+}
+
+.filters-list select:not(empty):hover:after,
+.kn-select:not(empty):hover:after {
+  border-color: #15467a;
 }
 
 .kn-required {

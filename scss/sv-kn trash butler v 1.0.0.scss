@@ -264,12 +264,20 @@ body, p, a{
                         }
                     }
                 }
-                .kn-sig-clear{
+                a.kn-sig-clear{
+                    background: white;
+                    border: 1px dashed;
                     color: $primary;
-                    text-decoration: none;
-                    outline: none;
+                    font-weight: bold;
+                    outline:none;
+                    padding: 5px 10px;
+                    text-align: center;
+                    text-decoration:none;
+                    transition: all .1s linear;
                     &:hover{
-                        color: $secondary;
+                        background: $primary;
+                        border:1px solid;
+                        color: white;
                     }
                 }
             }
@@ -424,7 +432,7 @@ body, p, a{
     }
     .kn-pagination{
         .kn-select{
-            select{/* Dropdown - One Selection */
+            select{
                 @include form_ui();
                 option{
                     color: $primary;
@@ -439,7 +447,7 @@ body, p, a{
             tbody > tr > td{
             background: none;
             border:none;
-            line-height: 1.5;
+            line-height: 1;
             padding:.5rem 1rem;
             vertical-align: middle;
             }
@@ -635,6 +643,7 @@ body, p, a{
 #knack-body #kn-app-header {
     background-color:  $primary;
 }
+
 .kn-info-bar {
     background-color: $primary;
     border-top-color: $primary;
@@ -727,6 +736,7 @@ header .kn-container{
 /* Global UI */
 .ui-datepicker{
     color: $primary;
+    padding: 1rem;
     .ui-datepicker-header{
         .ui-datepicker-prev,
         .ui-datepicker-next{
@@ -801,6 +811,18 @@ header .kn-container{
 .redactor-toolbar-tooltip{
     background: $primary;
     font-weight: bold;
+}
+
+.filters-list select:not(empty),
+.kn-select:not(empty){
+    &:after{
+        border:2px solid $secondary;
+        border-right: 0;
+        border-top: 0;
+    }
+    &:hover:after {
+        border-color: $primary;
+    }
 }
 
 .kn-required{
