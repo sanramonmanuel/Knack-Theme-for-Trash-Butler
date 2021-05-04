@@ -11379,3 +11379,49 @@ flex-wrap:wrap
 }
 }
    
+.group-layout-wrapper {
+    display:flex!important;
+    flex-wrap:wrap
+   }
+   .group-layout-wrapper .report-column,
+   .group-layout-wrapper .view-column {
+    display:flex;
+    flex-direction:column;
+    flex:inherit;
+    width:100%;
+    padding:0 .5em
+   }
+   .group-layout-wrapper .report-column:first-of-type,
+   .group-layout-wrapper .view-column:first-of-type {
+    padding-left:0
+   }
+   .group-layout-wrapper .report-column:last-of-type,
+   .group-layout-wrapper .view-column:last-of-type {
+    padding-right:0
+   }
+   @media screen and (min-width:980px) {
+    .group-layout-wrapper .report-column,
+    .group-layout-wrapper .view-column {
+     flex:1;
+     width:inherit
+    }
+   }
+   .group-layout-wrapper .report-column .kn-report-wrapper,
+   .group-layout-wrapper .report-column>.kn-view,
+   .group-layout-wrapper .view-column .kn-report-wrapper,
+   .group-layout-wrapper .view-column>.kn-view {
+    flex:1
+   }
+   .group-layout-wrapper .report-group,
+   .group-layout-wrapper .view-group {
+    display:flex;
+    flex-direction:row;
+    width:100%;
+    flex-wrap:wrap
+   }
+   @media screen and (min-width:980px) {
+    .group-layout-wrapper .report-group,
+    .group-layout-wrapper .view-group {
+     flex-wrap:nowrap
+    }
+   }

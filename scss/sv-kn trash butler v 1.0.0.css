@@ -23,6 +23,14 @@ body, p, a {
   background: #fafafa;
 }
 
+#knack-body header#kn-app-header {
+  background: #fafafa;
+}
+
+#knack-body .kn-scenes.kn-section .kn-scene.kn-container {
+  background: #fafafa;
+}
+
 /*============================================================================*/
 /* Knack Data View Types */
 /*============================================================================*/
@@ -80,6 +88,7 @@ body, p, a {
 .kn-form .kn-form-group .kn-input-link input {
   background: rgba(109, 124, 144, 0.1);
   border: 2px solid transparent;
+  border-radius: .35em;
   -webkit-box-shadow: none;
           box-shadow: none;
   color: #333;
@@ -115,6 +124,7 @@ body, p, a {
 .kn-form .kn-form-group .kn-input-paragraph_text .kn-textarea {
   background: rgba(109, 124, 144, 0.1);
   border: 2px solid transparent;
+  border-radius: .35em;
   -webkit-box-shadow: none;
           box-shadow: none;
   color: #333;
@@ -135,6 +145,7 @@ body, p, a {
 
 .kn-form .kn-form-group .kn-input-rich_text .redactor-box .redactor-toolbar {
   background: rgba(109, 124, 144, 0.1);
+  border-radius: .35em;
   outline: none;
   -webkit-transition: all .1s linear;
   transition: all .1s linear;
@@ -153,6 +164,7 @@ body, p, a {
 .kn-form .kn-form-group .kn-input-rich_text .redactor-box .redactor-editor {
   background: rgba(109, 124, 144, 0.1);
   border: 2px solid transparent;
+  border-radius: .35em;
   -webkit-box-shadow: none;
           box-shadow: none;
   color: #333;
@@ -192,6 +204,7 @@ body, p, a {
   /* Dropdown - One Selection */
   background: rgba(109, 124, 144, 0.1);
   border: 2px solid transparent;
+  border-radius: .35em;
   -webkit-box-shadow: none;
           box-shadow: none;
   color: #333;
@@ -225,6 +238,7 @@ body, p, a {
 .kn-form .kn-form-group .kn-input-multiple_choice .kn-select .chzn-container.chzn-container-multi .chzn-choices {
   background: rgba(109, 124, 144, 0.1);
   border: 2px solid transparent;
+  border-radius: .35em;
   -webkit-box-shadow: none;
           box-shadow: none;
   color: #333;
@@ -315,6 +329,7 @@ body, p, a {
   /* Dropdown */
   background: rgba(109, 124, 144, 0.1);
   border: 2px solid transparent;
+  border-radius: .35em;
   -webkit-box-shadow: none;
           box-shadow: none;
   color: #333;
@@ -367,6 +382,7 @@ body, p, a {
   text-align: center;
   background: rgba(109, 124, 144, 0.1);
   border: 2px solid transparent;
+  border-radius: .35em;
   -webkit-box-shadow: none;
           box-shadow: none;
   color: #333;
@@ -387,10 +403,6 @@ body, p, a {
   background-color: #ffffff;
 }
 
-.kn-form .kn-form-group .kn-input-date_time .kn-instructions {
-  color: #7AC144;
-}
-
 .kn-form .kn-form-group .kn-input-timer {
   /* Timwer */
 }
@@ -400,6 +412,7 @@ body, p, a {
   text-align: center;
   background: rgba(109, 124, 144, 0.1);
   border: 2px solid transparent;
+  border-radius: .35em;
   -webkit-box-shadow: none;
           box-shadow: none;
   color: #333;
@@ -450,6 +463,17 @@ body, p, a {
 
 .kn-form .kn-form-group .kn-input-signature div .kn-sig-clear:hover {
   color: #7AC144;
+}
+
+.kn-form .kn-instructions {
+  color: #7AC144;
+  font-style: italic;
+}
+
+.kn-form hr {
+  background: #7AC144;
+  border-radius: 5px;
+  height: 2px;
 }
 
 .kn-form .kn-submit button {
@@ -511,7 +535,7 @@ body, p, a {
 .kn-table.kn-view {
   -webkit-box-shadow: 0px 5px 15px rgba(150, 158, 166, 0.2);
           box-shadow: 0px 5px 15px rgba(150, 158, 166, 0.2);
-  background: unset;
+  background: white;
   border-radius: 1rem;
   padding: 2rem;
 }
@@ -625,6 +649,33 @@ body, p, a {
   color: white;
 }
 
+.kn-table.kn-view .kn-pagination .kn-select select {
+  /* Dropdown - One Selection */
+  background: rgba(109, 124, 144, 0.1);
+  border: 2px solid transparent;
+  border-radius: .35em;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #333;
+  font-size: 15px;
+  font-weight: bold;
+  height: 35px;
+  line-height: 1.429;
+  margin: auto 2px;
+  outline: none;
+  padding: 5px 15px;
+  width: 100%;
+}
+
+.kn-table.kn-view .kn-pagination .kn-select select:hover, .kn-table.kn-view .kn-pagination .kn-select select:focus {
+  border: 2px solid #15467a;
+  background-color: #ffffff;
+}
+
+.kn-table.kn-view .kn-pagination .kn-select select option {
+  color: #15467a;
+}
+
 .kn-table.kn-view .kn-table-wrapper.is-constrained .kn-table.kn-table-table.is-bordered.is-striped thead > tr,
 .kn-table.kn-view .kn-table-wrapper.is-constrained .kn-table.kn-table-table.is-bordered.is-striped thead > tr > th,
 .kn-table.kn-view .kn-table-wrapper.is-constrained .kn-table.kn-table-table.is-bordered.is-striped tbody > tr > td {
@@ -633,6 +684,12 @@ body, p, a {
   line-height: 1.5;
   padding: .5rem 1rem;
   vertical-align: middle;
+}
+
+.kn-table.kn-view .kn-table-wrapper.is-constrained .kn-table.kn-table-table.is-bordered.is-striped thead {
+  background: white;
+  position: relative;
+  z-index: 1;
 }
 
 .kn-table.kn-view .kn-table-wrapper.is-constrained .kn-table.kn-table-table.is-bordered.is-striped .kn-sort.level.is-compact {
@@ -654,6 +711,17 @@ body, p, a {
   background: rgba(21, 70, 122, 0.102);
 }
 
+.kn-table.kn-view .kn-table-wrapper.is-constrained .kn-table.kn-table-table.is-bordered.is-striped tbody > tr .kn-table-link a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
 .kn-table.kn-view .kn-table-wrapper.is-constrained .kn-table.kn-table-table.is-bordered.is-striped tbody > tr .kn-table-link a:hover {
   color: #7AC144;
 }
@@ -667,13 +735,180 @@ body, p, a {
 /*============================================================================*/
 /*List View*/
 .kn-list {
-  background: white;
+  background: none;
+  margin: auto 0;
+  padding: 2rem;
 }
 
-.kn-list .kn-detail-label {
-  background: rgba(21, 70, 122, 0.102);
+.kn-list .view-header h2 {
+  color: #15467a;
+}
+
+.kn-list .kn-records-nav .js-filter-menu.tabs.is-toggle.is-flush ul li a {
+  /* Filter Tabs */
+  border-radius: 5px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin: auto 2px;
+}
+
+.kn-list .kn-records-nav .js-filter-menu.tabs.is-toggle.is-flush ul li a:hover {
+  background: #15467a;
+  border-color: #15467a;
+  color: white;
+}
+
+.kn-list .kn-records-nav .js-filter-menu.tabs.is-toggle.is-flush ul li.is-active a {
+  background: #7AC144;
+  border-color: #7AC144;
+  color: white;
+}
+
+.kn-list .kn-records-nav .kn-filters-nav .kn-add-filter.kn-button.is-small {
+  background: #15467a;
+  border-color: #15467a;
+  color: white;
+}
+
+.kn-list .kn-records-nav .kn-filters-nav .kn-add-filter.kn-button.is-small:hover {
+  border-color: white;
+  -webkit-box-shadow: 0 2px 4px #0000004d, inset 0px 2px 4px #0000004d;
+          box-shadow: 0 2px 4px #0000004d, inset 0px 2px 4px #0000004d;
+}
+
+.kn-list .kn-records-nav .kn-filters ul li {
+  background: none;
+  border: 2px dashed #15467a;
+  color: #15467a;
+}
+
+.kn-list .kn-records-nav .kn-filters ul li .remove.delete.is-small {
+  background: #7AC144;
+}
+
+.kn-list .kn-records-nav .kn-filters ul li .remove.delete.is-small:hover {
+  background: #15467a;
+}
+
+.kn-list .kn-records-nav .table-keyword-search {
+  /* Search Input */
+}
+
+.kn-list .kn-records-nav .table-keyword-search .input {
+  background: none;
+  border-color: transparent;
+  border-radius: 5px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   color: #15467a;
   font-weight: bold;
+  outline: none;
+}
+
+.kn-list .kn-records-nav .table-keyword-search .input::-webkit-input-placeholder {
+  font-weight: lighter;
+}
+
+.kn-list .kn-records-nav .table-keyword-search .input:-ms-input-placeholder {
+  font-weight: lighter;
+}
+
+.kn-list .kn-records-nav .table-keyword-search .input::-ms-input-placeholder {
+  font-weight: lighter;
+}
+
+.kn-list .kn-records-nav .table-keyword-search .input::placeholder {
+  font-weight: lighter;
+}
+
+.kn-list .kn-records-nav .table-keyword-search .input:hover, .kn-list .kn-records-nav .table-keyword-search .input:active, .kn-list .kn-records-nav .table-keyword-search .input:focus {
+  border-color: #15467a;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #15467a;
+}
+
+.kn-list .kn-records-nav .table-keyword-search .kn-button.search {
+  background: none;
+  border-color: #15467a;
+  border-radius: 5px;
+  color: #15467a;
+}
+
+.kn-list .kn-records-nav .table-keyword-search .kn-button.search:hover, .kn-list .kn-records-nav .table-keyword-search .kn-button.search:active, .kn-list .kn-records-nav .table-keyword-search .kn-button.search:focus {
+  background: #15467a;
+  border-color: #15467a;
+  color: white;
+}
+
+.kn-list .kn-records-nav .kn-pagination .kn-select select {
+  /* Dropdown - One Selection */
+  background: rgba(109, 124, 144, 0.1);
+  border: 2px solid transparent;
+  border-radius: .35em;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #333;
+  font-size: 15px;
+  font-weight: bold;
+  height: 35px;
+  line-height: 1.429;
+  margin: auto 2px;
+  outline: none;
+  padding: 5px 15px;
+  width: 100%;
+}
+
+.kn-list .kn-records-nav .kn-pagination .kn-select select:hover, .kn-list .kn-records-nav .kn-pagination .kn-select select:focus {
+  border: 2px solid #15467a;
+  background-color: #ffffff;
+}
+
+.kn-list .kn-records-nav .kn-pagination .kn-select select option {
+  color: #15467a;
+}
+
+.kn-list .kn-list-content .kn-list-item-container .columns .kn-details-column .kn-details-group {
+  -webkit-box-shadow: 0px 5px 15px rgba(150, 158, 166, 0.2);
+          box-shadow: 0px 5px 15px rgba(150, 158, 166, 0.2);
+  border-radius: 15px;
+  margin: auto 15px;
+  padding: 1rem;
+}
+
+.kn-list .kn-list-content .kn-detail-label {
+  background: none;
+  color: #15467a;
+  font-weight: bold;
+}
+
+.kn-list .kn-list-content .kn-details-link {
+  text-align: center;
+}
+
+.kn-list .kn-list-content .kn-details-link a {
+  border: 2px solid;
+  border-radius: 15px;
+  font-weight: bold;
+  margin: auto 5px;
+  padding: 2px 10px;
+  text-transform: uppercase;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+.kn-list .kn-list-content .kn-details-link a:hover {
+  color: #7AC144;
+}
+
+.kn-list .kn-list-content img {
+  max-width: 100%;
+}
+
+@media (min-width: 769px) {
+  .kn-list .kn-list-content img {
+    max-width: 25%;
+  }
 }
 
 /*============================================================================*/
@@ -685,21 +920,21 @@ body, p, a {
 /*============================================================================*/
 /* Menu View */
 #knack-body #kn-app-header {
-  background-color: #ffffff;
+  background-color: #15467a;
 }
 
 .kn-info-bar {
-  background-color: #ffffff;
-  border-top-color: #cccccc;
+  background-color: #15467a;
+  border-top-color: #15467a;
   border-top-width: 1px;
   border-top-style: solid;
   padding-bottom: 5px;
 }
 
 .kn-info-bar a {
-  background-color: #ffffff;
+  background-color: #15467a;
   padding-left: 30px !important;
-  color: black !important;
+  color: white !important;
   font-size: 14px !important;
 }
 
@@ -740,10 +975,14 @@ header .kn-container {
 /*============================================================================*/
 /* Rich TextView */
 .kn-rich_text {
-  background: unset;
+  background: none;
 }
 
-.kn-rich_text h1, .kn-rich_text h2, .kn-rich_text h3, .kn-rich_text h4, .kn-rich_text h5, .kn-rich_text h6 {
+.kn-rich_text h1,
+.kn-rich_text h2,
+.kn-rich_text h3,
+.kn-rich_text h4,
+.kn-rich_text h5 {
   color: #15467a;
 }
 
@@ -756,6 +995,10 @@ header .kn-container {
 
 .kn-rich_text a:hover {
   color: #7AC144;
+}
+
+.kn-rich_text p {
+  font-size: calc(100% + .5vh);
 }
 
 /*============================================================================*/
@@ -832,6 +1075,36 @@ header .kn-container {
   color: white;
 }
 
+.ui-timepicker-wrapper {
+  width: 120px;
+}
+
+.ui-timepicker-wrapper .ui-timepicker-list {
+  background: white;
+}
+
+.ui-timepicker-wrapper .ui-timepicker-list li {
+  color: #15467a;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.ui-timepicker-wrapper .ui-timepicker-list li.ui-timepicker-selected,
+.ui-timepicker-wrapper .ui-timepicker-list li .ui-timepicker-selected {
+  background: #15467a;
+  color: white;
+}
+
+.ui-timepicker-wrapper .ui-timepicker-list li:hover {
+  background: #7AC144;
+  color: white;
+}
+
+.redactor-toolbar-tooltip {
+  background: #15467a;
+  font-weight: bold;
+}
+
 .kn-required {
   color: #7AC144;
 }
@@ -846,7 +1119,8 @@ header .kn-container {
   color: white;
 }
 
-.kn-back-link .ang-link {
+.kn-back-link a.ang-link {
+  background: none;
   border: 2px solid;
   border-radius: 5px;
   padding: 5px 10px;
@@ -856,7 +1130,7 @@ header .kn-container {
   transition: all .1s linear;
 }
 
-.kn-back-link .ang-link:hover {
+.kn-back-link a.ang-link:hover {
   background: #15467a;
   border-color: #15467a;
   color: white;

@@ -24,6 +24,14 @@ body, p, a{
 }
 #knack-body{
     background: $MainB;
+    header#kn-app-header{
+        background:  $MainB;
+    }
+    .kn-scenes.kn-section {
+        .kn-scene.kn-container{
+            background: $MainB;
+        }
+    }
 }
 
 /*============================================================================*/
@@ -85,6 +93,7 @@ body, p, a{
             .redactor-box{
                 .redactor-toolbar{
                     background:rgba(109,124,144,0.1);
+                    border-radius:.35em;
                     outline:none;
                     transition: all .1s linear;
                     li a{
@@ -227,9 +236,6 @@ body, p, a{
                     @include form_ui();
                 }
             }
-            .kn-instructions{
-                color:$secondary;
-            }
         }
         .kn-input-timer{ /* Timwer */
             .knack-date,
@@ -268,6 +274,15 @@ body, p, a{
                 }
             }
         }
+    }
+    .kn-instructions{
+        color: $secondary;
+        font-style: italic;
+    }
+    hr{
+        background: $secondary;
+        border-radius: 5px;
+        height: 2px;
     }
     .kn-submit{
         button{
@@ -322,7 +337,7 @@ body, p, a{
 /* Table View */
 .kn-table.kn-view{
     @include shadows();
-    background: unset;
+    background: white;
     border-radius: 1rem;
     padding: 2rem;
     h2{
@@ -407,6 +422,16 @@ body, p, a{
             }
         }
     }
+    .kn-pagination{
+        .kn-select{
+            select{/* Dropdown - One Selection */
+                @include form_ui();
+                option{
+                    color: $primary;
+                }
+            }
+        }
+    }
     .kn-table-wrapper.is-constrained{
         .kn-table.kn-table-table.is-bordered.is-striped{
             thead > tr,
@@ -417,6 +442,11 @@ body, p, a{
             line-height: 1.5;
             padding:.5rem 1rem;
             vertical-align: middle;
+            }
+            thead{
+                background: white;
+                position: relative;
+                z-index: 1;
             }
             .kn-sort.level.is-compact{
                 transition: all .1s linear;
@@ -434,6 +464,11 @@ body, p, a{
                 }
                 .kn-table-link{
                     a{
+                        display: flex;
+                        font-weight:bold;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        transition: all .1s linear;
                         &:hover{
                             color: $secondary;
                         }
@@ -455,11 +490,137 @@ body, p, a{
 /*============================================================================*/
 /*List View*/
 .kn-list{
-    background: white;
-    .kn-detail-label{
-        background: $prima1;
-        color: $primary;
-        font-weight:bold;
+    background: none;
+    margin:auto 0;
+    padding:2rem;
+    .view-header{
+        h2{
+            color: $primary;
+        }
+    }  
+    .kn-records-nav{
+        .js-filter-menu.tabs.is-toggle.is-flush ul li a{ /* Filter Tabs */
+            border-radius: 5px;
+            box-shadow: none;
+            margin: auto 2px;
+            &:hover{
+                background: $primary;
+                border-color: $primary;
+                color: white;
+            }
+        }
+        .js-filter-menu.tabs.is-toggle.is-flush ul li.is-active a{
+            background: $secondary;
+            border-color: $secondary;
+            color: white;
+        }
+        .kn-filters-nav{
+            .kn-add-filter.kn-button.is-small{
+                background: $primary;
+                border-color: $primary;
+                color: white;
+                &:hover{
+                    @include btnshadow();
+                }
+            }
+        }
+        .kn-filters{
+            ul li {
+                background: none;
+                border:2px dashed $primary;
+                color: $primary;
+                .remove.delete.is-small{
+                    background: $secondary;
+                    &:hover{
+                        background: $primary;
+                    }
+                }
+            }
+        }
+        .table-keyword-search{/* Search Input */
+            .input{
+                background:none;
+                border-color: transparent;
+                border-radius: 5px;
+                box-shadow: none;
+                color:$primary;
+                font-weight: bold;
+                outline:none;
+                &::placeholder{
+                    font-weight: lighter;
+                }
+                &:hover,
+                &:active,
+                &:focus{
+                    border-color: $primary;
+                    box-shadow: none;
+                    color:$primary;
+                }
+            }
+            .kn-button.search{
+                background: none;
+                border-color: $primary;
+                border-radius: 5px;
+                color:$primary;
+                &:hover,
+                &:active,
+                &:focus{
+                    background: $primary;
+                    border-color: $primary;
+                    color:white;
+                }
+            }
+        }
+        .kn-pagination{
+            .kn-select{
+                select{/* Dropdown - One Selection */
+                    @include form_ui();
+                    option{
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+    .kn-list-content{
+        .kn-list-item-container{
+            .columns{
+                .kn-details-column{
+                    .kn-details-group{
+                        @include shadows();
+                        border-radius:15px;
+                        margin:auto 15px;
+                        padding: 1rem;
+                    }
+                }
+            }
+        }
+        .kn-detail-label{
+            background: none;
+            color: $primary;
+            font-weight:bold;
+        }
+        .kn-details-link{
+            text-align: center;
+            a{
+                border:2px solid;
+                border-radius:15px;
+                font-weight:bold;
+                margin: auto 5px;
+                padding:2px 10px;
+                text-transform: uppercase;
+                transition: all .1s linear;
+                &:hover{
+                    color: $secondary;
+                }
+            }
+        }
+        img{
+            max-width: 100%;
+            @include media ('>tablet') {
+                max-width: 25%;
+            }
+        }
     }
 }
 
@@ -472,18 +633,18 @@ body, p, a{
 /*============================================================================*/
 /* Menu View */
 #knack-body #kn-app-header {
-    background-color: #ffffff;
+    background-color:  $primary;
 }
 .kn-info-bar {
-    background-color: #ffffff;
-    border-top-color: #cccccc;
+    background-color: $primary;
+    border-top-color: $primary;
     border-top-width: 1px;
     border-top-style: solid;
     padding-bottom: 5px;
     a {
-        background-color: #ffffff;
+        background-color: $primary;
         padding-left: 30px !important;
-        color: black !important;
+        color: white !important;
         font-size: 14px !important;
         &:hover {
             background-color: #ffffff;
@@ -512,8 +673,12 @@ header .kn-container{
 /*============================================================================*/
 /* Rich TextView */
 .kn-rich_text{
-    background: unset;
-    h1, h2, h3, h4, h5, h6{
+    background: none;
+    h1, 
+    h2, 
+    h3, 
+    h4, 
+    h5{
         color: $primary;
     }
     a{
@@ -524,6 +689,9 @@ header .kn-container{
         &:hover{
             color:$secondary;
         }
+    }
+    p{
+        font-size: calc(100% + .5vh);
     }
 }
 
@@ -609,6 +777,32 @@ header .kn-container{
     }
 }
 
+.ui-timepicker-wrapper{
+    width: 120px;
+    .ui-timepicker-list{
+        background: white;
+        li{
+            color: $primary;
+            font-weight: bold;
+            padding: 5px 10px;
+            &.ui-timepicker-selected,
+            & .ui-timepicker-selected{
+                background: $primary;
+                color: white;
+            }
+            &:hover{
+                background: $secondary;
+                color: white;
+            }
+        }
+    }
+}
+
+.redactor-toolbar-tooltip{
+    background: $primary;
+    font-weight: bold;
+}
+
 .kn-required{
     color:$secondary;
 }
@@ -618,7 +812,8 @@ header .kn-container{
     color: white;
 }
 
-.kn-back-link .ang-link {
+.kn-back-link a.ang-link {
+    background: none;
     border:2px solid;
     border-radius: 5px;
     padding: 5px 10px;

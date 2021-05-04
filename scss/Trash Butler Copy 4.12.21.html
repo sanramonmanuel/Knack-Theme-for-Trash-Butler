@@ -1,0 +1,2144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en"><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, target-densitydpi=160, maximum-scale=1, user-scalable = no">
+  <meta name="robots" content="noindex">
+  <link rel="apple-touch-icon" href="https://cdn1.cloud-database.co/renderer/img/knack-logo-114.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="/manifest.json">
+  <!--[if lt IE 9]><script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script><![endif]--><title>Trash Butler Copy 4.12.21</title><script type="text/javascript">knack_production_mode='production';
+  app_id='60746bed6f903a001b290594';
+  region='us-east';
+  api_domain='knack.com';
+  cdn_url='https://cdn1.cloud-database.co';
+  assets='cdn.cloud-database.co';
+  api_subdomain='us-api';
+  s3='{"domain":"s3.amazonaws.com","bucket":"assets.knackhq.com"}';s3_secure='{"domain":"s3.amazonaws.com","bucket":"cdn.cloud-database.co"}';
+  client_sha='663d660e428cb49f7e97f45d901177c0ed60394a';
+  socket_url='https://sockets.knack.com';
+  use_multiple_api_subdomains='';</script><script src="https://cdn1.cloud-database.co/namespace/scripts/k_663d660e428cb49f7e97f45d901177c0ed60394a.js"></script><style class="lazyload" charset="utf-8">@import "https://cdn1.cloud-database.co/renderer/css/jquery.fancybox-1.3.4.css";</style><style class="lazyload" charset="utf-8">@import "https://cdn1.cloud-database.co/renderer/css/v2/renderer_663d660e428cb49f7e97f45d901177c0ed60394a.v2.min.css";</style><style class="lazyload" charset="utf-8">@import "https://cdn1.cloud-database.co/renderer/css/fonts.css";</style><style class="lazyload" charset="utf-8">@import "https://cdn1.cloud-database.co/renderer/css/v2/themes/theme-kn-beta_663d660e428cb49f7e97f45d901177c0ed60394a.min.css";</style><style id="kn-dynamic-styles" type="text/css">
+      #knack-body #kn-app-header {
+        background-color: #ffffff;
+      }
+  
+      .kn-modal>h1 {
+        background-color: #ffffff !important;
+      }
+  
+      .kn-menu-arrow.is-right:before {
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
+      }
+  
+      .kn-menu-arrow.is-left:before {
+        background: linear-gradient(to left, rgba(255, 255, 255, 0), #ffffff);
+      }
+  
+      #kn-app-menu nav.tabs li.is-active a {
+        color: #15467a !important;
+      }
+      #kn-app-header,
+      #knack-logo .kn-title {
+        color: #15467a;
+      }
+      .kn-modal>h1 {
+        color: #15467a !important;
+      }
+      .kn-content a {
+        color: #15467a;
+      }
+  
+      .kn-content .link-hover-color:hover {
+        color: #15467a;
+      }
+  
+      .kn-button.is-link {
+        color: #15467a;
+      }
+  
+      .kn-menu .kn-button {
+        color: #15467a;
+      }
+  
+      .tabs.is-toggle .is-active a {
+        color: #15467a;
+      }
+  
+      .tabs.is-toggle a {
+        color: #15467a;
+      }
+  
+      .tabs a:hover {
+        color: #15467a;
+      }
+      .kn-navigation-bar a {
+        background-color: #15467a;
+      }
+  
+      .kn-navigation-bar a:hover {
+        background-color: #113862;
+      }
+  
+      .kn-navigation-bar .is-active a {
+        background-color: #113862;
+      }
+  
+      .is-primary {
+        background-color: #15467a !important;
+      }
+  
+      .select:after {
+        border-color: #15467a;
+      }
+  
+      .kn-button.is-active a {
+        background-color: #15467a;
+      }
+  
+      .kn-button.is-active a {
+        border-color: #15467a !important;
+      }
+  
+      .kn-button.is-primary:hover,
+      .kn-navigation-bar a:hover {
+        background-color: #113862;
+        border-color: #113862;
+      }
+  
+      .fc-state-active {
+        border-color: #15467a !important;
+      }
+  
+      .kn-menu-list a {
+        border-color: #15467a !important;
+      }
+  
+      .kn-menu-list li.is-primary {
+        background-color: #15467a !important;
+      }
+  
+      #app-menu-list-mobile li.is-active {
+        background-color: #15467a;
+      }
+      #knack-body .input:focus {
+        border-color: #0E2D4F;
+      }
+      .kn-navigation-bar a {
+        color: #ffffff !important;
+      }
+  
+      .kn-navigation-bar a:hover {
+        color: #ffffff !important;
+      }
+  
+      .is-primary {
+        color: #ffffff !important;
+      }
+  
+      .is-active a {
+        color: #ffffff;
+      }
+  
+      .kn-menu a {
+        color: #ffffff;
+      }
+  
+      .kn-button.is-loading:after {
+        border-color: transparent transparent #ffffff #ffffff !important;
+      }
+      .kn-table td,
+      .kn-table th {
+        padding-top: 6.5px;
+        padding-bottom: 6.5px;
+      }
+      
+      #knack-body,
+      .kn-view {
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+      }
+    
+    .kn-navigation-bar a,
+    .kn-navigation-bar a:hover {
+      color: #ffffff !important;
+    }
+  
+    .kn-navigation-bar a {
+      background-color: #15467a;
+    }
+  
+    #kn-app-menu a:hover,
+    #kn-app-menu .active a,
+    .kn-navigation-bar a:hover,
+    .kn-navigation-bar .is-active a {
+      color: #ffffff;
+      background-color: #113862;
+      border-color: #113862;
+    }
+    </style><style id="kn-custom-css" type="text/css">
+    #app-menu-container {
+    display: none;
+  }
+  
+  
+  @media only screen and (max-width: 1399px) {
+    #events {
+      z-index: 2;
+      width: max-content;
+      padding: 0 10px;
+      border: 1px solid #ccc;
+      background: #eee;
+      height: max-content;
+      overflow: auto;
+    }
+    #events .fc-event {
+      margin: 1em 0;
+      cursor: move;
+      padding: 3px;
+    }
+    #community-events {
+      float: left;
+      margin-right: 45px;
+    }
+    #schedule-item-events {
+      float: right;
+    }
+  }
+  
+  @media only screen and (min-width: 1400px) {
+    #events {
+      position: fixed;
+      z-index: 2;
+      top: 18%;
+      left: 0.5%;
+      width: 8%;
+      padding: 0 10px;
+      border: 1px solid #ccc;
+      background: #eee;
+      height: max-content;
+      overflow: auto;
+    }
+    #events .fc-event {
+      margin: 1em 0;
+      cursor: move;
+      padding: 3px;
+    }
+  }
+  
+  @media only screen and (min-width: 1590px) {
+    #events {
+      position: fixed;
+      z-index: 2;
+      top: 24.3%;
+      left: 0.5%;
+      width: max-content;
+      padding: 0 10px;
+      border: 1px solid #ccc;
+      background: #eee;
+      height: max-content;
+      overflow: auto;
+    }
+    #events .fc-event {
+      margin: 1em 0;
+      cursor: move;
+      padding: 3px;
+    }
+  }
+  
+  @media only screen and (min-width: 1672px) {
+    #events {
+      position: fixed;
+      z-index: 2;
+      top: 24.3%;
+      left: 3%;
+      width: max-content;
+      padding: 0 10px;
+      border: 1px solid #ccc;
+      background: #eee;
+      height: max-content;
+      overflow: auto;
+    }
+    #events .fc-event {
+      margin: 1em 0;
+      cursor: move;
+      padding: 3px;
+    }
+  }
+  
+  @media only screen and (min-width: 1865px) {
+    #events {
+      position: fixed;
+      z-index: 2;
+      top: 24.3%;
+      left: 8%;
+      width: max-content;
+      padding: 0 10px;
+      border: 1px solid #ccc;
+      background: #eee;
+      height: max-content;
+      overflow: auto;
+    }
+    #events .fc-event {
+      margin: 1em 0;
+      cursor: move;
+      padding: 3px;
+    }
+  }
+  
+  .kn-scenes>div {
+    background-color: white;
+  }
+  
+  
+  /*fixing table issue where td content is squeezed because of bootstrap css*/
+  table.kn-table tr td span[class*='col-'] {
+    max-width: 100%
+  }
+  
+  
+  
+  
+  /***
+  START FILEPOND CUSTOM CSS
+  ***/
+  
+  .hideMe {
+     position:absolute;
+     visibility:hidden;
+  }
+  
+  .filepond--drop-label {
+    color: #4c4e53;
+  }
+  
+  .filepond--label-action {
+    text-decoration-color: #babdc0;
+  }
+  
+  .filepond--panel-root {
+    border-radius: 2em;
+    background-color: #edf0f4;
+    height: 1em;
+  }
+  
+  .filepond--item-panel {
+    background-color: #595e68;
+  }
+  
+  .filepond--drip-blob {
+    background-color: #7f8a9a;
+  }
+  /***
+  END FILEPOND CUSTOM CSS
+  ***/
+  
+  
+  
+  /*Original Code*/
+  
+  #view_457 .view-header,
+  #view_68 .view-header,
+  #view_3190 .view-header,
+  #view_3237 .view-header {
+    text-align: center;
+    margin: 0;
+    background-color: #0f477b;
+    cursor: pointer;
+  }
+  
+  #view_457 .kn-table-wrapper,
+  #view_68 .kn-table-wrapper,
+  #view_3190 .kn-table-wrapper,
+  #view_3237 .kn-table-wrapper {
+    display: block;
+  }
+  
+  #view_457 .view-header h2,
+  #view_68 .view-header h2,
+  #view_3190 .view-header h2,
+  #view_3237 .view-header h2 {
+    color: white;
+    margin-bottom: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  #view_377 .kn-form-group-1 {
+    display: none;
+  }
+  
+  
+  
+  #view_457 tbody,
+  #view_68 tbody,
+  #view_3190 tbody,
+  #view_3237 tbody,
+  #view_76 tbody,
+  #view_105 tbody,
+  #view_106 tbody,
+  #view_107 tbody,
+  #view_2506 tbody,
+  #view_81 tbody,
+  #view_490 tbody,
+  #view_505 tbody {
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  #view_457 table thead,
+  #view_68 table thead,
+  #view_3190 table thead,
+  #view_3237 table thead,
+  #view_76 table thead,
+  #view_105 table thead,
+  #view_106 table thead,
+  #view_107 table thead,
+  #view_2506 table thead,
+  #view_81 table thead,
+  #view_490 table thead,
+  #view_505 table thead {
+    display: none;
+  }
+  
+  #view_457 table tr,
+  #view_68 table tr,
+  #view_3190 table tr,
+  #view_3237 table tr,
+  #view_76 table tr,
+  #view_105 table tr,
+  #view_106 table tr,
+  #view_107 table tr,
+  #view_2506 table tr,
+  #view_81 table tr,
+  #view_490 table tr,
+  #view_505 table tr {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+    min-width: 240px;
+    max-width: 240px;
+    border-radius: 6px;
+    box-shadow: 4px 4px 8px 3px rgba(15, 71, 123, 0.5);
+  }
+  
+  #view_457 table tr td,
+  #view_68 table tr td,
+  #view_3190 table tr td,
+  #view_3237 table tr td,
+  #view_76 table tr td,
+  #view_105 table tr td,
+  #view_106 table tr td,
+  #view_107 table tr td,
+  #view_2506 table tr td,
+  #view_81 table tr td,
+  #view_490 table tr td,
+  #view_505 table tr td {
+    border: none;
+    text-align: center;
+  }
+  
+  #view_457 table tr td:first-child,
+  #view_68 table tr td:first-child,
+  #view_3190 table tr td:first-child,
+  #view_3237 table tr td:first-child,
+  #view_76 table tr td:first-child,
+  #view_105 table tr td:first-child,
+  #view_106 table tr td:first-child,
+  #view_107 table tr td:first-child,
+  #view_2506 table tr td:first-child,
+  #view_81 table tr td:first-child,
+  #view_490 table tr td:first-child,
+  #view_505 table tr td:first-child {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  #view_457 table tr td:last-child a {
+    padding: 4px 10px 6px 4px;
+    border-radius: 6px;
+    background-color: #fb750c;
+    color: white;
+  }
+  
+  #view_3190 table tr td:last-child a {
+    padding: 4px 10px 6px 4px;
+    border-radius: 6px;
+    background-color: #fb750c;
+    color: white;
+  }
+  
+  #view_2506 table tr td:last-child a,
+  #view_81 table tr td:last-child a {
+    padding: 4px 10px 10px 4px;
+    border-radius: 6px;
+    background-color: #023f74;
+    color: white;
+  }
+  
+  #view_76 table tr td:last-child a,
+  #view_105 table tr td:last-child a,
+  #view_106 table tr td:last-child a,
+  #view_107 table tr td:last-child a {
+    padding: 4px 10px 10px 4px;
+    border-radius: 6px;
+    background-color: #ed2a2a;
+    color: white;
+  }
+  
+  #view_467,
+  #view_468,
+  #view_469,
+  #view_1448 {
+    height: 20px;
+    border: 10px;
+    box-shadow: 0 10px 10px -10px #8c8b8b inset;
+  }
+  /*End Original Code*/
+  
+  
+  
+  
+  
+  /* SMS Thread like display for SMS Chat View*/
+  form.chat * {
+    transition: all .5s;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  }
+  
+  form.chat {
+    margin: 0;
+    cursor: default;
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+      border: 1px solid #ecf0f1;
+      max-height:320px;
+      overflow-y:auto;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none;
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE/Edge */
+    user-select: none;
+  }
+  
+  form.chat .messages {
+    display: block;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+    height: 90%;
+    width: 100%;
+    padding: 2% 3%;
+    border-bottom: 1px solid #ecf0f1;
+  }
+  
+  form.chat ::-webkit-scrollbar {
+    width: 3px;
+    height: 1px;
+    transition: all .5s;
+    z-index: 10;
+  }
+  
+  form.chat ::-webkit-scrollbar-track {
+    background-color: white;
+  }
+  
+  form.chat ::-webkit-scrollbar-thumb {
+    background-color: #bec4c8;
+    border-radius: 3px;
+  }
+  
+  form.chat .message {
+    display: block;
+    width: 98%;
+    padding: 0.5%;
+  }
+  
+  form.chat .message p {
+    margin: 0;
+  }
+  
+  form.chat .myMessage,
+  form.chat .fromThem {
+    max-width: 50%;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+  }
+  
+  form.chat .message:hover .myMessage {
+    -webkit-transform: translateX(-130px);
+    transform: translateX(-130px);
+  }
+  
+  form.chat .message:hover .fromThem {
+    -webkit-transform: translateX(130px);
+    transform: translateX(130px);
+  }
+  
+  form.chat .message:hover date {
+    opacity: 1;
+  }
+  
+  form.chat .myMessage,
+  .fromThem {
+    position: relative;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 25px;
+    clear: both;
+    font: 400 15px 'Open Sans', sans-serif;
+  }
+  
+  form.chat .myMessage {
+    background: #4c9df1;
+    color: white;
+    float: right;
+    clear: both;
+    border-bottom-right-radius: 20px 0px\9;
+  }
+  
+  form.chat .myMessage:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: -2px;
+    right: -8px;
+    height: 19px;
+    border-right: 20px solid #4c9df1;
+    border-bottom-left-radius: 16px 14px;
+    -webkit-transform: translate(0, -2px);
+    transform: translate(0, -2px);
+    border-bottom-left-radius: 15px 0px\9;
+    transform: translate(-1px, -2px)\9;
+  }
+  
+  form.chat .myMessage:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: -2px;
+    right: -42px;
+    width: 12px;
+    height: 20px;
+    background: white;
+    border-bottom-left-radius: 10px;
+    -webkit-transform: translate(-30px, -2px);
+    transform: translate(-30px, -2px);
+  }
+  
+  form.chat .fromThem {
+    background: #E5E5EA;
+    color: black;
+    float: left;
+    clear: both;
+    border-bottom-left-radius: 30px 0px\9;
+  }
+  
+  form.chat .fromThem:before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    bottom: -2px;
+    left: -7px;
+    height: 19px;
+    border-left: 20px solid #E5E5EA;
+    border-bottom-right-radius: 16px 14px;
+    -webkit-transform: translate(0, -2px);
+    transform: translate(0, -2px);
+    border-bottom-right-radius: 15px 0px\9;
+    transform: translate(-1px, -2px)\9;
+  }
+  
+  form.chat .fromThem:after {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    bottom: -2px;
+    left: 4px;
+    width: 26px;
+    height: 20px;
+    background: white;
+    border-bottom-right-radius: 10px;
+    -webkit-transform: translate(-30px, -2px);
+    transform: translate(-30px, -2px);
+  }
+  
+  form.chat date {
+    position: absolute;
+    top: 10px;
+    font-size: 14px;
+    white-space: nowrap;
+    vertical-align: middle;
+    color: #8b8b90;
+    opacity: 0;
+    z-index: 4;
+  }
+  
+  form.chat .myMessage,
+  form.chat .fromThem {
+    font-size: 12px;
+  }
+  
+  form.chat .message:hover .myMessage {
+    transform: translateY(18px);
+    -webkit-transform: translateY(18px);
+  }
+  
+  form.chat .message:hover .fromThem {
+    transform: translateY(18px);
+    -webkit-transform: translateY(18px);
+  }
+  
+  form.chat .myMessage date{
+    top: -20px;
+    left: auto;
+    right: 0;
+    font-size: 12px;
+  }
+  
+  form.chat .fromThem date {
+    top: -20px;
+    left: 0;
+    font-size: 12px;
+  }
+  
+  
+  form.chat .myMessage,
+  form.chat .fromThem {
+    max-width: 90%;
+  }
+  
+  /* Initial Height for WYSIWYG Editors*/
+  .redactor-editor {
+      min-height:300px;
+  }
+  /*
+  green #79c144 
+  blue #0f477b
+  orange #fb750c
+  */
+  
+  /* ACCORDION CSS START */
+  .ac-container label {
+      height: 30px !important;
+      line-height: 21px !important;
+      font-weight: bold;
+      padding: 5px 20px;
+      position: relative;
+      z-index: 20;
+      display: block;
+      height: 30px;
+      cursor: pointer;
+      color: #777;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+      line-height: 33px;
+      font-size: 19px;
+      background: #fff;
+      background: -moz-linear-gradient(top,#fff 1%,#eaeaea 100%);
+      background: -webkit-gradient(linear,left top,left bottom,color-stop(1%,#fff),color-stop(100%,#eaeaea));
+      background: -webkit-linear-gradient(top,#fff 1%,#eaeaea 100%);
+      background: -o-linear-gradient(top,#fff 1%,#eaeaea 100%);
+      background: -ms-linear-gradient(top,#fff 1%,#eaeaea 100%);
+      background: linear-gradient(top,#fff 1%,#eaeaea 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff',endColorstr='#eaeaea',GradientType=0 );
+      box-shadow: 0 0 0 1px rgba(155,155,155,0.3),1px 0 0 rgba(255,255,255,0.9) inset,0 2px 2px rgba(0,0,0,0.1);
+      font-size: 12px;
+      height: 30px;
+      line-height: 20px;
+  }
+  
+  .ac-container {
+      width: 100%;
+      margin: 10px auto 30px auto;
+      text-align: left;
+  }
+  
+  .ac-container label:hover {
+      background: #fff;
+  }
+  
+  .ac-container input:checked + label,.ac-container input:checked + label:hover {
+      background: #f1f2f3;
+      color: #666;
+      text-shadow: 0 1px 1px rgba(255,255,255,0.6);
+      box-shadow: 0 0 0 1px rgba(155,155,155,0.3),0 2px 2px rgba(0,0,0,0.1);
+      height: 30px;
+      line-height: 21px;
+      font-size: 13px;
+  }
+  
+  .ac-container label:hover:after,.ac-container input:checked + label:hover:after {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      right: 13px;
+      top: 7px;
+      /*background: transparent url(../images/arrow_down.png) no-repeat center center;*/
+  }
+  
+  .ac-container input:checked + label:hover:after {
+      /*background-image: url(../images/arrow_up.png);*/
+  }
+  
+  .ac-container input {
+      display: none;
+  }
+  
+  .ac-container article {
+      background: rgba(255,255,255,0.5);
+      margin-top: -1px;
+      overflow: hidden;
+      height: 0;
+      position: relative;
+      z-index: 10;
+      -webkit-transition: height 0.3s ease-in-out,box-shadow 0.6s linear;
+      -moz-transition: height 0.3s ease-in-out,box-shadow 0.6s linear;
+      -o-transition: height 0.3s ease-in-out,box-shadow 0.6s linear;
+      -ms-transition: height 0.3s ease-in-out,box-shadow 0.6s linear;
+      transition: height 0.3s ease-in-out,box-shadow 0.6s linear;
+  }
+  
+  .ac-container article p {
+      font-style: normal;
+      color: #777;
+      line-height: 23px;
+      padding: 20px;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+  }
+  
+  .ac-container input:checked ~ article {
+      -webkit-transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
+      -moz-transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
+      -o-transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
+      -ms-transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
+      transition: height 0.5s ease-in-out,box-shadow 0.1s linear;
+      box-shadow: 0 0 0 1px rgba(155,155,155,0.3);
+  }
+  
+  .ac-container input:checked ~ article.ac-small {
+      height: 140px;
+  }
+  
+  .ac-container input:checked ~ article.ac-medium {
+      height: 180px;
+  }
+  
+  .ac-container input:checked ~ article.ac-large {
+      height: 230px;
+  }
+  /* ACCORDION CSS END */
+    </style><style class="lazyload" charset="utf-8">@import "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css";</style><style class="lazyload" charset="utf-8">@import "https://server.chhjny.com/scripts/@fullcalendar/core@4.2.0/main.min.css";</style><style class="lazyload" charset="utf-8">@import "https://server.chhjny.com/scripts/@fullcalendar/daygrid@4.2.0/main.min.css";</style><style class="lazyload" charset="utf-8">@import "https://server.chhjny.com/scripts/@fullcalendar/timegrid@4.2.0/main.min.css";</style><style class="lazyload" charset="utf-8">@import "https://server.chhjny.com/scripts/@fullcalendar/bootstrap@4.2.0/main.min.css";</style><style class="lazyload" charset="utf-8">@import "https://server.chhjny.com/scripts/tingle@0.15.1/tingle.min.css";</style><script src="https://server.chhjny.com/scripts/@fullcalendar/core@4.2.0/main.min.js" class="lazyload" charset="utf-8"></script><script src="https://server.chhjny.com/scripts/@fullcalendar/daygrid@4.2.0/main.min.js" class="lazyload" charset="utf-8"></script><script src="https://server.chhjny.com/scripts/@fullcalendar/timegrid@4.2.0/main.min.js" class="lazyload" charset="utf-8"></script><script src="https://server.chhjny.com/scripts/@fullcalendar/bootstrap@4.2.0/main.min.js" class="lazyload" charset="utf-8"></script><script src="https://server.chhjny.com/scripts/@fullcalendar/interaction@4.2.0/main.min.js" class="lazyload" charset="utf-8"></script><script src="https://server.chhjny.com/scripts/tingle@0.15.1/tingle.min.js" class="lazyload" charset="utf-8"></script><style class="lazyload" charset="utf-8">@import "https://dl.dropbox.com/s/5s9ex55u3hig4az/Trash-Butler-theme.min.css";</style><style class="lazyload" charset="utf-8">@import "https://unpkg.com/filepond/dist/filepond.css";</style><style class="lazyload" charset="utf-8">@import "https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css";</style><script src="https://cdn.jsdelivr.net/npm/exif-js" class="lazyload" charset="utf-8"></script><script src="https://unpkg.com/filepond-plugin-image-crop/dist/filepond-plugin-image-crop.js" class="lazyload" charset="utf-8"></script><script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js" class="lazyload" charset="utf-8"></script><script src="https://unpkg.com/filepond-plugin-image-transform/dist/filepond-plugin-image-transform.js" class="lazyload" charset="utf-8"></script><script src="https://unpkg.com/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.min.js" class="lazyload" charset="utf-8"></script><script src="https://unpkg.com/filepond-plugin-image-exif-orientation/dist/filepond-plugin-image-exif-orientation.min.js" class="lazyload" charset="utf-8"></script><script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js" class="lazyload" charset="utf-8"></script><script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js" class="lazyload" charset="utf-8"></script><script src="https://unpkg.com/filepond/dist/filepond.min.js" class="lazyload" charset="utf-8"></script><script src="https://server.chhjny.com/imageupload/NewImageUploader.js" class="lazyload" charset="utf-8"></script><script src="https://server.chhjny.com/imageupload/processImageUploadIntegration_filepond.js" class="lazyload" charset="utf-8"></script><style class="lazyload" charset="utf-8">@import "https://server.chhjny.com/sidebar/sidebar.css";</style><style class="lazyload" charset="utf-8">@import "https://server.chhjny.com/jkanban/jkanban.min.css";</style><script src="https://server.chhjny.com/sidebar/sidebar.js" class="lazyload" charset="utf-8"></script><script src="https://server.chhjny.com/jkanban/jkanban.min.js" class="lazyload" charset="utf-8"></script><script src="https://server.chhjny.com/jkanban/KnackKanban.js" class="lazyload" charset="utf-8"></script><style>@import url("https://fonts.googleapis.com/css?family=Oxygen:400,700&display=swap&subset=latin-ext");@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");@keyframes spin{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}.b-bar{font:normal 15px Verdana,Arial,Helvetica;line-height:1.3;letter-spacing:-.022em;font-size:12px;position:absolute;color:#36414d;z-index:2147483646;height:32px;align-items:flex-end;pointer-events:none}.b-bar,.b-bar__wrapper{display:flex;justify-content:flex-end}.b-bar__wrapper{pointer-events:all;box-sizing:border-box;margin:1px;padding:4px}.b-bar__wrapper:hover{background:hsla(0,0%,100%,.8);border-radius:4px;box-shadow:0 0 1px 1px rgba(0,0,0,.1);transition:all .1s ease}.b-bar__wrapper:not(:hover) .b-bar__element--hover-only,.b-bar__wrapper:not(:hover) .b-bar__separator--hover-only{display:none}.b-bar__separator{width:1px;margin:0 5px;background:#ccc;opacity:.5}.b-bar--collapsed .b-bar__wrapper:not(:hover) .b-bar__element{font-size:0;width:6px;height:6px;display:none}.b-bar--collapsed .b-bar__wrapper:not(:hover) .b-bar__element--show-collapsed{display:flex}.b-bar--collapsed .b-bar__wrapper:not(:hover) .b-bar__element--logo svg,.b-bar--collapsed .b-bar__wrapper:not(:hover) .b-bar__element--ok svg{display:none}.b-bar--collapsed .b-bar__wrapper:not(:hover) .b-bar__element--spinner svg{width:6px}.b-bar--collapsed .b-bar__wrapper:not(:hover) .b-bar__element--warning{border-radius:50%;background:#ff8900}.b-bar--collapsed .b-bar__wrapper:not(:hover) .b-bar__element--warning svg{display:none}.b-bar--collapsed .b-bar__wrapper:not(:hover) .b-bar__element--error svg{width:6px}.b-bar--collapsed .b-bar__wrapper:not(:hover) .b-bar__element--offline{border-radius:50%;background:hsla(0,0%,66.7%,.5)}.b-bar--collapsed .b-bar__wrapper:not(:hover) .b-bar__element--offline svg,.b-bar--collapsed .b-bar__wrapper:not(:hover) .b-bar__element-warning{display:none}.b-bar--small .b-bar__wrapper:not(:hover){padding-top:0;padding-bottom:0}.b-bar--collapsed .b-bar__wrapper:not(:hover){padding-top:0;padding-bottom:2px}.b-bar--small .b-bar__wrapper:not(:hover) .b-bar__element{width:14px;height:14px;font-size:8px}.b-bar--small .b-bar__wrapper:not(:hover) .b-bar__element--icon svg,.b-bar--small .b-bar__wrapper:not(:hover) .b-bar__element--spinner svg{width:9px}.b-bar--small .b-bar__wrapper:not(:hover) .b-bar__element--ok svg{height:9px}.b-bar--small .b-bar__wrapper:not(:hover) .b-bar__element--logo svg{width:19px}.b-bar--small .b-bar__wrapper:not(:hover) .b-bar__element-warning{width:8px;height:8px;padding:1px}.b-bar__element .b-bar__element-icon{display:inline-flex}.b-bar__element{position:relative;width:22px;height:22px;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#fff;z-index:2147483646;margin-left:3px}.b-bar__element:first-child{margin-left:0}.b-bar__element--small-text{font-size:8px}.b-bar__element--clickable{cursor:pointer}.b-bar__element--alert{background:#f04b5c}.b-bar__element--premium{background:#fabc54}.b-bar__element--icon svg{width:14px;fill:#999}.b-bar__element--clickable-icon:hover svg{fill:#7033ff}.b-bar__element--ok{font-size:16px;background:#5cbb82}.b-bar__element--ok svg{height:14px;fill:#fff}.b-bar__element--warning svg{fill:#ff8900}.b-bar__element--error svg{fill:#ff5654}.b-bar__element--offline svg{fill:hsla(0,0%,66.7%,.5)}.b-bar__element--logo{background:#7033ff}.b-bar__element--logo svg{width:26px;fill:#fff}.b-bar__element--spinner{background:transparent}.b-bar__element--spinner svg{animation-name:spin;animation-duration:1.2s;animation-iteration-count:infinite;animation-timing-function:linear;width:13px;fill:#7033ff}.b-bar__element-warning{position:absolute;top:-3px;right:-3px;width:10px;height:10px;background:#ff8900;border-radius:50%;display:flex;padding:3px;justify-content:center;align-content:center}.b-bar__element-warning svg{width:inherit;height:inherit;fill:#fff}.b-bar__element-hover,.b-bar__element:hover .b-bar__element-text{display:none}.b-bar__element:hover .b-bar__element-hover{display:inline-block}.b-bar__crown{width:12px;height:12px}.b-bar__crown svg{width:12px;fill:#fff}.b-bar__popover-arrow{position:absolute;z-index:2147483647;display:block;width:0;height:0;bottom:100%;border:7px solid transparent;border-bottom-color:#fff;pointer-events:none}.b-bar__popover-arrow--bottom{top:100%;bottom:auto;border-top-color:#fff;border-bottom-color:transparent}.b-bar__popover{position:absolute;min-width:320px;min-height:120px;z-index:2147483647;color:#36414d;background:#fff;border-radius:4px;box-shadow:0 1px 5px 0 rgba(150,148,130,.5)}.b-bar-popover{display:block;position:relative;padding:18px;font:normal 15px Verdana,Arial,Helvetica;line-height:1.3;letter-spacing:-.022em;font-size:14px;color:#36414d;width:320px}.b-bar-popover--stats{width:548px;font-size:13px}.b-bar-popover--alerts,.b-bar-popover--helper{width:390px}.b-bar-popover__header{font-weight:700;font-size:125%;padding-right:2em}.b-bar-popover__header--small{font-size:100%}.b-bar-popover__header b{color:#7033ff}.b-bar-popover__close{position:absolute;top:10px;right:10px;font-size:13px;padding:0 2px;cursor:pointer;color:#999}.b-bar-popover__close:hover{color:#ff5654}.b-bar-popover__features{padding-inline-start:1em;list-style:square}.b-bar-popover__feature{margin:.5em 0;font-size:90%}.b-bar-popover__features,.b-bar-popover__info,.b-bar-popover__message{position:relative}.b-bar-popover__features b,.b-bar-popover__info b,.b-bar-popover__message b{color:#7033ff;font-weight:700}.b-bar-popover__link{cursor:pointer;color:#7033ff}.b-bar-popover__link:hover{color:#ff5654}.b-bar-popover__buttons{display:grid;grid-template-columns:1fr 1fr;grid-gap:8px}.b-bar-popover__button{display:inline-block;padding:10px 20px;border-radius:5px;font:inherit;font-weight:700;white-space:nowrap;text-align:center;vertical-align:middle;cursor:pointer;border:none;text-decoration:none;color:#fff;background:#7033ff;box-shadow:0 3px 13px rgba(112,51,255,.4)}.b-bar-popover__button:hover{background:#7e47ff}.b-bar-popover__button,.b-bar-popover__button:focus{outline:none transparent}.b-bar-popover__button--alt{display:inline-block;padding:10px 20px;border-radius:5px;font:inherit;font-weight:700;white-space:nowrap;text-align:center;vertical-align:middle;cursor:pointer;border:none;text-decoration:none;color:#fff;background:#fabc54;box-shadow:0 3px 13px rgba(250,188,84,.4)}.b-bar-popover__button--alt:hover{background:#fbc468}.b-bar-popover__button--alt,.b-bar-popover__button--alt:focus{outline:none transparent}.b-bar-popover__info{display:flex;position:relative;top:-1ex}.b-bar-popover__info-logo{flex:0 0 36px;margin-right:1em;padding:1.2em .3em}.b-bar-popover__info-logo svg{width:inherit}.b-bar-popover__info-text{flex:1}.b-bar-popover__info-text p{margin-bottom:0}.b-bar-popover__premium{margin-top:1ex}.b-bar-popover__premium-group{display:flex;width:100%;align-items:center;font-size:90%}.b-bar-popover__premium-group+.b-bar-popover__premium-group{padding-top:.5em}.b-bar-popover__premium-group-stats{padding-right:1ex}.b-bar-popover__premium-group-count{display:inline-flex;width:1.6em;height:1.6em;color:#fff;background:#fabc54;border-radius:50%;text-align:center;justify-content:center;font-size:86%;line-height:1.6em}.b-bar-popover__non-english{display:flex}.b-bar-popover__non-english-icon{width:38px;height:49px}.b-bar-popover__non-english-icon svg{width:inherit;height:inherit;fill:#aaa}.b-bar-popover__non-english-text{flex:1;padding-left:1em;line-height:1.4;color:#36414d}.b-bar-popover__non-english-title{font-weight:700}.b-bar-popover__non-english-desc{padding-top:1em;color:#666}.b-bar-popover__offline{display:flex}.b-bar-popover__offline-icon{width:38px;height:49px}.b-bar-popover__offline-icon svg{width:inherit;height:inherit;fill:#aaa;opacity:.3}.b-bar-popover__offline-text{flex:1;padding-left:1em;line-height:1.4;color:#36414d}.b-bar-popover__offline-title{font-weight:700}.b-bar-popover__offline-desc{padding-top:1em;color:#666}</style></head><body id="knack-body"><div id="knack-dist_1" class="kn-content"><header id="kn-app-header">
+    <div class="kn-container">
+  
+      <!---->
+  
+      <div id="kn-app-mobile-container">
+        <h1 id="knack-logo" style="" class="logo-img">
+          <a href="#form-view-ui-testing-manuels" class="kn-title" address="true"><img src="https://s3.amazonaws.com/assets.knackhq.com/assets/60746bed6f903a001b290594/logos/tblogo.png" alt="Trash Butler Copy 4.12.21" style="border: 0"></a>
+        </h1>
+  
+        <div class="kn-mobile-controls">
+          <label class="kn-mobile-nav-toggle" for="menu-show-dropdown" style="display: none;">
+            <i class="fa fa-bars"></i>
+          </label>
+          <input type="checkbox" id="menu-show-dropdown">
+        </div>
+      </div>
+  
+      <section id="app-menu-container">
+        <div class="kn-menu-arrow is-left"></div>
+        <div id="kn-app-menu"><div class="kn-navigation-bar">
+  
+      <nav class="buttons is-nav">
+  
+      <ul id="app-menu-list">
+  
+      
+  
+     
+      
+  
+     
+      
+  
+     
+      
+  
+     
+      
+  
+     
+            <li><a href="#standup-ver-2s" data-kn-slug="#standup-ver-2s"><span>Standup Ver. 2s</span></a></li>
+            
+            <li class="is-active"><a href="#form-view-ui-testing-manuels" data-kn-slug="#form-view-ui-testing-manuels"><span><i class="fa fa-coffee"></i>&nbsp;&nbsp;Form View UI Testing - Manuels</span></a></li>
+            
+      </ul>
+    </nav>
+  </div>
+  </div> <!-- Injected by SceneView.js -->
+        <div class="kn-menu-arrow is-right"></div>
+      </section>
+    </div>
+  </header>
+  
+  <div class="kn-info-bar" style="display: none;">
+    <div class="kn-info kn-container"><div class="kn-crumbtrail" style="visibility: hidden;">
+    
+  
+    
+      <a href="#form-view-ui-testing-manuels?" address="true">Form View UI Testing - Manuels</a>
+      
+    
+  </div>
+  </div> <!-- .kn-info appended to via SceneView.js -->
+  </div>
+  
+  <div id="kn-loading-spinner" style="display: none;"></div>
+  
+  <a name="kn-scenes-top"></a>
+  <div class="kn-scenes kn-section"><div class="kn-scene kn-container group-layout-wrapper" id="kn-scene_1289" style="display: block;"><div class="view-group view-group-1"><div class="view-column view-column-group-1"><div class="kn-form kn-view view_3440" id="view_3440">
+    <div class="view-header">
+      
+        <h2 class="kn-title">UI Form View</h2>
+      
+  
+      
+    </div>
+  
+  
+  
+  
+  
+    <div class="kn-form-confirmation" style="display: none">
+      <div class="kn-message success">
+        <p></p>
+      </div>
+      <a href="#" class="kn-form-reload button">
+        <span class="icon is-small"><i class="fa fa-refresh"></i></span>
+        <span>Reload form</span>
+      </a>
+    </div>
+  
+    <form action="#" method="post" novalidate="">
+  
+  
+  <ul class="kn-form-group columns kn-form-group-1"><li class="kn-form-col column is-constrained">
+      <div class="kn-input kn-input-name control" id="kn-input-field_1441" data-input-id="field_1441">
+  
+        <label for="field_1441" class="label kn-label"><span>Name</span></label>
+  
+  
+  <div class="control is-grouped">
+    
+      <p class="control is-expanded">
+        <input class="input" id="first" name="first" type="text" value="" placeholder="First">
+      </p>
+    
+  
+    <p class="control is-expanded">
+      <input class="input" id="last" name="last" type="text" value="" placeholder="Last">
+    </p>
+    <input name="key" type="hidden" value="field_1441">
+  </div>
+        <p class="kn-instructions" style="display: none;"></p>
+    </div> 
+  
+      <div class="kn-input kn-input-image control" id="kn-input-field_1440" data-input-id="field_1440">
+  
+        <label for="field_1440" class="label kn-label"><span>Image</span></label>
+  
+  
+    
+  
+    <input class="image" name="field_1440" type="hidden" value="">
+    <div class="kn-asset-current level" data-asset-id="">
+      
+  
+    </div>
+  
+    <div class="kn-file-upload" style="">
+      <input class="input is-file" id="field_1440_upload" value="" type="file" name="files" accept="image/*">
+      <div class="kn-spinner" style="display:none;"></div>
+    </div>
+  
+    
+  
+  
+  
+        <p class="kn-instructions" style="display: none;"></p>
+    </div> 
+  
+      <div class="kn-input kn-input-divider control" id="kn-input-" data-input-id="">
+  
+        <label for="" class="label kn-label"><span></span></label>
+  <div>
+    <hr>
+  </div>
+  
+        <p class="kn-instructions" style="display: none;"></p>
+    </div> 
+  
+      <div class="kn-input kn-input-short_text control" id="kn-input-field_1427" data-input-id="field_1427">
+  
+        <label for="field_1427" class="label kn-label"><span>Short Text</span></label>
+  <div class="control">
+    <input class="input" id="field_1427" name="field_1427" type="text" value="">
+  </div>
+        <p class="kn-instructions" style="display: none;"></p>
+    </div> 
+  
+      <div class="kn-input kn-input-multiple_choice control" id="kn-input-field_1435" data-input-id="field_1435">
+  
+        <label for="field_1435" class="label kn-label"><span>Multiple Choice</span></label>
+  
+  
+  <div class="kn-radio">
+  
+  
+      <div class="control">
+        <label class="option radio">
+          <input type="radio" name="view_3440-field_1435" value="First Choice" class="radio">
+          First Choice
+        </label>
+      </div>
+    
+      <div class="control">
+        <label class="option radio">
+          <input type="radio" name="view_3440-field_1435" value="Second Choice" class="radio">
+          Second Choice
+        </label>
+      </div>
+    
+      <div class="control">
+        <label class="option radio">
+          <input type="radio" name="view_3440-field_1435" value="Third Choice" class="radio">
+          Third Choice
+        </label>
+      </div>
+    
+      <div class="control">
+        <label class="option radio">
+          <input type="radio" name="view_3440-field_1435" value="Another Choice" class="radio">
+          Another Choice
+        </label>
+      </div>
+    
+  
+    
+  </div>
+  
+        <p class="kn-instructions" style="display: none;"></p>
+    </div> 
+  
+      <div class="kn-input kn-input-rating control" id="kn-input-field_1447" data-input-id="field_1447">
+  
+        <label for="field_1447" class="label kn-label"><span>Rating</span></label>
+  
+  <div class="input">
+    <input name="key" type="hidden" value="field_1447">
+    <input type="hidden" name="value" id="view_3440-field_1447-value" value="0" style="display: none;">
+    <div id="view_3440-field_1447" class="rating rateit svg" data-rateit-starwidth="19" data-rateit-starheight="20"><button id="rateit-reset-2" type="button" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-2"></button><div id="rateit-range-2" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-2" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0" style="width: 57px; height: 20px;" aria-readonly="false"><div class="rateit-selected" style="height: 20px; width: 0px;"></div><div class="rateit-hover" style="height:20px"></div></div></div>
+  </div>
+        <p class="kn-instructions" style="display: none;"></p>
+    </div> 
+  
+      <div class="kn-input kn-input-equation control" id="kn-input-field_1433" data-input-id="field_1433">
+  
+        <label for="field_1433" class="label kn-label"><span>Equation</span></label>
+  <div class="control has-icon">
+    <i class="fa fa-calculator"></i>
+    <p class="kn-equation input is-equation">0</p>
+  </div>
+  <input name="key" type="hidden" value="field_1433">
+  <input name="value" id="field_1433" type="hidden" value="NaN">
+        <p class="kn-instructions" style="display: none;"></p>
+    </div> 
+  
+      <div class="kn-input kn-input-link control" id="kn-input-field_1446" data-input-id="field_1446">
+  
+        <label for="field_1446" class="label kn-label"><span>Link</span></label>
+  
+  
+    <input class="input" id="field_1446" name="url" type="url" value="">
+  
+  
+  <input name="key" type="hidden" value="field_1446">
+        <p class="kn-instructions" style="display: none;"></p>
+    </div> 
+  
+      <div class="kn-input kn-input-rich_text control" id="kn-input-field_1429" data-input-id="field_1429">
+  
+        <label for="field_1429" class="label kn-label"><span>Rich Text</span></label>
+  
+  
+  <div class="redactor-box"><ul class="redactor-toolbar" id="redactor-toolbar-0" style="position: relative; width: auto; top: 0px; left: 0px; visibility: visible;"><li><a href="#" class="re-icon re-html" rel="html" tabindex="-1"></a></li><li><a href="#" class="re-icon re-formatting" rel="formatting" tabindex="-1"></a></li><li><a href="#" class="re-icon re-bold" rel="bold" tabindex="-1"></a></li><li><a href="#" class="re-icon re-italic" rel="italic" tabindex="-1"></a></li><li><a href="#" class="re-icon re-deleted" rel="deleted" tabindex="-1"></a></li><li><a href="#" class="re-icon re-fontcolor redactor-btn-image" rel="fontcolor" tabindex="-1"></a></li><li><a href="#" class="re-icon re-backcolor redactor-btn-image" rel="backcolor" tabindex="-1"></a></li><li><a href="#" class="re-icon re-link" rel="link" tabindex="-1"></a></li><li><a href="#" class="re-icon re-image_web_link redactor-btn-image" rel="image_web_link" tabindex="-1"></a></li><li><a href="#" class="re-icon re-video redactor-btn-image" rel="video" tabindex="-1"></a></li><li><a href="#" class="re-icon re-table redactor-btn-image" rel="table" tabindex="-1"></a></li><li><a href="#" class="re-icon re-unorderedlist" rel="unorderedlist" tabindex="-1"></a></li><li><a href="#" class="re-icon re-orderedlist" rel="orderedlist" tabindex="-1"></a></li><li><a href="#" class="re-icon re-outdent" rel="outdent" tabindex="-1"></a></li><li><a href="#" class="re-icon re-indent" rel="indent" tabindex="-1"></a></li><li><a href="#" class="re-icon re-alignment" rel="alignment" tabindex="-1"></a></li><li><a href="#" class="re-icon re-horizontalrule" rel="horizontalrule" tabindex="-1"></a></li></ul><div class="redactor-editor" dir="ltr" spellcheck="false" data-gramm="false" linguix-spellcheck="true" contenteditable="true"><p>​</p></div><gr-highlighter></gr-highlighter><textarea class="rich_text textarea" id="field_1429" name="field_1429" style="width: 500px; height: 150px; display: none;" dir="ltr"></textarea></div>
+        <p class="kn-instructions" style="display: none;"></p>
+    </div> 
+  
+      <div class="kn-input kn-input-date_time control" id="kn-input-field_1437" data-input-id="field_1437">
+  
+        <label for="field_1437" class="label kn-label"><span>Date/Time</span></label>
+  <div class="kn-datetime">
+  
+  
+  <div>
+    <input id="view_3440-field_1437" name="date" type="text" class="knack-date input control hasDatepicker" value="05/04/2021" autocomplete="off">
+    
+  </div>
+  
+  <input name="key" type="hidden" value="field_1437">
+  </div>
+  
+        <p class="kn-instructions" style="display: none;"></p>
+    </div> 
+  
+      <div class="kn-input kn-input-address control" id="kn-input-field_1443" data-input-id="field_1443">
+  
+        <label for="field_1443" class="label kn-label"><span>Address</span></label>
+  
+  
+  
+  
+    
+  
+    <div class="address-us">
+      <div class="address_street control">
+        <div class="control">
+          <input class="input" id="street" name="street" type="text" value="">
+          <label class="help" for="street">Street Address</label>
+        </div>
+        <div class="control">
+          <input class="input" id="street2" name="street2" type="text" value="">
+          <label class="help" for="street2">Street Address 2</label>
+        </div>
+      </div>
+  
+    
+      <div class="control is-grouped">
+        <div class="control">
+          <input class="input" id="city" name="city" type="text" value="">
+          <label class="help" for="city">City</label>
+        </div>
+        <div class="control">
+          <input class="input" id="state" name="state" size="2" type="text" value="">
+          <label class="help" for="state">State</label>
+        </div>
+        <div class="control">
+          <input class="input" id="zip" name="zip" size="5" type="text" value="">
+          <label class="help" for="zip">Zip</label>
+        </div>
+      </div>
+    
+    
+  
+    <input name="key" type="hidden" value="field_1443">
+  </div>
+  
+        <p class="kn-instructions" style="display: none;"></p>
+    </div> 
+  
+      <div class="kn-input kn-input-paragraph_text control" id="kn-input-field_1428" data-input-id="field_1428">
+  
+        <label for="field_1428" class="label kn-label"><span>Paragraph Text</span></label>
+  
+        <p class="kn-instructions" style="display: none;"></p>
+  <textarea class="kn-textarea" id="field_1428" name="field_1428"></textarea>  </div> 
+  
+      <div class="kn-input kn-input-boolean control" id="kn-input-field_1436" data-input-id="field_1436">
+  
+        <label for="field_1436" class="label kn-label"><span>Yes/No</span></label>
+  
+  <div class="control select">
+    <select id="field_1436" name="field_1436" class="select">
+      <option value="True">True</option>
+      <option value="False" selected="selected">False</option>
+    </select>
+  </div>
+  
+  <input name="key" type="hidden" value="field_1436">
+        <p class="kn-instructions" style="display: none;"></p>
+    </div> 
+  
+      <div class="kn-input kn-input-email control" id="kn-input-field_1442" data-input-id="field_1442">
+  
+        <label for="field_1442" class="label kn-label"><span>Email</span></label>
+  <div class="control">
+  
+    
+  
+    
+      <input class="input" id="field_1442" name="email" type="email" value="">
+    
+  
+    <input name="key" type="hidden" value="field_1442">
+  </div>
+  
+        <p class="kn-instructions" style="display: none;"></p>
+    </div> 
+  
+      <div class="kn-input kn-input-currency control" id="kn-input-field_1432" data-input-id="field_1432">
+  
+        <label for="field_1432" class="label kn-label"><span>Currency</span></label>
+  <div class="control">
+    <input class="input" id="field_1432" name="field_1432" type="text" value="">
+  </div>
+        <p class="kn-instructions" style="display: none;"></p>
+    </div> 
+  
+      <div class="kn-input kn-input-file control" id="kn-input-field_1439" data-input-id="field_1439">
+  
+        <label for="field_1439" class="label kn-label"><span>File</span></label>
+   <div class="control">
+     
+    <input class="file" name="field_1439" type="hidden" value="">
+    <div class="kn-asset-current">
+      <div style="margin-bottom: 6px;">
+  
+        
+  
+      </div>
+     </div>
+  
+    <div class="kn-file-upload" style="">
+      <input class="input is-file" id="field_1439_upload" value="" type="file" name="files">
+      <div class="kn-spinner" style="display:none;"></div>
+    </div>
+  
+    
+  </div>
+  
+        <p class="kn-instructions" style="display: none;"></p>
+    </div> 
+  
+      <div class="kn-input kn-input-signature control" id="kn-input-field_1445" data-input-id="field_1445">
+  
+        <label for="field_1445" class="label kn-label"><span>Signature</span></label>
+  
+  <div>
+    <input name="key" type="hidden" value="field_1445">
+    <input type="hidden" name="value" class="sig_value_field_1445" value="">
+  
+    <div id="view_3440-field_1445" class="kn-signature"><div style="padding:0 !important; margin:0 !important;width: 100% !important; height: 0 !important; -ms-touch-action: none; touch-action: none;margin-top:-1em !important; margin-bottom:1em !important;"></div><canvas style="margin: 0px; padding: 0px; border: medium none; height: 145px; width: 100%; touch-action: none; background-color: rgb(255, 255, 255);" class="jSignature" width="578" height="145"></canvas><div style="padding:0 !important; margin:0 !important;width: 100% !important; height: 0 !important; -ms-touch-action: none; touch-action: none;margin-top:-1.5em !important; margin-bottom:1.5em !important; position: relative;"><input type="button" value="Undo last stroke" style="position: absolute; display: none; margin: 0px !important; top: auto; left: 235px;"></div></div>
+    <a href="#" class="kn-sig-clear">reset</a>
+  </div>
+        <p class="kn-instructions" style="display: none;"></p>
+    </div> 
+  
+      <div class="kn-input kn-input-number control" id="kn-input-field_1431" data-input-id="field_1431">
+  
+        <label for="field_1431" class="label kn-label"><span>Number</span></label>
+  <div class="control">
+    <input class="input" id="field_1431" name="field_1431" type="text" value="">
+  </div>
+        <p class="kn-instructions" style="display: none;"></p>
+    </div> 
+  
+      <div class="kn-input kn-input-timer control" id="kn-input-field_1438" data-input-id="field_1438">
+  
+        <label for="field_1438" class="label kn-label"><span>Timer</span></label>
+  
+  
+  <div class="level control is-grouped">
+    
+  
+      <p class="control is-expanded">
+        <input id="view_3440-field_1438-date-from" class="input knack-date hasDatepicker" name="date-from" type="text" value="05/04/2021">
+      </p>
+  
+    
+  
+    
+  
+    <p class="control is-expanded control--timer">
+      <input id="view_3440-field_1438-time-from" name="time-from" type="text" class="input kn-time ui-timepicker-input" value="2:06pm" autocomplete="off">
+    </p>
+  
+    <p class="control kn-datetime__to">
+      <span>to</span>
+    </p>
+  
+    
+  
+    <p class="control is-expanded control--timer">
+      <input id="view_3440-field_1438-time-to" name="time-to" type="text" class="input kn-time ui-timepicker-input" value="3:06pm" autocomplete="off">
+    </p>
+  
+    
+  
+      <p class="control is-expanded control--timer">
+        <input id="view_3440-field_1438-date-to" class="input knack-date hasDatepicker" name="date-to" type="text" value="05/04/2021">
+      </p>
+  
+    
+  
+    <input name="key" type="hidden" value="field_1438">
+  </div>
+  
+        <p class="kn-instructions" style="display: none;"></p>
+    </div> 
+  
+      <div class="kn-input kn-input-phone control" id="kn-input-field_1444" data-input-id="field_1444">
+  
+        <label for="field_1444" class="label kn-label"><span>Phone</span></label>
+  
+  
+  <input class="input" id="field_1444" name="field_1444" type="text" value="" placeholder="(___) ___-____" maxlength="14">
+        <p class="kn-instructions" style="display: none;"></p>
+    </div> 
+  </li></ul>
+  
+  
+    <div class="kn-submit">
+  
+  
+  
+      <input name="view_key" type="hidden" value="view_3440">
+      <input name="view_name" type="hidden" value="Add Form View UI Testing - Manuel">
+  
+      <button class="kn-button is-primary" type="submit">
+        Submit
+      </button>
+    </div>
+  </form>
+  
+  </div></div></div><div class="view-group view-group-2"><div class="view-column view-column-group-2"><div class="kn-table kn-view view_3439" id="view_3439">
+    <div class="view-header">
+      
+        <h2 class="kn-title">UI Table View</h2>
+      
+  
+      
+        <p class="kn-description">
+          Nunc sed nulla sit amet nulla hendrerit finibus ac vel lacus. Nunc suscipit, velit et elementum cursus, enim dolor commodo ipsum, mollis finibus sem ante eu mauris. Proin et tincidunt diam. Proin auctor, ante feugiat fringilla mollis, lacus erat pretium lacus, nec dapibus quam dolor molestie erat. Nulla ultricies, nisl in fringilla fermentum, justo diam tempus libero, at scelerisque justo augue quis quam. Aenean eleifend egestas arcu eu tincidunt. Sed magna velit, auctor vitae mauris vitae, tincidunt pellentesque eros.
+        </p>
+      
+    </div>
+  
+  
+  
+  <!-- .kn-table-table is required for column headers -->
+  <div class="kn-records-nav">
+  
+  <div class="js-filter-menu tabs is-toggle is-flush"></div>
+  
+   
+      <div class="level" style="margin-bottom: .75em;">
+          <form class="table-keyword-search">
+            <p class="control has-addons">
+              <input name="keyword" class="input" type="text" placeholder="search by keyword">
+              <a class="kn-button search">
+                search
+              </a>
+              
+            </p>
+          </form>
+      </div>
+    
+  
+  
+  
+    
+      <div class="level" style="margin-bottom: .75em;">
+        <div class="level-left">
+  
+        
+  
+        
+  
+        
+          <div class="kn-filters-nav">
+            <a class="kn-add-filter kn-button is-small" style="margin-right: 10px;">
+              <span class="icon"><i class="fa fa-filter"></i></span>
+              <span>Add filters</span>
+            </a>
+          </div>
+        
+          <div class="kn-filters" id="view_3439_filters" style="display: none;">
+            <ul></ul>
+          </div>
+        </div>
+        <div class="kn-pagination level-right">
+    
+  
+    
+  
+    
+    
+  
+        </div>
+      </div>
+    
+    <div class="kn-filter-rule" style="display: none;">
+      <span class="field">
+        <select class="field" name="field"></select>
+      </span>
+      <span class="operator">
+        <select class="operator" name="operator"></select>
+      </span>
+      <span class="value">
+        <input name="value" type="text">
+      </span>
+      <input class="add" type="button" value="Add">
+      <a class="remove" href="#">cancel</a>
+    </div>
+  </div>
+  <div class="kn-table-wrapper is-constrained" style="height: 220px;">
+    <table class="kn-table kn-table-table is-bordered is-striped">
+      <thead>
+        
+            <tr><th class="field_1427 sorted-asc">
+              <span class="table-fixed-label">
+  
+              
+                <a href="#field_1427|desc" address="true" class="kn-sort level is-compact">
+              
+                <span>Short Text</span>
+                
+                  <span class="icon is-small is-transparent" style="margin-left: 3px;">
+                    <i class="fa fa-sort-amount-asc"></i>
+                  </span>
+                
+              
+                </a>
+              
+              </span>
+            </th>
+  
+        
+            <th class="field_1430">
+              <span class="table-fixed-label">
+  
+              
+                <a href="#field_1430|asc" address="true" class="kn-sort level is-compact">
+              
+                <span>Text Formula</span>
+                
+              
+                </a>
+              
+              </span>
+            </th>
+  
+        
+            <th class="field_1431">
+              <span class="table-fixed-label">
+  
+              
+                <a href="#field_1431|asc" address="true" class="kn-sort level is-compact">
+              
+                <span>Number</span>
+                
+              
+                </a>
+              
+              </span>
+            </th>
+  
+        
+            <th class="field_1432">
+              <span class="table-fixed-label">
+  
+              
+                <a href="#field_1432|asc" address="true" class="kn-sort level is-compact">
+              
+                <span>Currency</span>
+                
+              
+                </a>
+              
+              </span>
+            </th>
+  
+        
+            <th class="kn-table-link">
+              <span class="table-fixed-label">Edit Form View UI Testing - Manuel</span>
+            </th>
+        
+            <th class="kn-table-link">
+              <span class="table-fixed-label">Form View UI Testing - Manuel Details</span>
+            </th>
+        
+            <th class="kn-table-link">
+              <span class="table-fixed-label">Delete</span>
+            </th>
+        
+      </tr></thead>
+      <tbody>
+  <tr id="6090c10e01eb9f001bbd7da7">
+  
+    <td class="field_1427 cell-edit" data-column-index="0" data-field-key="field_1427"><span class="col-0">
+  Duis quis lobortis odio. Etiam rutrum dolor purus, sit amet tincidunt magna aliquet eget
+    </span></td>
+  
+    <td class="field_1430" data-column-index="1" data-field-key="field_1430"><span class="col-1">
+  654875215
+    </span></td>
+  
+    <td class="field_1431 cell-edit" data-column-index="2" data-field-key="field_1431"><span class="col-2">
+  654875215
+    </span></td>
+  
+    <td class="field_1432 cell-edit" data-column-index="3" data-field-key="field_1432"><span class="col-3">
+  &nbsp;
+    </span></td>
+  
+    <td class="kn-table-link" style="text-align: center; "><span class="col-4">
+  <a href="#form-view-ui-testing-manuels/edit-form-view-ui-testing-manuel/6090c10e01eb9f001bbd7da7" class="kn-link kn-link-page" address="true" style="text-align: center; "><span class="level is-compact"><span class="icon is-left"><i class="fa fa-pencil-square-o"></i></span><span>edit</span></span></a>
+    </span></td>
+  
+    <td class="kn-table-link" style="text-align: center; "><span class="col-5">
+  <a href="#form-view-ui-testing-manuels/form-view-ui-testing-manuel-details/6090c10e01eb9f001bbd7da7" class="kn-link kn-link-page" address="true" style="text-align: center; "><span class="level is-compact"><span class="icon is-left"><i class="fa fa-eye"></i></span><span>view</span></span></a>
+    </span></td>
+  
+    <td class="kn-table-link" style="text-align: center; "><span class="col-6">
+  <a class="kn-link-delete" href="#" style="text-align: center; "><span class="level is-compact"><span class="icon is-left"><i class="fa fa-trash"></i></span><span>Delete</span></span></a>
+    </span></td>
+  
+  </tr>
+  
+  <tr id="608b8871334697001cc8c8a7">
+  
+    <td class="field_1427 cell-edit" data-column-index="0" data-field-key="field_1427"><span class="col-0">
+  Short text to be added here
+    </span></td>
+  
+    <td class="field_1430" data-column-index="1" data-field-key="field_1430"><span class="col-1">
+  456875
+    </span></td>
+  
+    <td class="field_1431 cell-edit" data-column-index="2" data-field-key="field_1431"><span class="col-2">
+  456875
+    </span></td>
+  
+    <td class="field_1432 cell-edit" data-column-index="3" data-field-key="field_1432"><span class="col-3">
+  $52.00
+    </span></td>
+  
+    <td class="kn-table-link" style="text-align: center; "><span class="col-4">
+  <a href="#form-view-ui-testing-manuels/edit-form-view-ui-testing-manuel/608b8871334697001cc8c8a7" class="kn-link kn-link-page" address="true" style="text-align: center; "><span class="level is-compact"><span class="icon is-left"><i class="fa fa-pencil-square-o"></i></span><span>edit</span></span></a>
+    </span></td>
+  
+    <td class="kn-table-link" style="text-align: center; "><span class="col-5">
+  <a href="#form-view-ui-testing-manuels/form-view-ui-testing-manuel-details/608b8871334697001cc8c8a7" class="kn-link kn-link-page" address="true" style="text-align: center; "><span class="level is-compact"><span class="icon is-left"><i class="fa fa-eye"></i></span><span>view</span></span></a>
+    </span></td>
+  
+    <td class="kn-table-link" style="text-align: center; "><span class="col-6">
+  <a class="kn-link-delete" href="#" style="text-align: center; "><span class="level is-compact"><span class="icon is-left"><i class="fa fa-trash"></i></span><span>Delete</span></span></a>
+    </span></td>
+  
+  </tr>
+  
+  <tr id="608ff07ba2a22e001b5ca83b">
+  
+    <td class="field_1427 cell-edit" data-column-index="0" data-field-key="field_1427"><span class="col-0">
+  Text testing
+    </span></td>
+  
+    <td class="field_1430" data-column-index="1" data-field-key="field_1430"><span class="col-1">
+  &nbsp;
+    </span></td>
+  
+    <td class="field_1431 cell-edit" data-column-index="2" data-field-key="field_1431"><span class="col-2">
+  &nbsp;
+    </span></td>
+  
+    <td class="field_1432 cell-edit" data-column-index="3" data-field-key="field_1432"><span class="col-3">
+  &nbsp;
+    </span></td>
+  
+    <td class="kn-table-link" style="text-align: center; "><span class="col-4">
+  <a href="#form-view-ui-testing-manuels/edit-form-view-ui-testing-manuel/608ff07ba2a22e001b5ca83b" class="kn-link kn-link-page" address="true" style="text-align: center; "><span class="level is-compact"><span class="icon is-left"><i class="fa fa-pencil-square-o"></i></span><span>edit</span></span></a>
+    </span></td>
+  
+    <td class="kn-table-link" style="text-align: center; "><span class="col-5">
+  <a href="#form-view-ui-testing-manuels/form-view-ui-testing-manuel-details/608ff07ba2a22e001b5ca83b" class="kn-link kn-link-page" address="true" style="text-align: center; "><span class="level is-compact"><span class="icon is-left"><i class="fa fa-eye"></i></span><span>view</span></span></a>
+    </span></td>
+  
+    <td class="kn-table-link" style="text-align: center; "><span class="col-6">
+  <a class="kn-link-delete" href="#" style="text-align: center; "><span class="level is-compact"><span class="icon is-left"><i class="fa fa-trash"></i></span><span>Delete</span></span></a>
+    </span></td>
+  
+  </tr>
+  
+  
+  </tbody>
+    </table>
+  </div><div class="kn-records-nav below">
+  
+  <div class="js-filter-menu tabs is-toggle is-flush"></div>
+  
+   
+      
+    
+  
+  
+  
+    
+      <div class="level" style="margin-bottom: .75em;">
+        <div class="level-left"></div>
+        <div class="kn-pagination level-right">
+    
+  
+    
+  
+    
+    
+  
+        </div>
+      </div>
+    
+    <div class="kn-filter-rule" style="display: none;">
+      <span class="field">
+        <select class="field" name="field"></select>
+      </span>
+      <span class="operator">
+        <select class="operator" name="operator"></select>
+      </span>
+      <span class="value">
+        <input name="value" type="text">
+      </span>
+      <input class="add" type="button" value="Add">
+      <a class="remove" href="#">cancel</a>
+    </div>
+  </div>
+  </div><div class="kn-list kn-view view_3443" id="view_3443">
+    <div class="view-header">
+      
+        <h2 class="kn-title">List View</h2>
+      
+  
+      
+    </div>
+  
+  
+  
+  <div class="kn-records-nav">
+  
+  <div class="js-filter-menu tabs is-toggle is-flush"><ul><li class="is-active"><a><span>Sarasota</span></a></li><li><a><span>Minesota</span></a></li><li><a><span>Virginia</span></a></li></ul></div>
+  
+   
+      <div class="level" style="margin-bottom: .75em;">
+          <form class="table-keyword-search">
+            <p class="control has-addons">
+              <input name="keyword" class="input" type="text" placeholder="search by keyword">
+              <a class="kn-button search">
+                search
+              </a>
+              
+            </p>
+          </form>
+      </div>
+    
+  
+  
+  
+    
+      <div class="level" style="margin-bottom: .75em;">
+        <div class="level-left">
+  
+        
+  
+        
+  
+        
+          <div class="kn-filters" id="view_3443_filters" style="display: none;">
+            <ul></ul>
+          </div>
+        </div>
+        <div class="kn-pagination level-right">
+    
+          <div class="kn-select" style="margin-right: 5px;">
+            <select name="limit">
+              <option value="10" selected="">10 per page</option>
+              <option value="25">25 per page</option>
+              <option value="50">50 per page</option>
+              <option value="100">100 per page</option>
+              <option value="500">500 per page</option>
+              <option value="1000">1000 per page</option>
+              <!--<option value="all">Show All</option>-->
+            </select>
+          </div>
+    
+  
+    
+  
+    
+    
+  
+        </div>
+      </div>
+    
+    <div class="kn-filter-rule" style="display: none;">
+      <span class="field">
+        <select class="field" name="field"></select>
+      </span>
+      <span class="operator">
+        <select class="operator" name="operator"></select>
+      </span>
+      <span class="value">
+        <input name="value" type="text">
+      </span>
+      <input class="add" type="button" value="Add">
+      <a class="remove" href="#">cancel</a>
+    </div>
+  </div>
+  <div class="kn-list-content columns is-multiline">
+    
+  
+    
+  
+    
+      <div class="kn-list-item-container kn-list-container column is-half" id="6090c10e01eb9f001bbd7da7">
+        
+  
+  
+  
+  <section class="columns">
+    
+  
+    
+  
+      <div class="kn-details-column first column is-horizontal " style="flex-basis: 100%">
+  
+      
+  
+        
+  
+          <div class="kn-details-group column-1 columns">
+  
+          
+  
+          
+  
+          
+  
+          
+  
+          
+  
+          
+  
+          
+  
+          
+  
+          
+  
+            <div class="kn-details-group-column column">
+              <div class="kn-label-left kn-table is-unbordered">
+  
+                
+  
+                
+  
+                  
+                    <div class="kn-detail field_1427">
+                      <div class="kn-detail-label" style="min-width: 101px; max-width: 101px;"><span><span class="">Short Text</span></span></div>
+                      <div class="kn-detail-body"><span><span class="">Duis quis lobortis odio. Etiam rutrum dolor purus, sit amet tincidunt magna aliquet eget</span></span></div>
+                    </div>
+                  
+                
+              
+              
+  
+                
+  
+                  
+                    <div class="kn-detail field_1428">
+                      <div class="kn-detail-label" style="min-width: 101px; max-width: 101px;"><span><span class="">Paragraph Text</span></span></div>
+                      <div class="kn-detail-body"><span><span class="">Mauris non accumsan turpis. Cras vulputate mi at varius tristique. Nunc porttitor ipsum in magna efficitur viverra. Maecenas a arcu venenatis, lobortis ligula quis, sagittis tellus. In condimentum bibendum dolor, eu bibendum metus suscipit non. Nulla maximus mattis mi eu scelerisque. Nunc finibus laoreet dui. Nam et sem vehicula orci efficitur vestibulum. Cras in tellus at neque lacinia sagittis. Phasellus metus massa, dapibus varius odio tincidunt, eleifend lobortis tellus. Donec elementum ipsum velit, id tincidunt est consectetur id. Donec metus quam, mattis quis pretium et, semper vel lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris vitae bibendum lacus, sed vehicula elit. Donec vitae risus volutpat enim suscipit malesuada.</span></span></div>
+                    </div>
+                  
+                
+              
+              
+  
+                
+  
+                  
+                    <div class="kn-detail field_1429">
+                      <div class="kn-detail-label" style="min-width: 101px; max-width: 101px;"><span><span class="">Rich Text</span></span></div>
+                      <div class="kn-detail-body"><span><span class=""><p>Ut sodales turpis eget est porttitor porta vel a risus. Vestibulum 
+  tristique aliquet varius. Cras in erat nec nisl pellentesque ornare. 
+  Etiam non eros tempor, tempor ligula vel, rhoncus turpis. Donec diam 
+  velit, imperdiet vestibulum lacus tempor, tempus bibendum enim. 
+  Vestibulum lorem sem, auctor vel blandit eget, eleifend eget massa. Duis
+   consequat mollis diam maximus eleifend. Vestibulum congue lorem a mi 
+  imperdiet vulputate. Vivamus ullamcorper placerat aliquam. Quisque non 
+  efficitur erat.
+  </p></span></span></div>
+                    </div>
+                  
+                
+              
+              
+  
+                
+  
+                  
+                    <div class="kn-detail field_1430">
+                      <div class="kn-detail-label" style="min-width: 101px; max-width: 101px;"><span><span class="">Text Formula</span></span></div>
+                      <div class="kn-detail-body"><span><span class="">654875215</span></span></div>
+                    </div>
+                  
+                
+              
+              
+  
+                
+  
+                  
+                    <div class="kn-detail field_1431">
+                      <div class="kn-detail-label" style="min-width: 101px; max-width: 101px;"><span><span class="">Number</span></span></div>
+                      <div class="kn-detail-body"><span><span class="">654875215</span></span></div>
+                    </div>
+                  
+                
+              
+              
+  
+                
+  
+                
+  
+                
+  
+                  
+  
+                  
+                    <div class="kn-details-link">
+                      <div class="kn-detail-body" colspan="2" style="padding-left: 0px;">
+                        <span style="padding-left: 0px;"><a class="kn-link-page" href="#form-view-ui-testing-manuels/form-view-ui-testing-manuel-details2/6090c10e01eb9f001bbd7da7"><span class="">view</span></a></span>
+                      </div>
+                    </div>
+                  
+                
+              
+              
+              </div>
+          </div>
+    
+    </div>
+  
+    
+    
+       </div>
+    
+  
+  </section>
+  
+      </div>
+    
+      <div class="kn-list-item-container kn-list-container column is-half" id="608b8871334697001cc8c8a7">
+        
+  
+  
+  
+  <section class="columns">
+    
+  
+    
+  
+      <div class="kn-details-column first column is-horizontal " style="flex-basis: 100%">
+  
+      
+  
+        
+  
+          <div class="kn-details-group column-1 columns">
+  
+          
+  
+          
+  
+          
+  
+          
+  
+          
+  
+          
+  
+          
+  
+          
+  
+          
+  
+            <div class="kn-details-group-column column">
+              <div class="kn-label-left kn-table is-unbordered">
+  
+                
+  
+                
+  
+                  
+                    <div class="kn-detail field_1427">
+                      <div class="kn-detail-label" style="min-width: 101px; max-width: 101px;"><span><span class="">Short Text</span></span></div>
+                      <div class="kn-detail-body"><span><span class="">Short text to be added here</span></span></div>
+                    </div>
+                  
+                
+              
+              
+  
+                
+  
+                  
+                    <div class="kn-detail field_1428">
+                      <div class="kn-detail-label" style="min-width: 101px; max-width: 101px;"><span><span class="">Paragraph Text</span></span></div>
+                      <div class="kn-detail-body"><span><span class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut ullamcorper sapien. Nulla diam ante, finibus vel semper vitae, aliquet vel velit. Suspendisse malesuada in diam sit amet scelerisque. Praesent interdum tellus vitae arcu sollicitudin ullamcorper. Vivamus purus elit, aliquam eget venenatis ac, tempus vitae tortor. Mauris dignissim ante augue, sed tempus arcu scelerisque nec. Phasellus maximus libero et dolor viverra sollicitudin. Sed maximus erat vitae sem cursus suscipit. Duis eu elit non elit sollicitudin ornare malesuada et velit. Nulla dignissim id leo eget imperdiet. Nam ligula massa, faucibus sit amet lacus vitae, blandit consectetur elit. Integer eu auctor nunc, sed pretium risus. Mauris a urna nec lacus feugiat mattis. Quisque sagittis aliquam magna, ut rhoncus risus viverra ac. </span></span></div>
+                    </div>
+                  
+                
+              
+              
+  
+                
+  
+                  
+                    <div class="kn-detail field_1429">
+                      <div class="kn-detail-label" style="min-width: 101px; max-width: 101px;"><span><span class="">Rich Text</span></span></div>
+                      <div class="kn-detail-body"><span><span class=""><p>Nunc sed nulla sit amet nulla hendrerit finibus ac vel lacus. Nunc 
+  suscipit, velit et elementum cursus, enim dolor commodo ipsum, mollis 
+  finibus sem ante eu mauris. Proin et tincidunt diam. Proin auctor, ante 
+  feugiat fringilla mollis, lacus erat pretium lacus, nec dapibus quam 
+  dolor molestie erat. Nulla ultricies, nisl in fringilla fermentum, justo
+   diam tempus libero, at scelerisque justo augue quis quam. Aenean 
+  eleifend egestas arcu eu tincidunt. Sed magna velit, auctor vitae mauris
+   vitae, tincidunt pellentesque eros.
+  </p></span></span></div>
+                    </div>
+                  
+                
+              
+              
+  
+                
+  
+                  
+                    <div class="kn-detail field_1430">
+                      <div class="kn-detail-label" style="min-width: 101px; max-width: 101px;"><span><span class="">Text Formula</span></span></div>
+                      <div class="kn-detail-body"><span><span class="">456875</span></span></div>
+                    </div>
+                  
+                
+              
+              
+  
+                
+  
+                  
+                    <div class="kn-detail field_1431">
+                      <div class="kn-detail-label" style="min-width: 101px; max-width: 101px;"><span><span class="">Number</span></span></div>
+                      <div class="kn-detail-body"><span><span class="">456875</span></span></div>
+                    </div>
+                  
+                
+              
+              
+  
+                
+  
+                  
+                    <div class="kn-detail field_1432">
+                      <div class="kn-detail-label" style="min-width: 101px; max-width: 101px;"><span><span class="">Currency</span></span></div>
+                      <div class="kn-detail-body"><span><span class="">$52.00</span></span></div>
+                    </div>
+                  
+                
+              
+              
+  
+                
+  
+                
+  
+                  
+  
+                  
+                    <div class="kn-details-link">
+                      <div class="kn-detail-body" colspan="2" style="padding-left: 0px;">
+                        <span style="padding-left: 0px;"><a class="kn-link-page" href="#form-view-ui-testing-manuels/form-view-ui-testing-manuel-details2/608b8871334697001cc8c8a7"><span class="">view</span></a></span>
+                      </div>
+                    </div>
+                  
+                
+              
+              
+              </div>
+          </div>
+    
+    </div>
+  
+    
+    
+       </div>
+    
+  
+  </section>
+  
+      </div>
+    
+      <div class="kn-list-item-container kn-list-container column is-half" id="608ff07ba2a22e001b5ca83b">
+        
+  
+  
+  
+  <section class="columns">
+    
+  
+    
+  
+      <div class="kn-details-column first column is-horizontal " style="flex-basis: 100%">
+  
+      
+  
+        
+  
+          <div class="kn-details-group column-1 columns">
+  
+          
+  
+          
+  
+          
+  
+          
+  
+          
+  
+          
+  
+          
+  
+          
+  
+          
+  
+            <div class="kn-details-group-column column">
+              <div class="kn-label-left kn-table is-unbordered">
+  
+                
+  
+                
+  
+                  
+                    <div class="kn-detail field_1427">
+                      <div class="kn-detail-label" style="min-width: 117px; max-width: 117px;"><span><span class="">Short Text</span></span></div>
+                      <div class="kn-detail-body"><span><span class="">Text testing</span></span></div>
+                    </div>
+                  
+                
+              
+              
+  
+                
+  
+                  
+                    <div class="kn-detail field_1428">
+                      <div class="kn-detail-label" style="min-width: 117px; max-width: 117px;"><span><span class="">Paragraph Text</span></span></div>
+                      <div class="kn-detail-body"><span><span class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu erat a purus ullamcorper tincidunt. Nunc pretium eros et tortor ultrices tincidunt. Nullam volutpat interdum purus vel luctus. Fusce luctus, est sed fermentum ullamcorper, augue libero vulputate eros, quis vestibulum turpis urna eu ante. Nam vel turpis est. Sed dapibus sollicitudin tincidunt. Aenean auctor quam ullamcorper, vulputate orci iaculis, ultricies ipsum. </span></span></div>
+                    </div>
+                  
+                
+              
+              
+  
+                
+  
+                  
+                    <div class="kn-detail field_1429">
+                      <div class="kn-detail-label" style="min-width: 117px; max-width: 117px;"><span><span class="">Rich Text</span></span></div>
+                      <div class="kn-detail-body"><span><span class=""><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu erat a
+   purus ullamcorper tincidunt. Nunc pretium eros et tortor ultrices 
+  tincidunt. Nullam volutpat interdum purus vel luctus. Fusce luctus, est 
+  sed fermentum ullamcorper, augue libero vulputate eros, quis vestibulum 
+  turpis urna eu ante. Nam vel turpis est. Sed dapibus sollicitudin 
+  tincidunt. Aenean auctor quam ullamcorper, vulputate orci iaculis, 
+  ultricies ipsum. </p></span></span></div>
+                    </div>
+                  
+                
+              
+              
+  
+                
+  
+                
+  
+                
+  
+                
+  
+                
+  
+                  
+  
+                  
+                    <div class="kn-details-link">
+                      <div class="kn-detail-body" colspan="2" style="padding-left: 0px;">
+                        <span style="padding-left: 0px;"><a class="kn-link-page" href="#form-view-ui-testing-manuels/form-view-ui-testing-manuel-details2/608ff07ba2a22e001b5ca83b"><span class="">view</span></a></span>
+                      </div>
+                    </div>
+                  
+                
+              
+              
+              </div>
+          </div>
+    
+    </div>
+  
+    
+    
+       </div>
+    
+  
+  </section>
+  
+      </div>
+    
+  
+  </div></div></div></div></div>
+  </div>
+  
+  <div id="kn-popover"></div>
+  <div id="kn-overlay" class="overlay"></div>
+  <section id="kn-mobile-menu" style="display: none;"><ul id="app-menu-list-mobile" class="kn-menu-list">
+  
+      
+  
+     
+      
+  
+     
+      
+  
+     
+      
+  
+     
+      
+  
+     
+            <li class="minimizedMenu"><a href="#standup-ver-2s" data-kn-slug="#standup-ver-2s"><span class="hideText">Standup Ver. 2s<i class="fa fa-question-circle removeIcon hiddenTextWithIcon" title="Standup Ver. 2s" style="font-size: x-large;"></i></span></a></li>
+            
+            <li class="is-active"><a href="#form-view-ui-testing-manuels" data-kn-slug="#form-view-ui-testing-manuels"><span class="hideText"><i class="fa fa-coffee hiddenTextWithIcon" style="font-size: x-large;"></i>&nbsp;&nbsp;Form View UI Testing - Manuels</span></a></li>
+            
+      </ul></section>
+  </div><div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><iframe name="easyXDM_default6729_provider" id="easyXDM_default6729_provider" style="position: absolute; top: -2000px; visibility: hidden; left: 0px;" src="https://us-east-1-renderer-read.knack.com/api/xdc.html?xdm_e=https%3A%2F%2Fchhj.knack.com&amp;xdm_c=default6729&amp;xdm_p=1" frameborder="0"></iframe><iframe name="easyXDM_default6730_provider" id="easyXDM_default6730_provider" style="position: absolute; top: -2000px; visibility: hidden; left: 0px;" src="https://us-east-1-renderer-write.knack.com/api/xdc.html?xdm_e=https%3A%2F%2Fchhj.knack.com&amp;xdm_c=default6730&amp;xdm_p=1" frameborder="0"></iframe><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all prevent-close" style="position: absolute; top: 2308.17px; left: 774px; z-index: 1; display: none;"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">May</span>&nbsp;<span class="ui-datepicker-year">2021</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th class="ui-datepicker-week-end"><span title="Sunday">Su</span></th><th><span title="Monday">Mo</span></th><th><span title="Tuesday">Tu</span></th><th><span title="Wednesday">We</span></th><th><span title="Thursday">Th</span></th><th><span title="Friday">Fr</span></th><th class="ui-datepicker-week-end"><span title="Saturday">Sa</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">1</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">2</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">3</a></td><td class=" ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default ui-state-highlight ui-state-active ui-state-hover" href="#">4</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">5</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">6</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">7</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">8</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">9</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">10</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">11</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">12</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">13</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">14</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">15</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">16</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">17</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">18</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">19</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">20</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">21</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">22</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">23</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">24</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">25</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">26</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">27</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">28</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">29</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">30</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="4" data-year="2021"><a class="ui-state-default" href="#">31</a></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div><span class="redactor-toolbar-tooltip redactor-toolbar-tooltip-html" style="display: none;">HTML</span><span class="redactor-toolbar-tooltip redactor-toolbar-tooltip-formatting" style="display: none;">Formatting</span><span class="redactor-toolbar-tooltip redactor-toolbar-tooltip-bold" style="display: none;">Bold</span><span class="redactor-toolbar-tooltip redactor-toolbar-tooltip-italic" style="display: none;">Italic</span><span class="redactor-toolbar-tooltip redactor-toolbar-tooltip-deleted" style="display: none;">Deleted</span><span class="redactor-toolbar-tooltip redactor-toolbar-tooltip-link" style="display: none;">Link</span><span class="redactor-toolbar-tooltip redactor-toolbar-tooltip-unorderedlist" style="display: none;">• Unordered List</span><span class="redactor-toolbar-tooltip redactor-toolbar-tooltip-orderedlist" style="display: none;">1. Ordered List</span><span class="redactor-toolbar-tooltip redactor-toolbar-tooltip-outdent" style="display: none;">&lt; Outdent</span><span class="redactor-toolbar-tooltip redactor-toolbar-tooltip-indent" style="display: none;">&gt; Indent</span><span class="redactor-toolbar-tooltip redactor-toolbar-tooltip-alignment" style="display: none;">Alignment</span><span class="redactor-toolbar-tooltip redactor-toolbar-tooltip-horizontalrule" style="display: none;">Insert Horizontal Rule</span><span class="redactor-toolbar-tooltip redactor-toolbar-tooltip-fontcolor" style="display: none;">Font Color</span><span class="redactor-toolbar-tooltip redactor-toolbar-tooltip-backcolor" style="display: none;">Back Color</span><span class="redactor-toolbar-tooltip redactor-toolbar-tooltip-image_web_link" style="display: none;">Image</span><span class="redactor-toolbar-tooltip redactor-toolbar-tooltip-video" style="display: none;">Insert Video</span><span class="redactor-toolbar-tooltip redactor-toolbar-tooltip-table" style="display: none;">Table</span><div class="ui-timepicker-wrapper" tabindex="-1" style="position: absolute; top: 2308.17px; left: 930.317px; display: none;"><ul class="ui-timepicker-list"><li class="ui-timepicker-am ui-timepicker-selected">12:00am</li><li class="ui-timepicker-am">12:30am</li><li class="ui-timepicker-am">1:00am</li><li class="ui-timepicker-am">1:30am</li><li class="ui-timepicker-am">2:00am</li><li class="ui-timepicker-am">2:30am</li><li class="ui-timepicker-am">3:00am</li><li class="ui-timepicker-am">3:30am</li><li class="ui-timepicker-am">4:00am</li><li class="ui-timepicker-am">4:30am</li><li class="ui-timepicker-am">5:00am</li><li class="ui-timepicker-am">5:30am</li><li class="ui-timepicker-am">6:00am</li><li class="ui-timepicker-am">6:30am</li><li class="ui-timepicker-am">7:00am</li><li class="ui-timepicker-am">7:30am</li><li class="ui-timepicker-am">8:00am</li><li class="ui-timepicker-am">8:30am</li><li class="ui-timepicker-am">9:00am</li><li class="ui-timepicker-am">9:30am</li><li class="ui-timepicker-am">10:00am</li><li class="ui-timepicker-am">10:30am</li><li class="ui-timepicker-am">11:00am</li><li class="ui-timepicker-am">11:30am</li><li class="ui-timepicker-pm">12:00pm</li><li class="ui-timepicker-pm">12:30pm</li><li class="ui-timepicker-pm">1:00pm</li><li class="ui-timepicker-pm">1:30pm</li><li class="ui-timepicker-pm">2:00pm</li><li class="ui-timepicker-pm">2:30pm</li><li class="ui-timepicker-pm">3:00pm</li><li class="ui-timepicker-pm">3:30pm</li><li class="ui-timepicker-pm">4:00pm</li><li class="ui-timepicker-pm">4:30pm</li><li class="ui-timepicker-pm">5:00pm</li><li class="ui-timepicker-pm">5:30pm</li><li class="ui-timepicker-pm">6:00pm</li><li class="ui-timepicker-pm">6:30pm</li><li class="ui-timepicker-pm">7:00pm</li><li class="ui-timepicker-pm">7:30pm</li><li class="ui-timepicker-pm">8:00pm</li><li class="ui-timepicker-pm">8:30pm</li><li class="ui-timepicker-pm">9:00pm</li><li class="ui-timepicker-pm">9:30pm</li><li class="ui-timepicker-pm">10:00pm</li><li class="ui-timepicker-pm">10:30pm</li><li class="ui-timepicker-pm">11:00pm</li><li class="ui-timepicker-pm">11:30pm</li></ul></div><gr-manager></gr-manager><gr-checker></gr-checker><!----></body></html>
