@@ -17,15 +17,21 @@ h1, h2, h3, h4, h5{
 }
 
 body, p, a{
-    font-family: 'Source Sans Pro', 'Open Sans', sans-serif;
+    font-family: 'Open Sans','Source Sans Pro' , sans-serif;
     line-height: 1.5;
     margin: 0px;
     padding: 0px;
 }
 #knack-body{
     background: $MainB;
-    header#kn-app-header{
-        background:  $MainB;
+    header{
+        h1 .kn-title{
+            color: $primary;
+        }
+        &#kn-app-header{
+            background:  $MainB;
+            color: $primary;
+        }
     }
     .kn-scenes.kn-section {
         .kn-scene.kn-container{
@@ -34,8 +40,11 @@ body, p, a{
     }
 }
 
-/*============================================================================*/
-/* Knack Data View Types */
+/*=========================*/
+/*=========================*/
+/* KNACK RECORD VIEWS */
+/*=========================*/
+/*=========================*/
 
 /*============================================================================*/
 /*Form View */
@@ -122,7 +131,10 @@ body, p, a{
         .kn-input-file,
         .kn-input-image{
             input{
-                color: $primary;
+                @include form_ui();
+            }
+            .input.is-file{
+                @include file_ui();
             }
         }
         .kn-input-address{
@@ -141,9 +153,9 @@ body, p, a{
                 &:after{
                     color: $primary;
                 }
-                .chzn-container{/* Dropdown - Multiple Selections */
+                .chzn-container{
                     &.chzn-container-multi{
-                        .chzn-choices{
+                        .chzn-choices{/* Dropdown - Multiple Selections */
                             @include form_ui();
                             .default{
                                 background:none;
@@ -186,6 +198,81 @@ body, p, a{
                                 color: $secondary;
                             }
                         }
+                    }
+                }
+            }
+            .kn-checkbox{/* Check Boxes */
+                .option.checkbox{
+                    font-weight: bold;
+                    &:hover{
+                        color: $secondary;
+                    }
+                }
+            }
+            .kn-radio{/* Radio Buttons */
+                .control{
+                    font-weight: bold;
+                    &:hover{
+                        color: $secondary;
+                    }
+                }
+            }
+        }
+        .kn-input-connection{// Connection - Layouts
+            .chzn-container{
+                &.chzn-container-multi,
+                &.chzn-container-single{
+                    .chzn-choices,
+                    .chzn-single{/* Dropdown - Multiple Selections */
+                        @include form_ui();
+                        .default{
+                            background:none;
+                        }
+                        .search-field{
+                            input{
+                                background:none;
+                            }
+                        }
+                        .search-choice {
+                            background: $primary;
+                            color:white;
+                        }
+                    }
+                    .chzn-drop{
+                        padding: 15px 5px;
+                        .chzn-results{
+                            .active-result{
+                                border-radius: 25px;
+                                color: $primary;
+                                font-weight: bold;
+                                padding: 10px 10px;
+                                transition: all .1s linear;
+                                &:hover{
+                                    background: $primary;
+                                    color: white;
+                                }
+                            }
+                            .highlighted{
+                                background:none;
+                                &:hover{
+                                    background: $primary;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                    .search-choice-close{
+                        &:after{
+                            color: $secondary;
+                        }
+                    }
+                    &:after{
+                        border:2px solid $secondary;
+                        border-right: 0;
+                        border-top: 0;
+                    }
+                    &:hover:after {
+                        border-color: $primary;
                     }
                 }
             }
@@ -308,6 +395,7 @@ body, p, a{
 /*============================================================================*/
 /*Details View */
 .kn-details{
+    @include shadows();
     background: white;
     border-radius:15px;
     padding: 1rem;
@@ -323,8 +411,9 @@ body, p, a{
     }
     .kn-detail-body{
         a{
-            font-weight: bold;
             border-bottom: 2px solid;
+            color: $primary;
+            font-weight: bold;
             padding-bottom: 1px;
             text-decoration: none;
             transition: all .1s linear;
@@ -358,6 +447,7 @@ body, p, a{
     }
     .kn-records-nav{
         .js-filter-menu.tabs.is-toggle.is-flush ul li a{ /* Filter Tabs */
+            background: white;
             border-radius: 5px;
             box-shadow: none;
             margin: auto 2px;
@@ -440,11 +530,15 @@ body, p, a{
             }
         }
     }
-    .kn-table-wrapper.is-constrained{
-        .kn-table.kn-table-table.is-bordered.is-striped{
+    .kn-table-wrapper{
+        .kn-table.kn-table-table.can-overflow-x,
+        .kn-table.kn-table-table.is-bordered.is-striped,
+        .kn-table.kn-table-table.is-striped.can-overflow-x,
+        .kn-table.kn-table-table.is-bordered.can-overflow-x,
+        .kn-table.kn-table-table.is-bordered.is-striped.cell-editable,
+        .kn-table.kn-table-table.is-bordered.is-striped.can-overflow-x{
             thead > tr,
-            thead > tr > th,
-            tbody > tr > td{
+            thead > tr > th{
             background: none;
             border:none;
             line-height: 1;
@@ -456,22 +550,36 @@ body, p, a{
                 position: relative;
                 z-index: 1;
             }
-            .kn-sort.level.is-compact{
+            .kn-sort{
+                color: $primary;
                 transition: all .1s linear;
                 &:hover{
                 color: $secondary;
                 }
+            }
+            tbody > tr > td{
+                background: none;
+                border:none;
+                line-height: 1;
+                padding:.5rem 1rem;
+                vertical-align: middle;
             }
             tbody > tr{
                 transition: all .1s linear;
                 vertical-align: middle;
                 &:hover{
                     background: $prima1;
-                    // border-bottom: 1px solid $primary;
-                    // box-shadow: 0 -1px $primary;
                 }
+                &:nth-child(2n){
+                    background: none;
+                    &:hover{
+                        background: $prima1;
+                    }
+                }
+                td,
                 .kn-table-link{
                     a{
+                        color: $primary;
                         display: flex;
                         font-weight:bold;
                         text-decoration: none;
@@ -481,8 +589,21 @@ body, p, a{
                             color: $secondary;
                         }
                     }
+                    .table-fixed-label{
+                        color: $secondary;
+                    }
+                }
+                td.kn-td-nodata{
+                    text-align: center;
+                    font-weight: bold;
                 }
             }
+        }
+    }
+    img{
+        max-width: 100%;
+        @include media ('>tablet') {
+            max-width: 25%;
         }
     }
     .kn-button{
@@ -495,8 +616,9 @@ body, p, a{
         }
     }
 }
+
 /*============================================================================*/
-/*List View*/
+/* List View */
 .kn-list{
     background: none;
     margin:auto 0;
@@ -508,6 +630,7 @@ body, p, a{
     }  
     .kn-records-nav{
         .js-filter-menu.tabs.is-toggle.is-flush ul li a{ /* Filter Tabs */
+            background: white;
             border-radius: 5px;
             box-shadow: none;
             margin: auto 2px;
@@ -611,11 +734,8 @@ body, p, a{
         .kn-details-link{
             text-align: center;
             a{
-                border:2px solid;
-                border-radius:15px;
+                color: $primary;
                 font-weight:bold;
-                margin: auto 5px;
-                padding:2px 10px;
                 text-transform: uppercase;
                 transition: all .1s linear;
                 &:hover{
@@ -633,31 +753,351 @@ body, p, a{
 }
 
 /*============================================================================*/
-/*Search View*/
-.kn-search{
-    background: unset;
+/*Map View*/
+.kn-map{
+    .view-header{
+        h2{
+            color: $primary;
+        }
+    }
+    .kn-map-search{
+        .kn-label{
+            color: $primary;
+            font-weight:bold;
+        }
+        .kn-map-fields{
+            input{
+                @include form_ui();
+            }
+            .kn-select.kn-map-dropdown{
+                select{
+                    @include form_ui();
+                    option{
+                        color: $primary;
+                    }
+                }
+                &:after{
+                    color: $primary;
+                }
+            }
+        }
+        .kn-map-submit{
+            background: $primary;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all .1s linear;
+            &:hover{
+                box-shadow: 5px 5px $secondary;
+            }
+        }
+    }
+    .kn-map-dropdown{
+        width: 200px;
+    }
+    .fail-alert{
+        font-weight: bold;
+    }
+    .kn-pagination{
+        .kn-select{
+            select{
+                @include form_ui();
+                option{
+                    color: $primary;
+                }
+            }
+        }
+    }
+    .kn-view.kn-map-results{
+        .kn-records-nav{
+            margin: 5px auto;
+            .js-filter-menu.tabs.is-toggle.is-flush ul li a{ /* Filter Tabs */
+                background: white;
+                border-radius: 5px;
+                box-shadow: none;
+                margin: auto 2px;
+                &:hover{
+                    background: $primary;
+                    border-color: $primary;
+                    color: white;
+                }
+            }
+            .js-filter-menu.tabs.is-toggle.is-flush ul li.is-active a{
+                background: $secondary;
+                border-color: $secondary;
+                color: white;
+            }
+            .kn-filters-nav{
+                .kn-add-filter.kn-button.is-small{
+                    background: $primary;
+                    border-color: $primary;
+                    color: white;
+                    &:hover{
+                        @include btnshadow();
+                    }
+                }
+            }
+            .kn-filters{
+                ul li {
+                    background: none;
+                    border:2px dashed $primary;
+                    color: $primary;
+                    .remove.delete.is-small{
+                        background: $secondary;
+                        &:hover{
+                            background: $primary;
+                        }
+                    }
+                }
+            }
+            .table-keyword-search{/* Search Input */
+                .input{
+                    background:none;
+                    border-color: transparent;
+                    border-radius: 5px;
+                    box-shadow: none;
+                    color:$primary;
+                    font-weight: bold;
+                    outline:none;
+                    &::placeholder{
+                        font-weight: lighter;
+                    }
+                    &:hover,
+                    &:active,
+                    &:focus{
+                        border-color: $primary;
+                        box-shadow: none;
+                        color:$primary;
+                    }
+                }
+                .kn-button.search{
+                    background: none;
+                    border-color: $primary;
+                    border-radius: 5px;
+                    color:$primary;
+                    &:hover,
+                    &:active,
+                    &:focus{
+                        background: $primary;
+                        border-color: $primary;
+                        color:white;
+                    }
+                }
+            }
+        }
+        .kn-google-map{
+            .H_btn{
+                background: $primary;
+                &:hover{
+                    background: $secondary;
+                }
+            }
+            .H_ui{
+                .H_ib{
+                    .H_ib_body{
+                        box-shadow: 5px 5px $primary;
+                        h3{
+                            color: $primary;
+                        }
+                        a{
+                            border:2px solid;
+                            border-radius: 15px;
+                            color: $primary;
+                            padding: 2px 5px;
+                            text-decoration: none;
+                            &:hover{
+                                background: $primary;
+                                border-color: $primary;
+                                color: white;
+                            }
+                        }
+                        .H_ib_close svg.H_icon{
+                            background: $secondary;
+                            fill: white;
+                            position: absolute;
+                            right: 5px;
+                            top: 5px;
+                            transition: all .1s linear;
+                            &:hover{
+                                background: $primary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .kn-map-list{
+        .kn-list-container{
+            border-bottom:none;
+            transition: all .1s linear;
+            &:hover{
+                background: $prima1;
+            }
+            &.active{
+                background: $prima1;
+                border-left: 3px solid $secondary;
+            }
+        }
+    }
+    .kn-geo-distance{
+        color: $primary;
+        font-weight: bold;
+        top: 0;
+    }
+}
+
+/*============================================================================*/
+/*Calendar View*/
+.kn-calendar{
+    .view-header{
+        h2{
+            color: $primary;
+        }
+    }
+    .kn-records-nav{
+        .js-filter-menu.tabs.is-toggle.is-flush ul li a{ /* Filter Tabs */
+            background: white;
+            border-radius: 5px;
+            box-shadow: none;
+            margin: auto 2px;
+            &:hover{
+                background: $primary;
+                border-color: $primary;
+                color: white;
+            }
+        }
+        .js-filter-menu.tabs.is-toggle.is-flush ul li.is-active a{
+            background: $secondary;
+            border-color: $secondary;
+            color: white;
+        }
+        .kn-filters-nav{
+            .kn-add-filter.kn-button.is-small{
+                background: $primary;
+                border-color: $primary;
+                color: white;
+                &:hover{
+                    @include btnshadow();
+                }
+            }
+        }
+        .kn-filters{
+            ul li {
+                background: none;
+                border:2px dashed $primary;
+                color: $primary;
+                .remove.delete.is-small{
+                    background: $secondary;
+                    &:hover{
+                        background: $primary;
+                    }
+                }
+            }
+        }
+        .table-keyword-search{/* Search Input */
+            input{
+                @include form_ui();
+                &::placeholder{
+                    font-weight: lighter;
+                }
+            }
+            .kn-button.search{
+                background: none;
+                border-color: $primary;
+                border-radius: 5px;
+                color:$primary;
+                &:hover,
+                &:active,
+                &:focus{
+                    background: $primary;
+                    border-color: $primary;
+                    color:white;
+                }
+            }
+        }
+        .kn-pagination{
+            .kn-select{
+                select{/* Dropdown - One Selection */
+                    @include form_ui();
+                    option{
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+    .knack-calendar{
+        .fc{
+            table{
+                color: $primary;
+            }
+        }
+    } 
 }
 
 /*============================================================================*/
 /* Menu View */
-#knack-body #kn-app-header {
-    background-color:  $primary;
+.kn-content{
+    .kn-navigation-bar {
+        ul{
+            margin: auto 10px;
+        }
+        .is-active{
+            a{
+                background: $secondary;
+                border-color: $secondary;
+            }
+        }
+    }
 }
 
 .kn-info-bar {
-    background-color: $primary;
-    border-top-color: $primary;
+    background-color: $MainB;
+    border-top-color: $MainB;
     border-top-width: 1px;
     border-top-style: solid;
     padding-bottom: 5px;
     a {
-        background-color: $primary;
-        padding-left: 30px !important;
-        color: white !important;
-        font-size: 14px !important;
+        background-color: $MainB;
+        color: $primary;
+        font-weight: bold;
+        outline: none;
+        padding-left: 10px;
+        text-decoration: none;
+        transition: all .1s linear;
         &:hover {
-            background-color: #ffffff;
-            color: #a6a6a6 !important;
+            color: $secondary;
+        }
+    }
+    .kn-crumbtrail {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        padding-top: 5px;
+    }
+    .kn-current_user{
+        .kn-current-user-intro{
+            color: $secondary;
+        }
+        .first{
+            font-weight: bold;
+        }
+        .last{
+            font-weight: 500;
+        }
+        .kn-log-out{
+            color: $secondary;
+            border:2px solid;
+            border-radius: 5px;
+            padding: 2px 5px;
+            outline: none;
+            transition: all .1s linear;
+            &:hover{
+                background: $secondary;
+                border-color: $secondary;
+                color: white;
+            }
         }
     }
 }
@@ -666,13 +1106,6 @@ body, p, a{
     color: LightSeaGreen !important;
 }
 
-.kn-crumbtrail {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-    padding-top: 5px;
-}
-    
 header .kn-container{
     align-items: center;
     display:flex;
@@ -680,7 +1113,7 @@ header .kn-container{
 }
 
 /*============================================================================*/
-/* Rich TextView */
+/* Rich Text View */
 .kn-rich_text{
     background: none;
     h1, 
@@ -701,6 +1134,11 @@ header .kn-container{
     }
     p{
         font-size: calc(100% + .5vh);
+    }
+    hr{
+        background: $secondary;
+        border-radius: 5px;
+        height: 2px;
     }
 }
 
@@ -736,7 +1174,6 @@ header .kn-container{
 /* Global UI */
 .ui-datepicker{
     color: $primary;
-    padding: 1rem;
     .ui-datepicker-header{
         .ui-datepicker-prev,
         .ui-datepicker-next{
@@ -838,6 +1275,7 @@ header .kn-container{
     background: none;
     border:2px solid;
     border-radius: 5px;
+    color: $primary;
     padding: 5px 10px;
     outline: none;
     text-decoration: none;
@@ -847,4 +1285,12 @@ header .kn-container{
         border-color: $primary;
         color:white;
     }
+}
+
+#kn-loading-spinner{
+    @include sv-spinner-1();
+}
+
+.kn-link-page span span span{
+    text-decoration: none;
 }

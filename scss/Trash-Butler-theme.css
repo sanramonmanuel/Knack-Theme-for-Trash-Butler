@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5 {
 }
 
 body, p, a {
-  font-family: 'Source Sans Pro', 'Open Sans', sans-serif;
+  font-family: 'Open Sans','Source Sans Pro' , sans-serif;
   line-height: 1.5;
   margin: 0px;
   padding: 0px;
@@ -30,8 +30,13 @@ body, p, a {
   background: #fafafa;
 }
 
+#knack-body header h1 .kn-title {
+  color: #15467a;
+}
+
 #knack-body header#kn-app-header {
   background: #fafafa;
+  color: #15467a;
 }
 
 #knack-body .kn-scenes.kn-section .kn-scene.kn-container {
@@ -106,24 +111,33 @@ body, p, a {
   margin: auto 2px;
   outline: none;
   padding: 5px 15px;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
   width: 100%;
 }
 
-.kn-form .kn-form-group .kn-input-short_text input:hover, .kn-form .kn-form-group .kn-input-short_text input:focus,
+.kn-form .kn-form-group .kn-input-short_text input:hover, .kn-form .kn-form-group .kn-input-short_text input:focus, .kn-form .kn-form-group .kn-input-short_text input:active,
 .kn-form .kn-form-group .kn-input-number input:hover,
 .kn-form .kn-form-group .kn-input-number input:focus,
+.kn-form .kn-form-group .kn-input-number input:active,
 .kn-form .kn-form-group .kn-input-currency input:hover,
 .kn-form .kn-form-group .kn-input-currency input:focus,
+.kn-form .kn-form-group .kn-input-currency input:active,
 .kn-form .kn-form-group .kn-input-name input:hover,
 .kn-form .kn-form-group .kn-input-name input:focus,
+.kn-form .kn-form-group .kn-input-name input:active,
 .kn-form .kn-form-group .kn-input-email input:hover,
 .kn-form .kn-form-group .kn-input-email input:focus,
+.kn-form .kn-form-group .kn-input-email input:active,
 .kn-form .kn-form-group .kn-input-address input:hover,
 .kn-form .kn-form-group .kn-input-address input:focus,
+.kn-form .kn-form-group .kn-input-address input:active,
 .kn-form .kn-form-group .kn-input-phone input:hover,
 .kn-form .kn-form-group .kn-input-phone input:focus,
+.kn-form .kn-form-group .kn-input-phone input:active,
 .kn-form .kn-form-group .kn-input-link input:hover,
-.kn-form .kn-form-group .kn-input-link input:focus {
+.kn-form .kn-form-group .kn-input-link input:focus,
+.kn-form .kn-form-group .kn-input-link input:active {
   border: 2px solid #15467a;
   background-color: #ffffff;
 }
@@ -142,10 +156,12 @@ body, p, a {
   margin: auto 2px;
   outline: none;
   padding: 5px 15px;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
   width: 100%;
 }
 
-.kn-form .kn-form-group .kn-input-paragraph_text .kn-textarea:hover, .kn-form .kn-form-group .kn-input-paragraph_text .kn-textarea:focus {
+.kn-form .kn-form-group .kn-input-paragraph_text .kn-textarea:hover, .kn-form .kn-form-group .kn-input-paragraph_text .kn-textarea:focus, .kn-form .kn-form-group .kn-input-paragraph_text .kn-textarea:active {
   border: 2px solid #15467a;
   background-color: #ffffff;
 }
@@ -182,10 +198,12 @@ body, p, a {
   margin: auto 2px;
   outline: none;
   padding: 5px 15px;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
   width: 100%;
 }
 
-.kn-form .kn-form-group .kn-input-rich_text .redactor-box .redactor-editor:hover, .kn-form .kn-form-group .kn-input-rich_text .redactor-box .redactor-editor:focus {
+.kn-form .kn-form-group .kn-input-rich_text .redactor-box .redactor-editor:hover, .kn-form .kn-form-group .kn-input-rich_text .redactor-box .redactor-editor:focus, .kn-form .kn-form-group .kn-input-rich_text .redactor-box .redactor-editor:active {
   border: 2px solid #15467a;
   background-color: #ffffff;
 }
@@ -200,7 +218,59 @@ body, p, a {
 
 .kn-form .kn-form-group .kn-input-file input,
 .kn-form .kn-form-group .kn-input-image input {
+  background: rgba(109, 124, 144, 0.1);
+  border: 2px solid transparent;
+  border-radius: .35em;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #333;
+  font-size: 15px;
+  font-weight: bold;
+  height: 35px;
+  line-height: 1.429;
+  margin: auto 2px;
+  outline: none;
+  padding: 5px 15px;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+  width: 100%;
+}
+
+.kn-form .kn-form-group .kn-input-file input:hover, .kn-form .kn-form-group .kn-input-file input:focus, .kn-form .kn-form-group .kn-input-file input:active,
+.kn-form .kn-form-group .kn-input-image input:hover,
+.kn-form .kn-form-group .kn-input-image input:focus,
+.kn-form .kn-form-group .kn-input-image input:active {
+  border: 2px solid #15467a;
+  background-color: #ffffff;
+}
+
+.kn-form .kn-form-group .kn-input-file .input.is-file,
+.kn-form .kn-form-group .kn-input-image .input.is-file {
+  background: none;
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   color: #15467a;
+  font-size: 15px;
+  font-weight: bold;
+  height: 35px;
+  line-height: 1.429;
+  margin: auto 2px;
+  outline: none;
+  padding: 5px 15px;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+  width: 100%;
+}
+
+.kn-form .kn-form-group .kn-input-file .input.is-file:hover, .kn-form .kn-form-group .kn-input-file .input.is-file:focus, .kn-form .kn-form-group .kn-input-file .input.is-file:active,
+.kn-form .kn-form-group .kn-input-image .input.is-file:hover,
+.kn-form .kn-form-group .kn-input-image .input.is-file:focus,
+.kn-form .kn-form-group .kn-input-image .input.is-file:active {
+  border: none;
+  background-color: none;
+  color: #7AC144;
 }
 
 .kn-form .kn-form-group .kn-input-address .help {
@@ -222,10 +292,12 @@ body, p, a {
   margin: auto 2px;
   outline: none;
   padding: 5px 15px;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
   width: 100%;
 }
 
-.kn-form .kn-form-group .kn-input-multiple_choice .kn-select select:hover, .kn-form .kn-form-group .kn-input-multiple_choice .kn-select select:focus {
+.kn-form .kn-form-group .kn-input-multiple_choice .kn-select select:hover, .kn-form .kn-form-group .kn-input-multiple_choice .kn-select select:focus, .kn-form .kn-form-group .kn-input-multiple_choice .kn-select select:active {
   border: 2px solid #15467a;
   background-color: #ffffff;
 }
@@ -238,11 +310,8 @@ body, p, a {
   color: #15467a;
 }
 
-.kn-form .kn-form-group .kn-input-multiple_choice .kn-select .chzn-container {
-  /* Dropdown - Multiple Selections */
-}
-
 .kn-form .kn-form-group .kn-input-multiple_choice .kn-select .chzn-container.chzn-container-multi .chzn-choices {
+  /* Dropdown - Multiple Selections */
   background: rgba(109, 124, 144, 0.1);
   border: 2px solid transparent;
   border-radius: .35em;
@@ -256,10 +325,12 @@ body, p, a {
   margin: auto 2px;
   outline: none;
   padding: 5px 15px;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
   width: 100%;
 }
 
-.kn-form .kn-form-group .kn-input-multiple_choice .kn-select .chzn-container.chzn-container-multi .chzn-choices:hover, .kn-form .kn-form-group .kn-input-multiple_choice .kn-select .chzn-container.chzn-container-multi .chzn-choices:focus {
+.kn-form .kn-form-group .kn-input-multiple_choice .kn-select .chzn-container.chzn-container-multi .chzn-choices:hover, .kn-form .kn-form-group .kn-input-multiple_choice .kn-select .chzn-container.chzn-container-multi .chzn-choices:focus, .kn-form .kn-form-group .kn-input-multiple_choice .kn-select .chzn-container.chzn-container-multi .chzn-choices:active {
   border: 2px solid #15467a;
   background-color: #ffffff;
 }
@@ -332,6 +403,123 @@ body, p, a {
   color: #7AC144;
 }
 
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-multi .chzn-choices,
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-multi .chzn-single, .kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-single .chzn-choices,
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-single .chzn-single {
+  /* Dropdown - Multiple Selections */
+  background: rgba(109, 124, 144, 0.1);
+  border: 2px solid transparent;
+  border-radius: .35em;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #333;
+  font-size: 15px;
+  font-weight: bold;
+  height: 35px;
+  line-height: 1.429;
+  margin: auto 2px;
+  outline: none;
+  padding: 5px 15px;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+  width: 100%;
+}
+
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-multi .chzn-choices:hover, .kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-multi .chzn-choices:focus, .kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-multi .chzn-choices:active,
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-multi .chzn-single:hover,
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-multi .chzn-single:focus,
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-multi .chzn-single:active, .kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-single .chzn-choices:hover, .kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-single .chzn-choices:focus, .kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-single .chzn-choices:active,
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-single .chzn-single:hover,
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-single .chzn-single:focus,
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-single .chzn-single:active {
+  border: 2px solid #15467a;
+  background-color: #ffffff;
+}
+
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-multi .chzn-choices .default,
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-multi .chzn-single .default, .kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-single .chzn-choices .default,
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-single .chzn-single .default {
+  background: none;
+}
+
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-multi .chzn-choices .search-field input,
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-multi .chzn-single .search-field input, .kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-single .chzn-choices .search-field input,
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-single .chzn-single .search-field input {
+  background: none;
+}
+
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-multi .chzn-choices .search-choice,
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-multi .chzn-single .search-choice, .kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-single .chzn-choices .search-choice,
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-single .chzn-single .search-choice {
+  background: #15467a;
+  color: white;
+}
+
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-multi .chzn-drop, .kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-single .chzn-drop {
+  padding: 15px 5px;
+}
+
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-multi .chzn-drop .chzn-results .active-result, .kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-single .chzn-drop .chzn-results .active-result {
+  border-radius: 25px;
+  color: #15467a;
+  font-weight: bold;
+  padding: 10px 10px;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-multi .chzn-drop .chzn-results .active-result:hover, .kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-single .chzn-drop .chzn-results .active-result:hover {
+  background: #15467a;
+  color: white;
+}
+
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-multi .chzn-drop .chzn-results .highlighted, .kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-single .chzn-drop .chzn-results .highlighted {
+  background: none;
+}
+
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-multi .chzn-drop .chzn-results .highlighted:hover, .kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-single .chzn-drop .chzn-results .highlighted:hover {
+  background: #15467a;
+  color: white;
+}
+
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-multi .search-choice-close:after, .kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-single .search-choice-close:after {
+  color: #7AC144;
+}
+
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-multi:after, .kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-single:after {
+  border: 2px solid #7AC144;
+  border-right: 0;
+  border-top: 0;
+}
+
+.kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-multi:hover:after, .kn-form .kn-form-group .kn-input-connection .chzn-container.chzn-container-single:hover:after {
+  border-color: #15467a;
+}
+
+.kn-form .kn-form-group .kn-input-connection .kn-checkbox {
+  /* Check Boxes */
+}
+
+.kn-form .kn-form-group .kn-input-connection .kn-checkbox .option.checkbox {
+  font-weight: bold;
+}
+
+.kn-form .kn-form-group .kn-input-connection .kn-checkbox .option.checkbox:hover {
+  color: #7AC144;
+}
+
+.kn-form .kn-form-group .kn-input-connection .kn-radio {
+  /* Radio Buttons */
+}
+
+.kn-form .kn-form-group .kn-input-connection .kn-radio .control {
+  font-weight: bold;
+}
+
+.kn-form .kn-form-group .kn-input-connection .kn-radio .control:hover {
+  color: #7AC144;
+}
+
 .kn-form .kn-form-group .kn-input-boolean select {
   /* Dropdown */
   background: rgba(109, 124, 144, 0.1);
@@ -347,10 +535,12 @@ body, p, a {
   margin: auto 2px;
   outline: none;
   padding: 5px 15px;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
   width: 100%;
 }
 
-.kn-form .kn-form-group .kn-input-boolean select:hover, .kn-form .kn-form-group .kn-input-boolean select:focus {
+.kn-form .kn-form-group .kn-input-boolean select:hover, .kn-form .kn-form-group .kn-input-boolean select:focus, .kn-form .kn-form-group .kn-input-boolean select:active {
   border: 2px solid #15467a;
   background-color: #ffffff;
 }
@@ -400,12 +590,15 @@ body, p, a {
   margin: auto 2px;
   outline: none;
   padding: 5px 15px;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
   width: 100%;
 }
 
-.kn-form .kn-form-group .kn-input-date_time .kn-datetime .knack-date:hover, .kn-form .kn-form-group .kn-input-date_time .kn-datetime .knack-date:focus,
+.kn-form .kn-form-group .kn-input-date_time .kn-datetime .knack-date:hover, .kn-form .kn-form-group .kn-input-date_time .kn-datetime .knack-date:focus, .kn-form .kn-form-group .kn-input-date_time .kn-datetime .knack-date:active,
 .kn-form .kn-form-group .kn-input-date_time .kn-datetime .kn-time:hover,
-.kn-form .kn-form-group .kn-input-date_time .kn-datetime .kn-time:focus {
+.kn-form .kn-form-group .kn-input-date_time .kn-datetime .kn-time:focus,
+.kn-form .kn-form-group .kn-input-date_time .kn-datetime .kn-time:active {
   border: 2px solid #15467a;
   background-color: #ffffff;
 }
@@ -430,12 +623,15 @@ body, p, a {
   margin: auto 2px;
   outline: none;
   padding: 5px 15px;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
   width: 100%;
 }
 
-.kn-form .kn-form-group .kn-input-timer .knack-date:hover, .kn-form .kn-form-group .kn-input-timer .knack-date:focus,
+.kn-form .kn-form-group .kn-input-timer .knack-date:hover, .kn-form .kn-form-group .kn-input-timer .knack-date:focus, .kn-form .kn-form-group .kn-input-timer .knack-date:active,
 .kn-form .kn-form-group .kn-input-timer .kn-time:hover,
-.kn-form .kn-form-group .kn-input-timer .kn-time:focus {
+.kn-form .kn-form-group .kn-input-timer .kn-time:focus,
+.kn-form .kn-form-group .kn-input-timer .kn-time:active {
   border: 2px solid #15467a;
   background-color: #ffffff;
 }
@@ -508,6 +704,8 @@ body, p, a {
 /*============================================================================*/
 /*Details View */
 .kn-details {
+  -webkit-box-shadow: 0px 5px 15px rgba(150, 158, 166, 0.2);
+          box-shadow: 0px 5px 15px rgba(150, 158, 166, 0.2);
   background: white;
   border-radius: 15px;
   padding: 1rem;
@@ -524,8 +722,9 @@ body, p, a {
 }
 
 .kn-details .kn-detail-body a {
-  font-weight: bold;
   border-bottom: 2px solid;
+  color: #15467a;
+  font-weight: bold;
   padding-bottom: 1px;
   text-decoration: none;
   -webkit-transition: all .1s linear;
@@ -570,6 +769,7 @@ body, p, a {
 
 .kn-table.kn-view .kn-records-nav .js-filter-menu.tabs.is-toggle.is-flush ul li a {
   /* Filter Tabs */
+  background: white;
   border-radius: 5px;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -679,10 +879,12 @@ body, p, a {
   margin: auto 2px;
   outline: none;
   padding: 5px 15px;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
   width: 100%;
 }
 
-.kn-table.kn-view .kn-pagination .kn-select select:hover, .kn-table.kn-view .kn-pagination .kn-select select:focus {
+.kn-table.kn-view .kn-pagination .kn-select select:hover, .kn-table.kn-view .kn-pagination .kn-select select:focus, .kn-table.kn-view .kn-pagination .kn-select select:active {
   border: 2px solid #15467a;
   background-color: #ffffff;
 }
@@ -691,9 +893,18 @@ body, p, a {
   color: #15467a;
 }
 
-.kn-table.kn-view .kn-table-wrapper.is-constrained .kn-table.kn-table-table.is-bordered.is-striped thead > tr,
-.kn-table.kn-view .kn-table-wrapper.is-constrained .kn-table.kn-table-table.is-bordered.is-striped thead > tr > th,
-.kn-table.kn-view .kn-table-wrapper.is-constrained .kn-table.kn-table-table.is-bordered.is-striped tbody > tr > td {
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.can-overflow-x thead > tr,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.can-overflow-x thead > tr > th,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped thead > tr,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped thead > tr > th,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-striped.can-overflow-x thead > tr,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-striped.can-overflow-x thead > tr > th,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.can-overflow-x thead > tr,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.can-overflow-x thead > tr > th,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.cell-editable thead > tr,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.cell-editable thead > tr > th,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.can-overflow-x thead > tr,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.can-overflow-x thead > tr > th {
   background: none;
   border: none;
   line-height: 1;
@@ -701,32 +912,101 @@ body, p, a {
   vertical-align: middle;
 }
 
-.kn-table.kn-view .kn-table-wrapper.is-constrained .kn-table.kn-table-table.is-bordered.is-striped thead {
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.can-overflow-x thead,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped thead,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-striped.can-overflow-x thead,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.can-overflow-x thead,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.cell-editable thead,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.can-overflow-x thead {
   background: white;
   position: relative;
   z-index: 1;
 }
 
-.kn-table.kn-view .kn-table-wrapper.is-constrained .kn-table.kn-table-table.is-bordered.is-striped .kn-sort.level.is-compact {
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.can-overflow-x .kn-sort,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped .kn-sort,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-striped.can-overflow-x .kn-sort,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.can-overflow-x .kn-sort,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.cell-editable .kn-sort,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.can-overflow-x .kn-sort {
+  color: #15467a;
   -webkit-transition: all .1s linear;
   transition: all .1s linear;
 }
 
-.kn-table.kn-view .kn-table-wrapper.is-constrained .kn-table.kn-table-table.is-bordered.is-striped .kn-sort.level.is-compact:hover {
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.can-overflow-x .kn-sort:hover,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped .kn-sort:hover,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-striped.can-overflow-x .kn-sort:hover,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.can-overflow-x .kn-sort:hover,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.cell-editable .kn-sort:hover,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.can-overflow-x .kn-sort:hover {
   color: #7AC144;
 }
 
-.kn-table.kn-view .kn-table-wrapper.is-constrained .kn-table.kn-table-table.is-bordered.is-striped tbody > tr {
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.can-overflow-x tbody > tr > td,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped tbody > tr > td,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-striped.can-overflow-x tbody > tr > td,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.can-overflow-x tbody > tr > td,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.cell-editable tbody > tr > td,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.can-overflow-x tbody > tr > td {
+  background: none;
+  border: none;
+  line-height: 1;
+  padding: .5rem 1rem;
+  vertical-align: middle;
+}
+
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.can-overflow-x tbody > tr,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped tbody > tr,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-striped.can-overflow-x tbody > tr,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.can-overflow-x tbody > tr,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.cell-editable tbody > tr,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.can-overflow-x tbody > tr {
   -webkit-transition: all .1s linear;
   transition: all .1s linear;
   vertical-align: middle;
 }
 
-.kn-table.kn-view .kn-table-wrapper.is-constrained .kn-table.kn-table-table.is-bordered.is-striped tbody > tr:hover {
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.can-overflow-x tbody > tr:hover,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped tbody > tr:hover,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-striped.can-overflow-x tbody > tr:hover,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.can-overflow-x tbody > tr:hover,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.cell-editable tbody > tr:hover,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.can-overflow-x tbody > tr:hover {
   background: rgba(21, 70, 122, 0.102);
 }
 
-.kn-table.kn-view .kn-table-wrapper.is-constrained .kn-table.kn-table-table.is-bordered.is-striped tbody > tr .kn-table-link a {
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.can-overflow-x tbody > tr:nth-child(2n),
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped tbody > tr:nth-child(2n),
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-striped.can-overflow-x tbody > tr:nth-child(2n),
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.can-overflow-x tbody > tr:nth-child(2n),
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.cell-editable tbody > tr:nth-child(2n),
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.can-overflow-x tbody > tr:nth-child(2n) {
+  background: none;
+}
+
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.can-overflow-x tbody > tr:nth-child(2n):hover,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped tbody > tr:nth-child(2n):hover,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-striped.can-overflow-x tbody > tr:nth-child(2n):hover,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.can-overflow-x tbody > tr:nth-child(2n):hover,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.cell-editable tbody > tr:nth-child(2n):hover,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.can-overflow-x tbody > tr:nth-child(2n):hover {
+  background: rgba(21, 70, 122, 0.102);
+}
+
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.can-overflow-x tbody > tr td a,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.can-overflow-x tbody > tr .kn-table-link a,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped tbody > tr td a,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped tbody > tr .kn-table-link a,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-striped.can-overflow-x tbody > tr td a,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-striped.can-overflow-x tbody > tr .kn-table-link a,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.can-overflow-x tbody > tr td a,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.can-overflow-x tbody > tr .kn-table-link a,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.cell-editable tbody > tr td a,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.cell-editable tbody > tr .kn-table-link a,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.can-overflow-x tbody > tr td a,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.can-overflow-x tbody > tr .kn-table-link a {
+  color: #15467a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -737,8 +1017,54 @@ body, p, a {
   transition: all .1s linear;
 }
 
-.kn-table.kn-view .kn-table-wrapper.is-constrained .kn-table.kn-table-table.is-bordered.is-striped tbody > tr .kn-table-link a:hover {
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.can-overflow-x tbody > tr td a:hover,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.can-overflow-x tbody > tr .kn-table-link a:hover,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped tbody > tr td a:hover,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped tbody > tr .kn-table-link a:hover,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-striped.can-overflow-x tbody > tr td a:hover,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-striped.can-overflow-x tbody > tr .kn-table-link a:hover,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.can-overflow-x tbody > tr td a:hover,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.can-overflow-x tbody > tr .kn-table-link a:hover,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.cell-editable tbody > tr td a:hover,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.cell-editable tbody > tr .kn-table-link a:hover,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.can-overflow-x tbody > tr td a:hover,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.can-overflow-x tbody > tr .kn-table-link a:hover {
   color: #7AC144;
+}
+
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.can-overflow-x tbody > tr td .table-fixed-label,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.can-overflow-x tbody > tr .kn-table-link .table-fixed-label,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped tbody > tr td .table-fixed-label,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped tbody > tr .kn-table-link .table-fixed-label,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-striped.can-overflow-x tbody > tr td .table-fixed-label,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-striped.can-overflow-x tbody > tr .kn-table-link .table-fixed-label,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.can-overflow-x tbody > tr td .table-fixed-label,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.can-overflow-x tbody > tr .kn-table-link .table-fixed-label,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.cell-editable tbody > tr td .table-fixed-label,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.cell-editable tbody > tr .kn-table-link .table-fixed-label,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.can-overflow-x tbody > tr td .table-fixed-label,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.can-overflow-x tbody > tr .kn-table-link .table-fixed-label {
+  color: #7AC144;
+}
+
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.can-overflow-x tbody > tr td.kn-td-nodata,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped tbody > tr td.kn-td-nodata,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-striped.can-overflow-x tbody > tr td.kn-td-nodata,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.can-overflow-x tbody > tr td.kn-td-nodata,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.cell-editable tbody > tr td.kn-td-nodata,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.can-overflow-x tbody > tr td.kn-td-nodata {
+  text-align: center;
+  font-weight: bold;
+}
+
+.kn-table.kn-view img {
+  max-width: 100%;
+}
+
+@media (min-width: 769px) {
+  .kn-table.kn-view img {
+    max-width: 25%;
+  }
 }
 
 .kn-table.kn-view .kn-button:hover, .kn-table.kn-view .kn-button:active, .kn-table.kn-view .kn-button:focus {
@@ -748,7 +1074,7 @@ body, p, a {
 }
 
 /*============================================================================*/
-/*List View*/
+/* List View */
 .kn-list {
   background: none;
   margin: auto 0;
@@ -761,6 +1087,7 @@ body, p, a {
 
 .kn-list .kn-records-nav .js-filter-menu.tabs.is-toggle.is-flush ul li a {
   /* Filter Tabs */
+  background: white;
   border-radius: 5px;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -871,10 +1198,12 @@ body, p, a {
   margin: auto 2px;
   outline: none;
   padding: 5px 15px;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
   width: 100%;
 }
 
-.kn-list .kn-records-nav .kn-pagination .kn-select select:hover, .kn-list .kn-records-nav .kn-pagination .kn-select select:focus {
+.kn-list .kn-records-nav .kn-pagination .kn-select select:hover, .kn-list .kn-records-nav .kn-pagination .kn-select select:focus, .kn-list .kn-records-nav .kn-pagination .kn-select select:active {
   border: 2px solid #15467a;
   background-color: #ffffff;
 }
@@ -902,11 +1231,8 @@ body, p, a {
 }
 
 .kn-list .kn-list-content .kn-details-link a {
-  border: 2px solid;
-  border-radius: 15px;
+  color: #15467a;
   font-weight: bold;
-  margin: auto 5px;
-  padding: 2px 10px;
   text-transform: uppercase;
   -webkit-transition: all .1s linear;
   transition: all .1s linear;
@@ -927,42 +1253,468 @@ body, p, a {
 }
 
 /*============================================================================*/
-/*Search View*/
-.kn-search {
-  background: unset;
+/*Map View*/
+.kn-map .view-header h2 {
+  color: #15467a;
+}
+
+.kn-map .kn-map-search .kn-label {
+  color: #15467a;
+  font-weight: bold;
+}
+
+.kn-map .kn-map-search .kn-map-fields input {
+  background: rgba(109, 124, 144, 0.1);
+  border: 2px solid transparent;
+  border-radius: .35em;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #333;
+  font-size: 15px;
+  font-weight: bold;
+  height: 35px;
+  line-height: 1.429;
+  margin: auto 2px;
+  outline: none;
+  padding: 5px 15px;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+  width: 100%;
+}
+
+.kn-map .kn-map-search .kn-map-fields input:hover, .kn-map .kn-map-search .kn-map-fields input:focus, .kn-map .kn-map-search .kn-map-fields input:active {
+  border: 2px solid #15467a;
+  background-color: #ffffff;
+}
+
+.kn-map .kn-map-search .kn-map-fields .kn-select.kn-map-dropdown select {
+  background: rgba(109, 124, 144, 0.1);
+  border: 2px solid transparent;
+  border-radius: .35em;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #333;
+  font-size: 15px;
+  font-weight: bold;
+  height: 35px;
+  line-height: 1.429;
+  margin: auto 2px;
+  outline: none;
+  padding: 5px 15px;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+  width: 100%;
+}
+
+.kn-map .kn-map-search .kn-map-fields .kn-select.kn-map-dropdown select:hover, .kn-map .kn-map-search .kn-map-fields .kn-select.kn-map-dropdown select:focus, .kn-map .kn-map-search .kn-map-fields .kn-select.kn-map-dropdown select:active {
+  border: 2px solid #15467a;
+  background-color: #ffffff;
+}
+
+.kn-map .kn-map-search .kn-map-fields .kn-select.kn-map-dropdown select option {
+  color: #15467a;
+}
+
+.kn-map .kn-map-search .kn-map-fields .kn-select.kn-map-dropdown:after {
+  color: #15467a;
+}
+
+.kn-map .kn-map-search .kn-map-submit {
+  background: #15467a;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+.kn-map .kn-map-search .kn-map-submit:hover {
+  -webkit-box-shadow: 5px 5px #7AC144;
+          box-shadow: 5px 5px #7AC144;
+}
+
+.kn-map .kn-map-dropdown {
+  width: 200px;
+}
+
+.kn-map .fail-alert {
+  font-weight: bold;
+}
+
+.kn-map .kn-pagination .kn-select select {
+  background: rgba(109, 124, 144, 0.1);
+  border: 2px solid transparent;
+  border-radius: .35em;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #333;
+  font-size: 15px;
+  font-weight: bold;
+  height: 35px;
+  line-height: 1.429;
+  margin: auto 2px;
+  outline: none;
+  padding: 5px 15px;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+  width: 100%;
+}
+
+.kn-map .kn-pagination .kn-select select:hover, .kn-map .kn-pagination .kn-select select:focus, .kn-map .kn-pagination .kn-select select:active {
+  border: 2px solid #15467a;
+  background-color: #ffffff;
+}
+
+.kn-map .kn-pagination .kn-select select option {
+  color: #15467a;
+}
+
+.kn-map .kn-view.kn-map-results .kn-records-nav {
+  margin: 5px auto;
+}
+
+.kn-map .kn-view.kn-map-results .kn-records-nav .js-filter-menu.tabs.is-toggle.is-flush ul li a {
+  /* Filter Tabs */
+  background: white;
+  border-radius: 5px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin: auto 2px;
+}
+
+.kn-map .kn-view.kn-map-results .kn-records-nav .js-filter-menu.tabs.is-toggle.is-flush ul li a:hover {
+  background: #15467a;
+  border-color: #15467a;
+  color: white;
+}
+
+.kn-map .kn-view.kn-map-results .kn-records-nav .js-filter-menu.tabs.is-toggle.is-flush ul li.is-active a {
+  background: #7AC144;
+  border-color: #7AC144;
+  color: white;
+}
+
+.kn-map .kn-view.kn-map-results .kn-records-nav .kn-filters-nav .kn-add-filter.kn-button.is-small {
+  background: #15467a;
+  border-color: #15467a;
+  color: white;
+}
+
+.kn-map .kn-view.kn-map-results .kn-records-nav .kn-filters-nav .kn-add-filter.kn-button.is-small:hover {
+  border-color: white;
+  -webkit-box-shadow: 0 2px 4px #0000004d, inset 0px 2px 4px #0000004d;
+          box-shadow: 0 2px 4px #0000004d, inset 0px 2px 4px #0000004d;
+}
+
+.kn-map .kn-view.kn-map-results .kn-records-nav .kn-filters ul li {
+  background: none;
+  border: 2px dashed #15467a;
+  color: #15467a;
+}
+
+.kn-map .kn-view.kn-map-results .kn-records-nav .kn-filters ul li .remove.delete.is-small {
+  background: #7AC144;
+}
+
+.kn-map .kn-view.kn-map-results .kn-records-nav .kn-filters ul li .remove.delete.is-small:hover {
+  background: #15467a;
+}
+
+.kn-map .kn-view.kn-map-results .kn-records-nav .table-keyword-search {
+  /* Search Input */
+}
+
+.kn-map .kn-view.kn-map-results .kn-records-nav .table-keyword-search .input {
+  background: none;
+  border-color: transparent;
+  border-radius: 5px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #15467a;
+  font-weight: bold;
+  outline: none;
+}
+
+.kn-map .kn-view.kn-map-results .kn-records-nav .table-keyword-search .input::-webkit-input-placeholder {
+  font-weight: lighter;
+}
+
+.kn-map .kn-view.kn-map-results .kn-records-nav .table-keyword-search .input:-ms-input-placeholder {
+  font-weight: lighter;
+}
+
+.kn-map .kn-view.kn-map-results .kn-records-nav .table-keyword-search .input::-ms-input-placeholder {
+  font-weight: lighter;
+}
+
+.kn-map .kn-view.kn-map-results .kn-records-nav .table-keyword-search .input::placeholder {
+  font-weight: lighter;
+}
+
+.kn-map .kn-view.kn-map-results .kn-records-nav .table-keyword-search .input:hover, .kn-map .kn-view.kn-map-results .kn-records-nav .table-keyword-search .input:active, .kn-map .kn-view.kn-map-results .kn-records-nav .table-keyword-search .input:focus {
+  border-color: #15467a;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #15467a;
+}
+
+.kn-map .kn-view.kn-map-results .kn-records-nav .table-keyword-search .kn-button.search {
+  background: none;
+  border-color: #15467a;
+  border-radius: 5px;
+  color: #15467a;
+}
+
+.kn-map .kn-view.kn-map-results .kn-records-nav .table-keyword-search .kn-button.search:hover, .kn-map .kn-view.kn-map-results .kn-records-nav .table-keyword-search .kn-button.search:active, .kn-map .kn-view.kn-map-results .kn-records-nav .table-keyword-search .kn-button.search:focus {
+  background: #15467a;
+  border-color: #15467a;
+  color: white;
+}
+
+.kn-map .kn-view.kn-map-results .kn-google-map .H_btn {
+  background: #15467a;
+}
+
+.kn-map .kn-view.kn-map-results .kn-google-map .H_btn:hover {
+  background: #7AC144;
+}
+
+.kn-map .kn-view.kn-map-results .kn-google-map .H_ui .H_ib .H_ib_body {
+  -webkit-box-shadow: 5px 5px #15467a;
+          box-shadow: 5px 5px #15467a;
+}
+
+.kn-map .kn-view.kn-map-results .kn-google-map .H_ui .H_ib .H_ib_body h3 {
+  color: #15467a;
+}
+
+.kn-map .kn-view.kn-map-results .kn-google-map .H_ui .H_ib .H_ib_body a {
+  border: 2px solid;
+  border-radius: 15px;
+  color: #15467a;
+  padding: 2px 5px;
+  text-decoration: none;
+}
+
+.kn-map .kn-view.kn-map-results .kn-google-map .H_ui .H_ib .H_ib_body a:hover {
+  background: #15467a;
+  border-color: #15467a;
+  color: white;
+}
+
+.kn-map .kn-view.kn-map-results .kn-google-map .H_ui .H_ib .H_ib_body .H_ib_close svg.H_icon {
+  background: #7AC144;
+  fill: white;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+.kn-map .kn-view.kn-map-results .kn-google-map .H_ui .H_ib .H_ib_body .H_ib_close svg.H_icon:hover {
+  background: #15467a;
+}
+
+.kn-map .kn-map-list .kn-list-container {
+  border-bottom: none;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+.kn-map .kn-map-list .kn-list-container:hover {
+  background: rgba(21, 70, 122, 0.102);
+}
+
+.kn-map .kn-map-list .kn-list-container.active {
+  background: rgba(21, 70, 122, 0.102);
+  border-left: 3px solid #7AC144;
+}
+
+.kn-map .kn-geo-distance {
+  color: #15467a;
+  font-weight: bold;
+  top: 0;
+}
+
+/*============================================================================*/
+/*Calendar View*/
+.kn-calendar .view-header h2 {
+  color: #15467a;
+}
+
+.kn-calendar .kn-records-nav .js-filter-menu.tabs.is-toggle.is-flush ul li a {
+  /* Filter Tabs */
+  background: white;
+  border-radius: 5px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin: auto 2px;
+}
+
+.kn-calendar .kn-records-nav .js-filter-menu.tabs.is-toggle.is-flush ul li a:hover {
+  background: #15467a;
+  border-color: #15467a;
+  color: white;
+}
+
+.kn-calendar .kn-records-nav .js-filter-menu.tabs.is-toggle.is-flush ul li.is-active a {
+  background: #7AC144;
+  border-color: #7AC144;
+  color: white;
+}
+
+.kn-calendar .kn-records-nav .kn-filters-nav .kn-add-filter.kn-button.is-small {
+  background: #15467a;
+  border-color: #15467a;
+  color: white;
+}
+
+.kn-calendar .kn-records-nav .kn-filters-nav .kn-add-filter.kn-button.is-small:hover {
+  border-color: white;
+  -webkit-box-shadow: 0 2px 4px #0000004d, inset 0px 2px 4px #0000004d;
+          box-shadow: 0 2px 4px #0000004d, inset 0px 2px 4px #0000004d;
+}
+
+.kn-calendar .kn-records-nav .kn-filters ul li {
+  background: none;
+  border: 2px dashed #15467a;
+  color: #15467a;
+}
+
+.kn-calendar .kn-records-nav .kn-filters ul li .remove.delete.is-small {
+  background: #7AC144;
+}
+
+.kn-calendar .kn-records-nav .kn-filters ul li .remove.delete.is-small:hover {
+  background: #15467a;
+}
+
+.kn-calendar .kn-records-nav .table-keyword-search {
+  /* Search Input */
+}
+
+.kn-calendar .kn-records-nav .table-keyword-search .input {
+  background: rgba(109, 124, 144, 0.1);
+  border: 2px solid transparent;
+  border-radius: .35em;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #333;
+  font-size: 15px;
+  font-weight: bold;
+  height: 35px;
+  line-height: 1.429;
+  margin: auto 2px;
+  outline: none;
+  padding: 5px 15px;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+  width: 100%;
+}
+
+.kn-calendar .kn-records-nav .table-keyword-search .input:hover, .kn-calendar .kn-records-nav .table-keyword-search .input:focus, .kn-calendar .kn-records-nav .table-keyword-search .input:active {
+  border: 2px solid #15467a;
+  background-color: #ffffff;
+}
+
+.kn-calendar .kn-records-nav .table-keyword-search .input::-webkit-input-placeholder {
+  font-weight: lighter;
+}
+
+.kn-calendar .kn-records-nav .table-keyword-search .input:-ms-input-placeholder {
+  font-weight: lighter;
+}
+
+.kn-calendar .kn-records-nav .table-keyword-search .input::-ms-input-placeholder {
+  font-weight: lighter;
+}
+
+.kn-calendar .kn-records-nav .table-keyword-search .input::placeholder {
+  font-weight: lighter;
+}
+
+.kn-calendar .kn-records-nav .table-keyword-search .kn-button.search {
+  background: none;
+  border-color: #15467a;
+  border-radius: 5px;
+  color: #15467a;
+}
+
+.kn-calendar .kn-records-nav .table-keyword-search .kn-button.search:hover, .kn-calendar .kn-records-nav .table-keyword-search .kn-button.search:active, .kn-calendar .kn-records-nav .table-keyword-search .kn-button.search:focus {
+  background: #15467a;
+  border-color: #15467a;
+  color: white;
+}
+
+.kn-calendar .kn-records-nav .kn-pagination .kn-select select {
+  /* Dropdown - One Selection */
+  background: rgba(109, 124, 144, 0.1);
+  border: 2px solid transparent;
+  border-radius: .35em;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #333;
+  font-size: 15px;
+  font-weight: bold;
+  height: 35px;
+  line-height: 1.429;
+  margin: auto 2px;
+  outline: none;
+  padding: 5px 15px;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+  width: 100%;
+}
+
+.kn-calendar .kn-records-nav .kn-pagination .kn-select select:hover, .kn-calendar .kn-records-nav .kn-pagination .kn-select select:focus, .kn-calendar .kn-records-nav .kn-pagination .kn-select select:active {
+  border: 2px solid #15467a;
+  background-color: #ffffff;
+}
+
+.kn-calendar .kn-records-nav .kn-pagination .kn-select select option {
+  color: #15467a;
+}
+
+.kn-calendar .knack-calendar .fc table {
+  color: #15467a;
 }
 
 /*============================================================================*/
 /* Menu View */
-#knack-body #kn-app-header {
-  background-color: #15467a;
+.kn-content .kn-navigation-bar ul {
+  margin: auto 10px;
+}
+
+.kn-content .kn-navigation-bar .is-active a {
+  background: #7AC144;
+  border-color: #7AC144;
 }
 
 .kn-info-bar {
-  background-color: #15467a;
-  border-top-color: #15467a;
+  background-color: #fafafa;
+  border-top-color: #fafafa;
   border-top-width: 1px;
   border-top-style: solid;
   padding-bottom: 5px;
 }
 
 .kn-info-bar a {
-  background-color: #15467a;
-  padding-left: 30px !important;
-  color: white !important;
-  font-size: 14px !important;
+  background-color: #fafafa;
+  color: #15467a;
+  font-weight: bold;
+  outline: none;
+  padding-left: 10px;
+  text-decoration: none;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
 }
 
 .kn-info-bar a:hover {
-  background-color: #ffffff;
-  color: #a6a6a6 !important;
+  color: #7AC144;
 }
 
-#kn-app-menu nav.tabs li.is-active a {
-  color: LightSeaGreen !important;
-}
-
-.kn-crumbtrail {
+.kn-info-bar .kn-crumbtrail {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -973,6 +1725,38 @@ body, p, a {
       -ms-flex-positive: 1;
           flex-grow: 1;
   padding-top: 5px;
+}
+
+.kn-info-bar .kn-current_user .kn-current-user-intro {
+  color: #7AC144;
+}
+
+.kn-info-bar .kn-current_user .first {
+  font-weight: bold;
+}
+
+.kn-info-bar .kn-current_user .last {
+  font-weight: 500;
+}
+
+.kn-info-bar .kn-current_user .kn-log-out {
+  color: #7AC144;
+  border: 2px solid;
+  border-radius: 5px;
+  padding: 2px 5px;
+  outline: none;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+.kn-info-bar .kn-current_user .kn-log-out:hover {
+  background: #7AC144;
+  border-color: #7AC144;
+  color: white;
+}
+
+#kn-app-menu nav.tabs li.is-active a {
+  color: LightSeaGreen !important;
 }
 
 header .kn-container {
@@ -988,7 +1772,7 @@ header .kn-container {
 }
 
 /*============================================================================*/
-/* Rich TextView */
+/* Rich Text View */
 .kn-rich_text {
   background: none;
 }
@@ -1014,6 +1798,12 @@ header .kn-container {
 
 .kn-rich_text p {
   font-size: calc(100% + .5vh);
+}
+
+.kn-rich_text hr {
+  background: #7AC144;
+  border-radius: 5px;
+  height: 2px;
 }
 
 /*============================================================================*/
@@ -1049,7 +1839,6 @@ header .kn-container {
 /* Global UI */
 .ui-datepicker {
   color: #15467a;
-  padding: 1rem;
 }
 
 .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:hover .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:focus,
@@ -1151,6 +1940,7 @@ header .kn-container {
   background: none;
   border: 2px solid;
   border-radius: 5px;
+  color: #15467a;
   padding: 5px 10px;
   outline: none;
   text-decoration: none;
@@ -1162,6 +1952,49 @@ header .kn-container {
   background: #15467a;
   border-color: #15467a;
   color: white;
+}
+
+#kn-loading-spinner::after {
+  -webkit-animation: SVspinAround .5s infinite linear;
+          animation: SVspinAround .5s infinite linear;
+  border: 3px solid #7AC144;
+  border-radius: 10px;
+  border-right-color: transparent;
+  -webkit-box-shadow: 2px -4px #15467a;
+          box-shadow: 2px -4px #15467a;
+  content: "";
+  border-top-color: transparent;
+  display: block;
+  height: 20vh;
+  width: 20vh;
+  max-height: 100px;
+  max-width: 100px;
+}
+
+@-webkit-keyframes SVspinAround {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes SVspinAround {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+.kn-link-page span span span {
+  text-decoration: none;
 }
 
 /*============================================================================*/
@@ -1185,8 +2018,10 @@ header .kn-container {
   transition: all .1s linear;
 }
 
-#view_1819.kn-menu.kn-view .kn-link:hover,
-#view_3184.kn-menu.kn-view .kn-link:hover {
+#view_1819.kn-menu.kn-view .kn-link:hover, #view_1819.kn-menu.kn-view .kn-link:focus, #view_1819.kn-menu.kn-view .kn-link:active,
+#view_3184.kn-menu.kn-view .kn-link:hover,
+#view_3184.kn-menu.kn-view .kn-link:focus,
+#view_3184.kn-menu.kn-view .kn-link:active {
   background: #15467a;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -1227,15 +2062,31 @@ header .kn-container {
   transition: all .1s linear;
 }
 
-#view_2274.kn-menu.kn-view .kn-link:hover,
+#view_2274.kn-menu.kn-view .kn-link:hover, #view_2274.kn-menu.kn-view .kn-link:focus, #view_2274.kn-menu.kn-view .kn-link:active,
 #view_1982.kn-menu.kn-view .kn-link:hover,
+#view_1982.kn-menu.kn-view .kn-link:focus,
+#view_1982.kn-menu.kn-view .kn-link:active,
 #view_2255.kn-menu.kn-view .kn-link:hover,
+#view_2255.kn-menu.kn-view .kn-link:focus,
+#view_2255.kn-menu.kn-view .kn-link:active,
 #view_2250.kn-menu.kn-view .kn-link:hover,
+#view_2250.kn-menu.kn-view .kn-link:focus,
+#view_2250.kn-menu.kn-view .kn-link:active,
 #view_2262.kn-menu.kn-view .kn-link:hover,
+#view_2262.kn-menu.kn-view .kn-link:focus,
+#view_2262.kn-menu.kn-view .kn-link:active,
 #view_2235.kn-menu.kn-view .kn-link:hover,
+#view_2235.kn-menu.kn-view .kn-link:focus,
+#view_2235.kn-menu.kn-view .kn-link:active,
 #view_2247.kn-menu.kn-view .kn-link:hover,
+#view_2247.kn-menu.kn-view .kn-link:focus,
+#view_2247.kn-menu.kn-view .kn-link:active,
 #view_2738.kn-menu.kn-view .kn-link:hover,
-#view_2696.kn-menu.kn-view .kn-link:hover {
+#view_2738.kn-menu.kn-view .kn-link:focus,
+#view_2738.kn-menu.kn-view .kn-link:active,
+#view_2696.kn-menu.kn-view .kn-link:hover,
+#view_2696.kn-menu.kn-view .kn-link:focus,
+#view_2696.kn-menu.kn-view .kn-link:active {
   background: #15467a;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -1278,16 +2129,34 @@ header .kn-container {
   transition: all .1s linear;
 }
 
-#view_2615.kn-menu.kn-view .kn-link:hover,
+#view_2615.kn-menu.kn-view .kn-link:hover, #view_2615.kn-menu.kn-view .kn-link:focus, #view_2615.kn-menu.kn-view .kn-link:active,
 #view_2733.kn-menu.kn-view .kn-link:hover,
+#view_2733.kn-menu.kn-view .kn-link:focus,
+#view_2733.kn-menu.kn-view .kn-link:active,
 #view_2859.kn-menu.kn-view .kn-link:hover,
+#view_2859.kn-menu.kn-view .kn-link:focus,
+#view_2859.kn-menu.kn-view .kn-link:active,
 #view_3073.kn-menu.kn-view .kn-link:hover,
+#view_3073.kn-menu.kn-view .kn-link:focus,
+#view_3073.kn-menu.kn-view .kn-link:active,
 #view_3077.kn-menu.kn-view .kn-link:hover,
+#view_3077.kn-menu.kn-view .kn-link:focus,
+#view_3077.kn-menu.kn-view .kn-link:active,
 #view_3092.kn-menu.kn-view .kn-link:hover,
+#view_3092.kn-menu.kn-view .kn-link:focus,
+#view_3092.kn-menu.kn-view .kn-link:active,
 #view_3098.kn-menu.kn-view .kn-link:hover,
+#view_3098.kn-menu.kn-view .kn-link:focus,
+#view_3098.kn-menu.kn-view .kn-link:active,
 #view_3124.kn-menu.kn-view .kn-link:hover,
+#view_3124.kn-menu.kn-view .kn-link:focus,
+#view_3124.kn-menu.kn-view .kn-link:active,
 #view_3278.kn-menu.kn-view .kn-link:hover,
-#view_3330.kn-menu.kn-view .kn-link:hover {
+#view_3278.kn-menu.kn-view .kn-link:focus,
+#view_3278.kn-menu.kn-view .kn-link:active,
+#view_3330.kn-menu.kn-view .kn-link:hover,
+#view_3330.kn-menu.kn-view .kn-link:focus,
+#view_3330.kn-menu.kn-view .kn-link:active {
   background: #15467a;
   -webkit-box-shadow: none;
           box-shadow: none;

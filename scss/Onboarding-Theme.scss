@@ -4,7 +4,7 @@
 /*Designer: Manuel San Ramon*/
 /*Template:strategicvisionzthemes*/
 /*Version:1.0.0*/
-/*Tags:green, blue, branded, customized*/
+/*Tags:green, orange, branded, customized*/
 
 @import "sv-kn trash butler v 1.0.0.scss";
 
@@ -20,7 +20,7 @@
         box-shadow: none;
         color:$primary !important;
         font-weight:bold;
-        transition:alldf .1s linear;
+        transition:all .1s linear;
     }
 }
 
@@ -29,9 +29,12 @@
 #view_33,
 #view_109,
 #view_141,
-#view_38{
+#view_38,
+#view_78,
+#view_88{
     &.kn-details{
-        background:none;
+        background: none;
+        box-shadow: none;
     }
     &.kn-details{
         a{

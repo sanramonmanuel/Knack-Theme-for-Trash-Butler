@@ -1,3 +1,28 @@
+@mixin sv-spinner-1 {
+    &::after{
+        animation: SVspinAround .5s infinite linear;
+        border: 3px solid $secondary;
+        border-radius: 10px;
+        border-right-color: transparent;
+        box-shadow: 2px -4px $primary;
+        content:"";
+        border-top-color: transparent;
+        display: block;
+        height: 20vh;
+        width: 20vh;
+        max-height: 100px;
+        max-width: 100px;
+    }
+    @keyframes SVspinAround {
+        0% {
+         transform:rotate(0deg)
+        }
+        to {
+         transform:rotate(359deg)
+        }
+    }
+}
+
 @mixin HideIcon {
     &>i{
         display: none;
@@ -6,6 +31,7 @@
         display: inline;
     }
 }
+
 @mixin sv_centered_menu {
     display: grid;
     place-items: center;
@@ -17,7 +43,9 @@
             color:white;
             font-weight: bold;
             transition: all .1s linear;
-            &:hover {
+            &:hover,
+            &:focus,
+            &:active{
                 background: $primary;
                 box-shadow: none;
                 transform: translateY(1px);
@@ -39,11 +67,37 @@
     margin:auto 2px;
     outline:none;
     padding:5px 15px;
+    transition: all .1s linear;
     width:100%;
     &:hover,
-    &:focus{
+    &:focus,
+    &:active{
         border:2px solid $primary;
         background-color:#ffffff;
+    }
+}
+
+@mixin file_ui {
+    background:none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    color:$primary;
+    font-size:15px;
+    font-weight:bold;
+    height:35px;
+    line-height:1.429;
+    margin:auto 2px;
+    outline:none;
+    padding:5px 15px;
+    transition: all .1s linear;
+    width:100%;
+    &:hover,
+    &:focus,
+    &:active{
+        border:none;
+        background-color:none;
+        color: $secondary;
     }
 }
 
@@ -60,7 +114,7 @@
 @mixin norecord {
     display:none;
     pointer-events:none;
-    transition: all .1s ease-in-out;
+    transition: all .1s linear;
 }
 
 @mixin hiderec {
@@ -97,7 +151,7 @@
     color:$secondary;
     font-weight: 700;
     text-transform:$txtform;
-    transition: all .1s ease-in-out;
+    transition: all .1s linear;
 }
 
 @mixin linkhover {
@@ -147,7 +201,7 @@ $statpink:#ff4dcf;
     color: #404040;
     text-transform: none;
     outline: none;
-    transition: all .1s ease-in-out;
+    transition: all .1s linear;
     
 }
 @mixin primarybtn ($txtform) {
@@ -156,45 +210,45 @@ $statpink:#ff4dcf;
     color:$itext;
     text-transform:$txtform;
     outline: none;
-    transition: all .1s ease-in-out;
+    transition: all .1s linear;
 }
 
 @mixin successbtn () {
     color:$itext;
-    transition: all .1s ease-in-out;
+    transition: all .1s linear;
 }
 
 @mixin defaultbtn () {
     background:$primary;
     color:$itext;
     outline: none;
-    transition: all .1s ease-in-out;
+    transition: all .1s linear;
 }
 @mixin defaultout () {
     background:none;
     border-color:$primary;
     color:$primary;
     outline: none;
-    transition: all .1s ease-in-out;
+    transition: all .1s linear;
 }
 @mixin defaulthov () {
     background:$primary;
     border-color:$primary;
     color:white;
     outline: none;
-    transition: all .1s ease-in-out;
+    transition: all .1s linear;
 }
 
 @mixin warningbtn () {
     color:$itext;
     outline: none;
-    transition: all .1s ease-in-out;
+    transition: all .1s linear;
 }
 
 @mixin infobtn () {
     color:$itext;
     outline: none;
-    transition: all .1s ease-in-out;
+    transition: all .1s linear;
 }
 
 @mixin dangerbtn ($txtform) {
@@ -202,5 +256,5 @@ $statpink:#ff4dcf;
     color:$itext;
     outline: none;
     text-transform:$txtform;
-    transition: all .1s ease-in-out;
+    transition: all .1s linear;
 }
