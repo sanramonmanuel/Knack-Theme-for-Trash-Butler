@@ -753,6 +753,153 @@ body, p, a{
 }
 
 /*============================================================================*/
+/* Search View */
+.kn-search{
+    background: none;
+    margin:auto 0;
+    padding:2rem;
+    .kn-instructions{
+        color: $secondary;
+        font-style: italic;
+    }
+    .view-header{
+        h1{
+            color: $primary;
+        }
+    }
+    .kn-search_form{
+        .kn-details-group{
+            .kn-search-filters{
+                h3{
+                    color: $primary;
+                }
+                hr{
+                    background: $secondary;
+                    border-radius: 5px;
+                    height: 2px;
+                }
+                .kn-label{
+                color: $primary;
+                font-weight:bold;
+                }
+                .kn-search-filter{
+                    input{
+                        @include form_ui();
+                    }
+                    .operator.kn-select{
+                        select{
+                            @include form_ui();
+                            option{
+                                color: $primary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .kn-submit{
+            button{
+                background: $primary;
+                color: white;
+                font-weight: bold;
+                transition: all .1s linear;
+                &:hover{
+                    box-shadow: 5px 5px $secondary;
+                }
+            }
+        }
+    }
+    .kn-view.kn-table{
+        background: unset;
+    }
+    .kn-records-nav{
+        .js-filter-menu.tabs.is-toggle.is-flush ul li a{ /* Filter Tabs */
+            background: white;
+            border-radius: 5px;
+            box-shadow: none;
+            margin: auto 2px;
+            &:hover{
+                background: $primary;
+                border-color: $primary;
+                color: white;
+            }
+        }
+        .js-filter-menu.tabs.is-toggle.is-flush ul li.is-active a{
+            background: $secondary;
+            border-color: $secondary;
+            color: white;
+        }
+        .kn-filters-nav{
+            .kn-add-filter.kn-button.is-small{
+                background: $primary;
+                border-color: $primary;
+                color: white;
+                &:hover{
+                    @include btnshadow();
+                }
+            }
+        }
+        .kn-filters{
+            ul li {
+                background: none;
+                border:2px dashed $primary;
+                color: $primary;
+                .remove.delete.is-small{
+                    background: $secondary;
+                    &:hover{
+                        background: $primary;
+                    }
+                }
+            }
+        }
+        .table-keyword-search{/* Search Input */
+            .input{
+                background:none;
+                border-color: transparent;
+                border-radius: 5px;
+                box-shadow: none;
+                color:$primary;
+                font-weight: bold;
+                outline:none;
+                &::placeholder{
+                    font-weight: lighter;
+                }
+                &:hover,
+                &:active,
+                &:focus{
+                    border-color: $primary;
+                    box-shadow: none;
+                    color:$primary;
+                }
+            }
+            .kn-button.search{
+                background: none;
+                border-color: $primary;
+                border-radius: 5px;
+                color:$primary;
+                &:hover,
+                &:active,
+                &:focus{
+                    background: $primary;
+                    border-color: $primary;
+                    color:white;
+                }
+            }
+        }
+        .kn-pagination{
+            .kn-select{
+                select{/* Dropdown - One Selection */
+                    @include form_ui();
+                    option{
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*============================================================================*/
 /*Map View*/
 .kn-map{
     .view-header{
@@ -996,10 +1143,23 @@ body, p, a{
             }
         }
         .table-keyword-search{/* Search Input */
-            input{
-                @include form_ui();
+            .input{
+                background:none;
+                border-color: transparent;
+                border-radius: 5px;
+                box-shadow: none;
+                color:$primary;
+                font-weight: bold;
+                outline:none;
                 &::placeholder{
                     font-weight: lighter;
+                }
+                &:hover,
+                &:active,
+                &:focus{
+                    border-color: $primary;
+                    box-shadow: none;
+                    color:$primary;
                 }
             }
             .kn-button.search{
