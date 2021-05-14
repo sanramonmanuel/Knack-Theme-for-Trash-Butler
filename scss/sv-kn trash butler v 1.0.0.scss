@@ -765,6 +765,8 @@ body, p, a{
     .view-header{
         h1{
             color: $primary;
+            padding: 20px 0;
+            text-align: center;
         }
     }
     .kn-search_form{
@@ -892,6 +894,17 @@ body, p, a{
                     @include form_ui();
                     option{
                         color: $primary;
+                    }
+                }
+            }
+            .kn-pagination-arrows{ /* Unfinished from management > site visits  menu*/
+                .kn-change-page.kn-previous,
+                .kn-change-page.kn-next{
+                    i{
+                        color: $secondary;
+                        &:hover{
+                            color: $primary;
+                        }
                     }
                 }
             }
@@ -1188,12 +1201,67 @@ body, p, a{
         }
     }
     .knack-calendar{
-        .fc{
-            table{
-                color: $primary;
+        &.fc{
+            .fc-header{
+                tbody > tr > td{
+                    background: none;
+                    border:none;
+                    line-height: 1;
+                    padding:.5rem 1rem;
+                    vertical-align: middle;
+                }
+                .fc-header-title{
+                    h2{
+                        color: $primary;
+                    }
+                }
+                .fc-button.fc-button-prev.fc-state-default.fc-corner-left,
+                .fc-button.fc-button-next.fc-state-default.fc-corner-right,
+                .fc-button.fc-button-today.fc-state-default.fc-corner-left.fc-corner-right,
+                .fc-button.fc-button-month.fc-state-default.fc-corner-left,
+                .fc-button.fc-button-agendaWeek.fc-state-default,
+                .fc-button.fc-button-agendaDay.fc-state-default.fc-corner-right{
+                    background: white;
+                    border-radius: 5px;
+                    box-shadow: none;
+                    font-weight: bold;
+                    margin: auto 2px;
+                    padding:20px 30px;
+                    text-transform: capitalize;
+                    &.fc-state-hover{
+                        background: $prima1;
+                        border-color: $primary;
+                        color: $primary;
+                    }
+                    &.fc-state-active{
+                        background: $primary;
+                        color: white;
+                    }
+                }
+                .fc-state-disabled{
+                    color: $secondary;
+                    background: $segunda;
+                    border-color: $secondary;
+                }
             }
-        }
-    } 
+            .fc-content{
+                .fc-view.fc-view-month.fc-grid{
+                    .fc-border-separate{
+                        thead > tr > th{
+                            background: none;
+                            border:none;
+                            border-bottom: 2px solid $secondary;
+                            color: $primary;
+                            line-height: 1;
+                            padding:.5rem 1rem;
+                            text-transform: uppercase;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+        } 
+    }
 }
 
 /*============================================================================*/

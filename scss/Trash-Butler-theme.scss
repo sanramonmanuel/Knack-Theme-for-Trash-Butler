@@ -15,7 +15,7 @@
     @include sv_centered_menu();
 }
 
-// Settings Page of TB 
+// Settings Page
 #view_2274,
 #view_1982,
 #view_2255,
@@ -28,7 +28,7 @@
     @include sv_centered_menu();
 }
 
-// Reports Page of TB
+// Reports Page
 #view_2615,
 #view_2733,
 #view_2859,
@@ -39,6 +39,15 @@
 #view_3124,
 #view_3278,
 #view_3330{
+    @include sv_centered_menu();
+}
+
+// Complete Today's Services
+#view_3451,
+#view_3457,
+#view_3458,
+#view_3459,
+#view_3460{
     @include sv_centered_menu();
 }
 

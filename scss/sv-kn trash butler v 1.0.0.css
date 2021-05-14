@@ -1263,6 +1263,8 @@ body, p, a {
 
 .kn-search .view-header h1 {
   color: #15467a;
+  padding: 20px 0;
+  text-align: center;
 }
 
 .kn-search .kn-search_form .kn-details-group .kn-search-filters h3 {
@@ -1473,6 +1475,20 @@ body, p, a {
 }
 
 .kn-search .kn-records-nav .kn-pagination .kn-select select option {
+  color: #15467a;
+}
+
+.kn-search .kn-records-nav .kn-pagination .kn-pagination-arrows {
+  /* Unfinished from management > site visits  menu*/
+}
+
+.kn-search .kn-records-nav .kn-pagination .kn-pagination-arrows .kn-change-page.kn-previous i,
+.kn-search .kn-records-nav .kn-pagination .kn-pagination-arrows .kn-change-page.kn-next i {
+  color: #7AC144;
+}
+
+.kn-search .kn-records-nav .kn-pagination .kn-pagination-arrows .kn-change-page.kn-previous i:hover,
+.kn-search .kn-records-nav .kn-pagination .kn-pagination-arrows .kn-change-page.kn-next i:hover {
   color: #15467a;
 }
 
@@ -1894,8 +1910,70 @@ body, p, a {
   color: #15467a;
 }
 
-.kn-calendar .knack-calendar .fc table {
+.kn-calendar .knack-calendar.fc .fc-header tbody > tr > td {
+  background: none;
+  border: none;
+  line-height: 1;
+  padding: .5rem 1rem;
+  vertical-align: middle;
+}
+
+.kn-calendar .knack-calendar.fc .fc-header .fc-header-title h2 {
   color: #15467a;
+}
+
+.kn-calendar .knack-calendar.fc .fc-header .fc-button.fc-button-prev.fc-state-default.fc-corner-left,
+.kn-calendar .knack-calendar.fc .fc-header .fc-button.fc-button-next.fc-state-default.fc-corner-right,
+.kn-calendar .knack-calendar.fc .fc-header .fc-button.fc-button-today.fc-state-default.fc-corner-left.fc-corner-right,
+.kn-calendar .knack-calendar.fc .fc-header .fc-button.fc-button-month.fc-state-default.fc-corner-left,
+.kn-calendar .knack-calendar.fc .fc-header .fc-button.fc-button-agendaWeek.fc-state-default,
+.kn-calendar .knack-calendar.fc .fc-header .fc-button.fc-button-agendaDay.fc-state-default.fc-corner-right {
+  background: white;
+  border-radius: 5px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-weight: bold;
+  margin: auto 2px;
+  padding: 20px 30px;
+  text-transform: capitalize;
+}
+
+.kn-calendar .knack-calendar.fc .fc-header .fc-button.fc-button-prev.fc-state-default.fc-corner-left.fc-state-hover,
+.kn-calendar .knack-calendar.fc .fc-header .fc-button.fc-button-next.fc-state-default.fc-corner-right.fc-state-hover,
+.kn-calendar .knack-calendar.fc .fc-header .fc-button.fc-button-today.fc-state-default.fc-corner-left.fc-corner-right.fc-state-hover,
+.kn-calendar .knack-calendar.fc .fc-header .fc-button.fc-button-month.fc-state-default.fc-corner-left.fc-state-hover,
+.kn-calendar .knack-calendar.fc .fc-header .fc-button.fc-button-agendaWeek.fc-state-default.fc-state-hover,
+.kn-calendar .knack-calendar.fc .fc-header .fc-button.fc-button-agendaDay.fc-state-default.fc-corner-right.fc-state-hover {
+  background: rgba(21, 70, 122, 0.102);
+  border-color: #15467a;
+  color: #15467a;
+}
+
+.kn-calendar .knack-calendar.fc .fc-header .fc-button.fc-button-prev.fc-state-default.fc-corner-left.fc-state-active,
+.kn-calendar .knack-calendar.fc .fc-header .fc-button.fc-button-next.fc-state-default.fc-corner-right.fc-state-active,
+.kn-calendar .knack-calendar.fc .fc-header .fc-button.fc-button-today.fc-state-default.fc-corner-left.fc-corner-right.fc-state-active,
+.kn-calendar .knack-calendar.fc .fc-header .fc-button.fc-button-month.fc-state-default.fc-corner-left.fc-state-active,
+.kn-calendar .knack-calendar.fc .fc-header .fc-button.fc-button-agendaWeek.fc-state-default.fc-state-active,
+.kn-calendar .knack-calendar.fc .fc-header .fc-button.fc-button-agendaDay.fc-state-default.fc-corner-right.fc-state-active {
+  background: #15467a;
+  color: white;
+}
+
+.kn-calendar .knack-calendar.fc .fc-header .fc-state-disabled {
+  color: #7AC144;
+  background: rgba(122, 193, 68, 0.102);
+  border-color: #7AC144;
+}
+
+.kn-calendar .knack-calendar.fc .fc-content .fc-view.fc-view-month.fc-grid .fc-border-separate thead > tr > th {
+  background: none;
+  border: none;
+  border-bottom: 2px solid #7AC144;
+  color: #15467a;
+  line-height: 1;
+  padding: .5rem 1rem;
+  text-transform: uppercase;
+  vertical-align: middle;
 }
 
 /*============================================================================*/
