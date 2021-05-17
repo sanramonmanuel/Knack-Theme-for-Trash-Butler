@@ -437,14 +437,16 @@ body, p, a{
     background: white;
     border-radius: 1rem;
     padding: 2rem;
-    h2{
-        color: $primary;
-        margin:0;
-        @include media ('<tablet'){
-            border-bottom-style: inset;
-            border-color: $secondary;
+    .view-header{
+        h2{
+            color: $primary;
+            margin:0;
+            @include media ('<tablet'){
+                border-bottom-style: inset;
+                border-color: $secondary;
+            }
         }
-    }
+    }  
     .kn-records-nav{
         .js-filter-menu.tabs.is-toggle.is-flush ul li a{ /* Filter Tabs */
             background: white;
@@ -1578,6 +1580,7 @@ header .kn-container{
         border:2px solid $secondary;
         border-right: 0;
         border-top: 0;
+        padding: 3px;
     }
     &:hover:after {
         border-color: $primary;

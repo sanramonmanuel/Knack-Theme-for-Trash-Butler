@@ -1577,6 +1577,7 @@ header .kn-container{
     &:after{
         border:2px solid $secondary;
         border-right: 0;
+        padding: 3px;
         border-top: 0;
     }
     &:hover:after {
