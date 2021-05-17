@@ -1,0 +1,58 @@
+/*Theme Name:Strategic Visionz Knack- Trash Butler Official*/
+/*ThemeTheme URI:https://dl.dropbox.com/s/h6k0q0asex9a5b5/sv%20trash%20butler%20v%201.0.0.min.css*/
+/*Description:This is the Official Theme for Trash Butler*/
+/*Designer: Manuel San Ramon*/
+/*Template:strategicvisionzthemes*/
+/*Version:1.0.0*/
+/*Tags:green, blue, branded, customized*/
+
+@import "sv-kn trash butler v 1.0.0.scss";
+
+/*============================================================================*/
+/* Special Single Menu View */
+#view_1819,
+#view_3184 {
+    @include sv_centered_menu();
+}
+
+// Settings Page
+#view_2274,
+#view_1982,
+#view_2255,
+#view_2250,
+#view_2262,
+#view_2235,
+#view_2247,
+#view_2738,
+#view_2696{
+    @include sv_centered_menu();
+}
+
+// Reports Page
+#view_2615,
+#view_2733,
+#view_2859,
+#view_3073,
+#view_3077,
+#view_3092,
+#view_3098,
+#view_3124,
+#view_3278,
+#view_3330{
+    @include sv_centered_menu();
+}
+
+// Complete Today's Services
+#view_3451,
+#view_3457,
+#view_3458,
+#view_3459,
+#view_3460{
+    @include sv_centered_menu();
+}
+
+// Scene Pages
+#kn-scene_679,
+#kn-scene_769{
+    background:none;
+}
