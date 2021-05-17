@@ -1,0 +1,265 @@
+@mixin sv-spinner-1 {
+    &::after{
+        animation: SVspinAround .5s infinite linear;
+        border: 3px solid $secondary;
+        border-radius: 10px;
+        border-right-color: transparent;
+        box-shadow: 2px -4px $primary;
+        content:"";
+        border-top-color: transparent;
+        display: block;
+        height: 20vh;
+        width: 20vh;
+        max-height: 100px;
+        max-width: 100px;
+    }
+    @keyframes SVspinAround {
+        0% {
+         transform:rotate(0deg)
+        }
+        to {
+         transform:rotate(359deg)
+        }
+    }
+}
+
+@mixin HideIcon {
+    &>i{
+        display: none;
+    }
+    &:hover>i{
+        display: inline;
+    }
+}
+
+@mixin sv_centered_menu {
+    display: grid;
+    place-items: center;
+    &.kn-menu.kn-view{
+        .kn-link{
+            background: $primary;
+            border: 2px solid transparent;
+            box-shadow: 5px 5px $secondary;
+            color:white;
+            font-weight: bold;
+            transition: all .1s linear;
+            &:hover,
+            &:focus,
+            &:active{
+                background: $primary;
+                box-shadow: none;
+                transform: translateY(1px);
+            }
+        }
+    }
+}
+
+@mixin form_ui {
+    background:rgba(109, 124, 144, .1);
+    border: 2px solid transparent;
+    border-radius: .35em;
+    box-shadow: none;
+    color:#333;
+    font-size:15px;
+    font-weight:bold;
+    height:35px;
+    line-height:1.429;
+    margin:auto 2px;
+    outline:none;
+    padding:5px 15px;
+    transition: all .1s linear;
+    width:100%;
+    &:hover,
+    &:focus,
+    &:active{
+        border:2px solid $primary;
+        background-color:#ffffff;
+    }
+}
+
+@mixin file_ui {
+    background:none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    color:$primary;
+    font-size:15px;
+    font-weight:bold;
+    height:35px;
+    line-height:1.429;
+    margin:auto 2px;
+    outline:none;
+    padding:5px 15px;
+    transition: all .1s linear;
+    width:100%;
+    &:hover,
+    &:focus,
+    &:active{
+        border:none;
+        background-color:none;
+        color: $secondary;
+    }
+}
+
+@mixin calborder {
+    border:1px dashed #ddd;
+}
+
+@mixin psfix ($fontsize) {
+    color:$secondary;
+    font-size:$fontsize;
+    font-weight:bold;
+}
+
+@mixin norecord {
+    display:none;
+    pointer-events:none;
+    transition: all .1s linear;
+}
+
+@mixin hiderec {
+    opacity:0;
+    pointer-events:none;
+}
+
+@mixin shadows {
+    box-shadow:0px 5px 15px hsla(210, 8%, 62%, 0.2);
+}
+
+@mixin inshadow {
+    box-shadow:inset 0 7px 29px 0 #64646f33;
+}
+
+@mixin balance{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin SuperCentered {
+    display: grid;
+    place-items: center;
+}
+
+@mixin clean {
+    border-bottom:none;
+    background:none;
+    border:none;
+}
+
+@mixin linkbtn ($txtform) {
+    color:$secondary;
+    font-weight: 700;
+    text-transform:$txtform;
+    transition: all .1s linear;
+}
+
+@mixin linkhover {
+    color:$primary;
+}
+
+@mixin hoverbtn {
+    transform: scale(1.01);
+    outline: none;
+}
+@mixin stats ($statcolor) {
+    background: $statcolor;
+    color:#ffffff;
+    padding: 5px 10px;
+}
+@mixin primasegunda {
+    background:linear-gradient(to left, $primary 0%, $secondary 100%);
+}
+
+@mixin btnshadow {
+    border-color: white;
+    box-shadow: 0 2px 4px #0000004d, inset 0px 2px 4px #0000004d;
+}
+
+$transition: all .1s linear;
+
+$MainB: #fafafa;
+$primary:#026937;
+$secondary:#EA7200;
+
+$prima1:rgba(2, 105, 55,.1);
+$segunda:rgba(234, 114, 0, .1);
+
+$Text:#787878;
+$itext:#ffffff;
+$paletext:#ffc999;
+
+$accent1:#dcb38d; 
+$accent2: #55565A;
+
+$statlightb:#66ccff;
+$statred:#cc0000;
+$statorange:#ff9900;
+$statpurple:#9900ff;
+$statyellow:#ffd11a;
+$statblack:#262626;
+$statpink:#ff4dcf;
+
+@mixin monobtn {
+    background:none;
+    border:2px solid #d9d9d9;
+    color: #404040;
+    text-transform: none;
+    outline: none;
+    transition: all .1s linear;
+    
+}
+@mixin primarybtn ($txtform) {
+    background:$primary;
+    border:none;
+    color:$itext;
+    text-transform:$txtform;
+    outline: none;
+    transition: all .1s linear;
+}
+
+@mixin successbtn () {
+    color:$itext;
+    transition: all .1s linear;
+}
+
+@mixin defaultbtn () {
+    background:$primary;
+    color:$itext;
+    outline: none;
+    transition: all .1s linear;
+}
+@mixin defaultout () {
+    background:none;
+    border-color:$primary;
+    color:$primary;
+    outline: none;
+    transition: all .1s linear;
+}
+@mixin defaulthov () {
+    background:$primary;
+    border-color:$primary;
+    color:white;
+    outline: none;
+    transition: all .1s linear;
+}
+
+@mixin warningbtn () {
+    color:$itext;
+    outline: none;
+    transition: all .1s linear;
+}
+
+@mixin infobtn () {
+    color:$itext;
+    outline: none;
+    transition: all .1s linear;
+}
+
+@mixin dangerbtn ($txtform) {
+    background:$statred;
+    color:$itext;
+    outline: none;
+    text-transform:$txtform;
+    transition: all .1s linear;
+}

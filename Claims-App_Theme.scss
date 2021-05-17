@@ -1,0 +1,47 @@
+/*Theme Name:Strategic Visionz Knack - Claims App*/
+/*ThemeTheme URI:*/
+/*Description:This is the Official Theme for Claims App*/
+/*Designer: Manuel San Ramon*/
+/*Template:strategicvisionzthemes*/
+/*Version:1.0.0*/
+/*Tags:green, orange, branded, customized*/
+
+@import "kn-CHHJ-theme.scss";
+
+
+/* Admin */
+// Dashboard
+#view_161,
+#view_19,
+#view_218{
+    @include sv_centered_menu();
+}
+
+// Open Claims
+#view_72,
+#view_96,
+#view_122{
+    @include sv_centered_menu();
+}
+
+/* Vendor */
+// Open Repair
+#view_109,
+#view_117,
+#view_120{
+    @include sv_centered_menu();
+}
+
+// Claims - View Completed Repairs
+#view_196{
+    @include sv_centered_menu();
+}
+
+// Kanban
+#view_219.kn-table.kn-view{
+    overflow-x: scroll;
+}
+
+#view_221{
+    @include sv_centered_menu();
+}
