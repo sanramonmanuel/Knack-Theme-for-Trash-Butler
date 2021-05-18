@@ -2642,3 +2642,7 @@ header .kn-container {
   -webkit-transform: translateY(1px);
           transform: translateY(1px);
 }
+
+#testing-commits {
+  background: unset;
+}
