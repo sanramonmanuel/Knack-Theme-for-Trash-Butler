@@ -1468,6 +1468,56 @@ header .kn-container{
 }
 
 /*============================================================================*/
+/* Login */
+.kn-login{
+    .view-header{
+        h2{
+            color: $primary;
+        }
+    }
+    .kn-login-form{
+        .login_form{
+            text-align: center;
+            .kn-label{
+                color:$primary;
+            }
+            .input{
+                @include form_ui();
+            }
+            .ang-link{
+                color: $secondary;
+                &:hover{
+                    color: $primary;
+                }
+            }
+            .remember{
+                color: $secondary;
+                font-weight: bold;
+            }
+        }
+        .kn-button{
+            background: $primary;
+            color: white;
+            font-weight: bold;
+            transition: all .1s linear;
+            width: 100%;
+            &:hover{
+                box-shadow: 5px 5px $secondary;
+            }
+        }
+        .register{
+            .control{
+                text-align: center;
+            }
+            .kn-label{
+                color: $secondary;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+/*============================================================================*/
 /* Modal View*/
 .kn-modal{
     .modal-card-head {
