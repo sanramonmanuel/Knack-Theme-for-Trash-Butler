@@ -1361,79 +1361,79 @@ body, p, a{
 
 /*============================================================================*/
 /* Menu View */
-.kn-content{
-    .kn-navigation-bar {
-        ul{
-            margin: auto 10px;
-        }
-        .is-active{
-            a{
-                background: $secondary;
-                border-color: $secondary;
-            }
-        }
-    }
-}
+// .kn-content{
+//     .kn-navigation-bar {
+//         ul{
+//             margin: auto 10px;
+//         }
+//         .is-active{
+//             a{
+//                 background: $secondary;
+//                 border-color: $secondary;
+//             }
+//         }
+//     }
+// }
 
-.kn-info-bar {
-    background-color: $MainB;
-    border-top-color: $MainB;
-    border-top-width: 1px;
-    border-top-style: solid;
-    padding-bottom: 5px;
-    a {
-        background-color: $MainB;
-        color: $primary;
-        font-weight: bold;
-        outline: none;
-        padding-left: 10px;
-        text-decoration: none;
-        transition: all .1s linear;
-        &:hover {
-            color: $secondary;
-        }
-    }
-    .kn-crumbtrail {
-        display: flex;
-        align-items: center;
-        flex-grow: 1;
-        padding-top: 5px;
-    }
-    .kn-current_user{
-        .kn-current-user-intro{
-            color: $secondary;
-        }
-        .first{
-            font-weight: bold;
-        }
-        .last{
-            font-weight: 500;
-        }
-        .kn-log-out{
-            color: $secondary;
-            border:2px solid;
-            border-radius: 5px;
-            padding: 2px 5px;
-            outline: none;
-            transition: all .1s linear;
-            &:hover{
-                background: $secondary;
-                border-color: $secondary;
-                color: white;
-            }
-        }
-    }
-}
+// .kn-info-bar {
+//     background-color: $MainB;
+//     border-top-color: $MainB;
+//     border-top-width: 1px;
+//     border-top-style: solid;
+//     padding-bottom: 5px;
+//     a {
+//         background-color: $MainB;
+//         color: $primary;
+//         font-weight: bold;
+//         outline: none;
+//         padding-left: 10px;
+//         text-decoration: none;
+//         transition: all .1s linear;
+//         &:hover {
+//             color: $secondary;
+//         }
+//     }
+//     .kn-crumbtrail {
+//         display: flex;
+//         align-items: center;
+//         flex-grow: 1;
+//         padding-top: 5px;
+//     }
+//     .kn-current_user{
+//         .kn-current-user-intro{
+//             color: $secondary;
+//         }
+//         .first{
+//             font-weight: bold;
+//         }
+//         .last{
+//             font-weight: 500;
+//         }
+//         .kn-log-out{
+//             color: $secondary;
+//             border:2px solid;
+//             border-radius: 5px;
+//             padding: 2px 5px;
+//             outline: none;
+//             transition: all .1s linear;
+//             &:hover{
+//                 background: $secondary;
+//                 border-color: $secondary;
+//                 color: white;
+//             }
+//         }
+//     }
+// }
 
-#kn-app-menu nav.tabs li.is-active a {
-    color: LightSeaGreen !important;
-}
+// #kn-app-menu nav.tabs li.is-active a {
+//     color: LightSeaGreen !important;
+// }
 
-header .kn-container{
-    align-items: center;
-    display:flex;
-    justify-content: left;
-}
+// header .kn-container{
+//     align-items: center;
+//     display:flex;
+//     justify-content: left;
+// }
 
 /*============================================================================*/
 /* Rich Text View */
