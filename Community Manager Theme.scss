@@ -78,6 +78,26 @@ font-size: 20px;
 .sv-warning-text{
 color: red;
 }
+// Docs And Other Bottons using Details View
+#view_3378,
+#view_3384{
+    &.kn-list{
+        .kn-list-content{
+            .kn-list-item-container{
+                .columns{
+                    .kn-details-column{
+                        .kn-details-group{
+                            box-shadow: none;
+                            border-radius:15px;
+                            margin:auto 15px;
+                            padding: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 // IMG 100%
 #view_3370{

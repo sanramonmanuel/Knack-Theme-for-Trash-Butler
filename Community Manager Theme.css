@@ -2461,6 +2461,15 @@ body, p, a {
   color: red;
 }
 
+#view_3378.kn-list .kn-list-content .kn-list-item-container .columns .kn-details-column .kn-details-group,
+#view_3384.kn-list .kn-list-content .kn-list-item-container .columns .kn-details-column .kn-details-group {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 15px;
+  margin: auto 15px;
+  padding: 1rem;
+}
+
 #view_3370.kn-list .kn-list-content .kn-list-item-container .columns .kn-details-column .kn-details-group {
   -webkit-box-shadow: none;
           box-shadow: none;
