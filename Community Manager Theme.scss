@@ -21,11 +21,18 @@
                 .columns{
                     .kn-details-column{
                         .kn-details-group{
+                            background:none;
                             box-shadow: none;
                             border-radius:15px;
                             margin:auto 15px;
                             padding: 1rem;
                         }
+                    }
+                }
+                img{
+                    max-width: 100%;
+                    @include media ('>tablet') {
+                        max-width: 100%;
                     }
                 }
             }
@@ -56,65 +63,127 @@
     }
 }
 
-/* Dashboard */
-// Headline
-.sv-button-green{
-    background: #7AC144;
-    color:white;
-    box-shadow:none;
-    border:none;
-    padding:5px 10px;
+#kn-scene_1255.kn-scene.kn-container {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 75px 400px;
+}
+
+/* Notification */
+#view_3407{
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+/* Community Details */
+#view_3374{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+/* Community Units */
+#view_3393{
+    grid-column-start: 3;
+    grid-column-end: 5;
 }
   
-.sv-button-red{
-background: red;
-color:white;
-box-shadow:none;
-border:none;
-padding:5px 10px;
-font-size: 20px;
+/* Recent Infraction */
+/* Community Docs */
+#view_3376,
+#view_3378{
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
-  
-.sv-warning-text{
-color: red;
-}
-// Docs And Other Bottons using Details View
+
 #view_3378,
 #view_3384{
-    &.kn-list{
-        .kn-list-content{
-            .kn-list-item-container{
-                .columns{
-                    .kn-details-column{
-                        .kn-details-group{
-                            box-shadow: none;
-                            border-radius:15px;
-                            margin:auto 15px;
-                            padding: 1rem;
-                        }
-                    }
-                }
-            }
+    &.kn-details{
+        text-align: center;
+    }
+}
+#view_3384 {
+    &.kn-details{
+        button{
+            width:100%;
         }
     }
 }
 
-// IMG 100%
-#view_3370{
+/* Open Service Hazards */
+#view_3379{
+    grid-column-start: 3;
+    grid-column-end: 5;
     &.kn-list{
-        .kn-list-content{
-            .kn-list-item-container{
-                .columns{
-                    .kn-details-column{
-                        .kn-details-group{
-                            box-shadow: none;
-                            border-radius:15px;
-                            margin:auto 15px;
-                            padding: 1rem;
-                        }
-                    }
-                }
-            }
+        margin:0;
+    }
+}
+
+/* Infraction and Hazard Btn */
+#view_3377{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#view_3388{
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+#view_3377.kn-details,
+#view_3388.kn-details {
+    text-align: right;
+    position: relative;
+    top: 100px;
+}
+
+/* Headline */
+.sv-button-green{
+    background: $secondary;
+    box-shadow:none;
+    border:none;
+    border-radius: 5px;
+    color:white;
+    font-size: 16px;
+    padding: 7px 10px;
+    width: 300px;
+}
+  
+.sv-button-red{
+    background: $statred;
+    border-radius: 5px;
+    box-shadow:none;
+    border: none;
+    color:white;
+    font-size: 16px;
+    padding: 4px 10px;
+    width: 300px;
+}
+  
+.sv-warning-text{
+    color: $statred;
+    font-size: 16px;
+    width: 70%;
+}
+/* Updates, ComHeading, Docs And Other Bottons using Details View */
+#view_3407,
+#view_3374,
+#view_3378,
+#view_3384,
+#view_3377,
+#view_3388{
+    &.kn-details{
+        background:none;
+        box-shadow: none;
+    }
+}
+
+#view_3407{
+    text-align: right;
+}
+
+#view_3374{
+    &.kn-details{
+        .kn-detail-body{
             img{
                 max-width: 100%;
                 @include media ('>tablet') {
@@ -125,13 +194,49 @@ color: red;
     }
 }
 
-// Sticky Bar
+#view_3393,
+#view_3378,
+#view_3384{
+    background: unset;
+}
+
+/* Control Panels */
+#view_3384{
+    .sv-control-panel{
+        background: $primary;
+        border:none;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        padding: 10px 10px;
+        outline: none;
+        text-decoration: none;
+        transition: all .1s linear;
+        &:hover{
+            box-shadow: 5px 5px $secondary;
+        }
+    }
+}
+
+/* Community Profile */
+/* Community name */
+
+#view_3472,
+#view_3412,
+#view_3503{
+    &.kn-details{
+        background:none;
+        box-shadow: none;
+    }
+}
+
+/* Survey Bar*/
 p.sticky{
     background:#15467a;
     bottom: 0;
     color: white;
     font-size: 15px;
-  	left: 0;
+      left: 0;
     padding: 10px 10px;
     position: fixed;
     text-align: center;
@@ -165,17 +270,5 @@ a#close_sticky{
     transition: all .1s linear;
     &:hover{
         color: #7AC144;
-    }
-}
-
-/* Community Profile */
-// Community name
-
-#view_3472,
-#view_3412,
-#view_3503{
-    &.kn-details{
-        background:none;
-        box-shadow: none;
     }
 }

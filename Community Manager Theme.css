@@ -2400,11 +2400,22 @@ body, p, a {
 }
 
 #view_3370.kn-list .kn-list-content .kn-list-item-container .columns .kn-details-column .kn-details-group {
+  background: none;
   -webkit-box-shadow: none;
           box-shadow: none;
   border-radius: 15px;
   margin: auto 15px;
   padding: 1rem;
+}
+
+#view_3370.kn-list .kn-list-content .kn-list-item-container img {
+  max-width: 100%;
+}
+
+@media (min-width: 769px) {
+  #view_3370.kn-list .kn-list-content .kn-list-item-container img {
+    max-width: 100%;
+  }
 }
 
 #view_3370.kn-list .kn-list-content .kn-detail-label {
@@ -2437,57 +2448,178 @@ body, p, a {
   color: #7AC144;
 }
 
-/* Dashboard */
+#kn-scene_1255.kn-scene.kn-container {
+  display: -ms-grid !important;
+  display: grid !important;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 75px 400px;
+      grid-template-rows: 75px 400px;
+}
+
+/* Notification */
+#view_3407 {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+/* Community Details */
+#view_3374 {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+/* Community Units */
+#view_3393 {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+/* Recent Infraction */
+/* Community Docs */
+#view_3376,
+#view_3378 {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#view_3378.kn-details,
+#view_3384.kn-details {
+  text-align: center;
+}
+
+#view_3384.kn-details button {
+  width: 100%;
+}
+
+/* Open Service Hazards */
+#view_3379 {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+#view_3379.kn-list {
+  margin: 0;
+}
+
+/* Infraction and Hazard Btn */
+#view_3377 {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#view_3388 {
+  -ms-grid-column: 4;
+      grid-column-start: 4;
+  grid-column-end: 5;
+}
+
+#view_3377.kn-details,
+#view_3388.kn-details {
+  text-align: right;
+  position: relative;
+  top: 100px;
+}
+
+/* Headline */
 .sv-button-green {
   background: #7AC144;
-  color: white;
   -webkit-box-shadow: none;
           box-shadow: none;
   border: none;
-  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  padding: 7px 10px;
+  width: 300px;
 }
 
 .sv-button-red {
-  background: red;
-  color: white;
+  background: #cc0000;
+  border-radius: 5px;
   -webkit-box-shadow: none;
           box-shadow: none;
   border: none;
-  padding: 5px 10px;
-  font-size: 20px;
+  color: white;
+  font-size: 16px;
+  padding: 4px 10px;
+  width: 300px;
 }
 
 .sv-warning-text {
-  color: red;
+  color: #cc0000;
+  font-size: 16px;
+  width: 70%;
 }
 
-#view_3378.kn-list .kn-list-content .kn-list-item-container .columns .kn-details-column .kn-details-group,
-#view_3384.kn-list .kn-list-content .kn-list-item-container .columns .kn-details-column .kn-details-group {
+/* Updates, ComHeading, Docs And Other Bottons using Details View */
+#view_3407.kn-details,
+#view_3374.kn-details,
+#view_3378.kn-details,
+#view_3384.kn-details,
+#view_3377.kn-details,
+#view_3388.kn-details {
+  background: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border-radius: 15px;
-  margin: auto 15px;
-  padding: 1rem;
 }
 
-#view_3370.kn-list .kn-list-content .kn-list-item-container .columns .kn-details-column .kn-details-group {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border-radius: 15px;
-  margin: auto 15px;
-  padding: 1rem;
+#view_3407 {
+  text-align: right;
 }
 
-#view_3370.kn-list .kn-list-content img {
+#view_3374.kn-details .kn-detail-body img {
   max-width: 100%;
 }
 
 @media (min-width: 769px) {
-  #view_3370.kn-list .kn-list-content img {
+  #view_3374.kn-details .kn-detail-body img {
     max-width: 100%;
   }
 }
 
+#view_3393,
+#view_3378,
+#view_3384 {
+  background: unset;
+}
+
+/* Control Panels */
+#view_3384 .sv-control-panel {
+  background: #15467a;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  padding: 10px 10px;
+  outline: none;
+  text-decoration: none;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+#view_3384 .sv-control-panel:hover {
+  -webkit-box-shadow: 5px 5px #7AC144;
+          box-shadow: 5px 5px #7AC144;
+}
+
+/* Community Profile */
+/* Community name */
+#view_3472.kn-details,
+#view_3412.kn-details,
+#view_3503.kn-details {
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/* Survey Bar*/
 p.sticky {
   background: #15467a;
   bottom: 0;
@@ -2535,13 +2667,4 @@ a#close_sticky {
 
 a#close_sticky:hover {
   color: #7AC144;
-}
-
-/* Community Profile */
-#view_3472.kn-details,
-#view_3412.kn-details,
-#view_3503.kn-details {
-  background: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
 }
