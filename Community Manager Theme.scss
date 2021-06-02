@@ -1,6 +1,6 @@
-/*Theme Name:Strategic Visionz Knack - Onboarding App*/
+/*Theme Name:Strategic Visionz Knack - Community Manager UI*/
 /*ThemeTheme URI:*/
-/*Description:This is the Official Theme for Onboarding App*/
+/*Description:This is the Official Theme for Community Manager UI*/
 /*Designer: Manuel San Ramon*/
 /*Template:strategicvisionzthemes*/
 /*Version:1.0.0*/
@@ -8,3 +8,154 @@
 
 @import "kn-TB-theme.scss";
 
+/* Select A Community */
+.sv-dashboard-text{
+    color: $primary;
+    text-align: center;
+}
+
+#view_3370{
+    &.kn-list{
+        .kn-list-content{
+            .kn-list-item-container{
+                .columns{
+                    .kn-details-column{
+                        .kn-details-group{
+                            box-shadow: none;
+                            border-radius:15px;
+                            margin:auto 15px;
+                            padding: 1rem;
+                        }
+                    }
+                }
+            }
+            .kn-detail-label{
+                background: none;
+                color: $primary;
+                font-weight:bold;
+            }
+            .kn-details-link{
+                text-align: center;
+                a{
+                    color: $primary;
+                    font-weight:bold;
+                    text-transform: uppercase;
+                    transition: all .1s linear;
+                    &:hover{
+                        color: $secondary;
+                    }
+                }
+            }
+            h1{
+                color: $primary;
+                &:hover{
+                    color: $secondary;
+                }
+            }
+        }
+    }
+}
+
+/* Dashboard */
+// Headline
+.sv-button-green{
+    background: #7AC144;
+    color:white;
+    box-shadow:none;
+    border:none;
+    padding:5px 10px;
+}
+  
+.sv-button-red{
+background: red;
+color:white;
+box-shadow:none;
+border:none;
+padding:5px 10px;
+font-size: 20px;
+}
+  
+.sv-warning-text{
+color: red;
+}
+
+// IMG 100%
+#view_3370{
+    &.kn-list{
+        .kn-list-content{
+            .kn-list-item-container{
+                .columns{
+                    .kn-details-column{
+                        .kn-details-group{
+                            box-shadow: none;
+                            border-radius:15px;
+                            margin:auto 15px;
+                            padding: 1rem;
+                        }
+                    }
+                }
+            }
+            img{
+                max-width: 100%;
+                @include media ('>tablet') {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// Sticky Bar
+p.sticky{
+    background:#15467a;
+    bottom: 0;
+    color: white;
+    font-size: 15px;
+  	left: 0;
+    padding: 10px 10px;
+    position: fixed;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    z-index: 5;
+    & > a#close_sticky{
+        display:none;
+    }
+    &:hover > a#close_sticky{
+        display: block;
+    }
+}
+
+a#click_survey_id{
+    border-bottom: 2px solid #15467a;
+    color: white;
+    font-weight: bold;
+    transition: all .1s linear;
+    &:hover{
+        border-color: #7AC144;
+    }
+}
+
+a#close_sticky{
+    border-bottom: none;
+    position: fixed;
+    right: 20px;
+    bottom: 2px;
+    transform: scale(1.5);
+    transition: all .1s linear;
+    &:hover{
+        color: #7AC144;
+    }
+}
+
+/* Community Profile */
+// Community name
+
+#view_3472,
+#view_3412,
+#view_3503{
+    &.kn-details{
+        background:none;
+        box-shadow: none;
+    }
+}
