@@ -2631,6 +2631,19 @@ body, p, a {
   color: #15467a;
 }
 
+/* Recent Infraction Unit Details */
+#view_3512.kn-details,
+#view_3510.kn-details {
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#view_3512 h1,
+#view_3510 h1 {
+  color: #15467a;
+}
+
 /* Service History */
 #view_3458.kn-details {
   background: none;

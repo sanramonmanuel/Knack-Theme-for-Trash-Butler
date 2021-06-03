@@ -242,6 +242,12 @@
     @include detalhe();
 }
 
+/* Recent Infraction Unit Details */
+#view_3512,
+#view_3510{
+    @include detalhe();
+}
+
 /* Service History */
 #view_3458{
     @include detalhe();
