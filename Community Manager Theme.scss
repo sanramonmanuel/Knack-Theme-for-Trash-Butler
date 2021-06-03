@@ -385,3 +385,13 @@ a#close_sticky{
         color: #7AC144;
     }
 }
+
+/* Modal -  Request Radar*/
+#view_3402{
+    @include detalhe();
+}
+
+#view_3516.kn-form{
+    margin-left: -70px;
+    box-shadow: none;
+}

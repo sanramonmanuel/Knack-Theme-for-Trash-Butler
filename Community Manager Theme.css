@@ -2837,3 +2837,20 @@ a#close_sticky {
 a#close_sticky:hover {
   color: #7AC144;
 }
+
+/* Modal -  Request Radar*/
+#view_3402.kn-details {
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#view_3402 h1 {
+  color: #15467a;
+}
+
+#view_3516.kn-form {
+  margin-left: -70px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
