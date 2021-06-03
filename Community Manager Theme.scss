@@ -8,6 +8,16 @@
 
 @import "kn-TB-theme.scss";
 
+@mixin detalhe{
+    &.kn-details{
+        background:none;
+        box-shadow: none;
+    }
+    h1{
+        color:$primary;
+    }
+}
+
 /* Select A Community */
 .sv-dashboard-text{
     color: $primary;
@@ -63,77 +73,91 @@
     }
 }
 
+/* Dashboard UI */
 #kn-scene_1255.kn-scene.kn-container {
     display: grid !important;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 75px 400px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 350px 50px 1fr 250px 50px 1000px 0;
+    width: 99%;
 }
 
 /* Notification */
-#view_3407{
-    grid-column-start: 3;
-    grid-column-end: 5;
+#view_3407 {
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
 
-/* Community Details */
-#view_3374{
+/* Hidden */
+#view_3517{
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
-/* Community Units */
-#view_3393{
-    grid-column-start: 3;
-    grid-column-end: 5;
+
+
+#view_3378.kn-details,
+#view_3384.kn-details {
+    text-align: center;
+}
+
+/* Community Documents Btn */
+#view_3543.kn-rich_text{
+    padding-top: 50px;
+}
+#view_3543.kn-rich_text button{
+    width: 50%;
+    background: none;
+    border: 2px solid $primary;
+    border-radius: 5px;
+    color: $primary;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 0;
+    outline: none;
+    text-decoration: none;
+    transition: all .1s linear;
+    &:hover{
+        box-shadow: 5px 5px $secondary;
+    }
+}
+
+#view_3543.kn-rich_text{
+    text-align: center;
+}
+
+/* Control Panel Btn */
+#view_3384.kn-details {
+    padding-top: 50px;
+    button {
+        width: 50%;
+    }
+}
+
+/* Support Ticket Btn */
+#view_3539{
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
   
-/* Recent Infraction */
-/* Community Docs */
-#view_3376,
-#view_3378{
+/* Support Ticket Table */
+#view_3537{
     grid-column-start: 1;
     grid-column-end: 3;
 }
+  
+#view_3379.kn-list {
+    margin: 0;
+}
 
-#view_3378,
-#view_3384{
+/* Infraction, Hazard, Ticket Btns */
+#view_3377,
+#view_3388,
+#view_3539 {
     &.kn-details{
-        text-align: center;
+        text-align: right;
+        position: relative;
+        top: 80px;
     }
-}
-#view_3384 {
-    &.kn-details{
-        button{
-            width:100%;
-        }
-    }
-}
-
-/* Open Service Hazards */
-#view_3379{
-    grid-column-start: 3;
-    grid-column-end: 5;
-    &.kn-list{
-        margin:0;
-    }
-}
-
-/* Infraction and Hazard Btn */
-#view_3377{
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-
-#view_3388{
-    grid-column-start: 4;
-    grid-column-end: 5;
-}
-
-#view_3377.kn-details,
-#view_3388.kn-details {
-    text-align: right;
-    position: relative;
-    top: 100px;
 }
 
 /* Headline */
@@ -145,7 +169,7 @@
     color:white;
     font-size: 16px;
     padding: 7px 10px;
-    width: 300px;
+    width: 400px;
 }
   
 .sv-button-red{
@@ -156,7 +180,7 @@
     color:white;
     font-size: 16px;
     padding: 4px 10px;
-    width: 300px;
+    width: 400px;
 }
   
 .sv-warning-text{
@@ -170,7 +194,8 @@
 #view_3378,
 #view_3384,
 #view_3377,
-#view_3388{
+#view_3388,
+#view_3539{
     &.kn-details{
         background:none;
         box-shadow: none;
@@ -194,12 +219,6 @@
     }
 }
 
-#view_3393,
-#view_3378,
-#view_3384{
-    background: unset;
-}
-
 /* Control Panels */
 #view_3384{
     .sv-control-panel{
@@ -216,6 +235,84 @@
             box-shadow: 5px 5px $secondary;
         }
     }
+}
+
+/* Service History */
+#view_3458{
+    @include detalhe();
+}
+
+/* Infractions */
+#view_3462,
+#view_3508{
+    @include detalhe();
+}
+
+
+/* RADAR & Units */
+#view_3465{
+    @include detalhe();
+}
+
+/* Service Hazards */
+#view_3463{
+    @include detalhe();
+}
+
+/* Support Tickets */
+#view_3468{
+    @include detalhe();
+}
+
+/* Account/Billing */
+#view_3470,
+#view_3526{
+    @include detalhe();
+}
+
+#kn-scene_1274.kn-scene.kn-container {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px 300px 2fr;
+}
+
+#view_3470{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    &.kn-details{
+        text-align:center;
+    }
+}
+
+#view_3526{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    &.kn-details{
+        .view-header{
+            h2{
+                text-align:center;
+            }
+        }
+        .kn-button{
+            background: $primary;
+            border:none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            padding: 10px 10px;
+            outline: none;
+            text-decoration: none;
+            transition: all .1s linear;
+            &:hover{
+                box-shadow: 5px 5px $secondary;
+            }
+        }
+    }
+}
+
+#view_3500{
+    grid-column-start: 1;
+    grid-column-end: 4;
 }
 
 /* Community Profile */
