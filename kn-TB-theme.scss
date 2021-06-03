@@ -567,6 +567,12 @@ body, p, a{
             tbody > tr{
                 transition: all .1s linear;
                 vertical-align: middle;
+                &.kn-table-group{
+                    td{
+                        background: $secondary;
+                        color: white;
+                    }
+                }
                 &:hover{
                     background: $prima1;
                 }

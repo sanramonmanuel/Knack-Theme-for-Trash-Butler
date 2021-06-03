@@ -970,6 +970,15 @@ body, p, a {
   vertical-align: middle;
 }
 
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.can-overflow-x tbody > tr.kn-table-group,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped tbody > tr.kn-table-group,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-striped.can-overflow-x tbody > tr.kn-table-group,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.can-overflow-x tbody > tr.kn-table-group,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.cell-editable tbody > tr.kn-table-group,
+.kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped.can-overflow-x tbody > tr.kn-table-group {
+  background: #7AC144;
+}
+
 .kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.can-overflow-x tbody > tr:hover,
 .kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-bordered.is-striped tbody > tr:hover,
 .kn-table.kn-view .kn-table-wrapper .kn-table.kn-table-table.is-striped.can-overflow-x tbody > tr:hover,
