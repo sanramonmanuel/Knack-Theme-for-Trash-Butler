@@ -2870,3 +2870,22 @@ a#close_sticky:hover {
           box-shadow: none;
   background: none;
 }
+
+/* Modal Service hHazard Page Addressed? */
+.view_3523.kn-form {
+  margin-left: -70px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: none;
+}
+
+/* Modal - Support Ticket Details  */
+.view_3525.kn-details {
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.view_3525 h1 {
+  color: #15467a;
+}
