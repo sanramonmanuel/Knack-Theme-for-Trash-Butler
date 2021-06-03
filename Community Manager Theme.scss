@@ -24,6 +24,10 @@
     text-align: center;
 }
 
+#view_3369{
+    margin-left: -220px;
+}
+
 #view_3370{
     &.kn-list{
         .kn-list-content{
@@ -71,6 +75,20 @@
             }
         }
     }
+}
+
+#view_3370 .kn-list-item-container.kn-list-container.column.is-full{
+    background: white;
+    padding: 20px 0;
+    margin: 10px 10px 20px -100px;
+    &:hover{
+        box-shadow: 10px 10px $primary;
+    }
+}
+
+/* Community Icon */
+#view_3370.kn-list i{
+    font-size: 120px;
 }
 
 /* Dashboard UI */

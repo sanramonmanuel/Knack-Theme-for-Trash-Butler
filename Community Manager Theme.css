@@ -2399,6 +2399,10 @@ body, p, a {
   text-align: center;
 }
 
+#view_3369 {
+  margin-left: -220px;
+}
+
 #view_3370.kn-list .kn-list-content .kn-list-item-container .columns .kn-details-column .kn-details-group {
   background: none;
   -webkit-box-shadow: none;
@@ -2446,6 +2450,22 @@ body, p, a {
 
 #view_3370.kn-list .kn-list-content h1:hover {
   color: #7AC144;
+}
+
+#view_3370 .kn-list-item-container.kn-list-container.column.is-full {
+  background: white;
+  padding: 20px 0;
+  margin: 10px 10px 20px -100px;
+}
+
+#view_3370 .kn-list-item-container.kn-list-container.column.is-full:hover {
+  -webkit-box-shadow: 10px 10px #15467a;
+          box-shadow: 10px 10px #15467a;
+}
+
+/* Community Icon */
+#view_3370.kn-list i {
+  font-size: 120px;
 }
 
 /* Dashboard UI */
