@@ -237,6 +237,11 @@
     }
 }
 
+/* Service Ratings Details */
+#view_3477{
+    @include detalhe();
+}
+
 /* Service History */
 #view_3458{
     @include detalhe();

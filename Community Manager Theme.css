@@ -2620,6 +2620,17 @@ body, p, a {
           box-shadow: 5px 5px #7AC144;
 }
 
+/* Service Ratings Details */
+#view_3477.kn-details {
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#view_3477 h1 {
+  color: #15467a;
+}
+
 /* Service History */
 #view_3458.kn-details {
   background: none;
