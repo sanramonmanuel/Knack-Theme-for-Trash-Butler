@@ -2459,8 +2459,8 @@ body, p, a {
 }
 
 #view_3370 .kn-list-item-container.kn-list-container.column.is-full:hover {
-  -webkit-box-shadow: 10px 10px #15467a;
-          box-shadow: 10px 10px #15467a;
+  -webkit-box-shadow: 10px 0 #15467a;
+          box-shadow: 10px 0 #15467a;
 }
 
 /* Community Icon */
