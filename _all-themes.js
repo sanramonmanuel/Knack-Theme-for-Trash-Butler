@@ -8,6 +8,12 @@ KnackInitAsync = function($, callback) {
     LazyLoad.css(['https://dl.dropbox.com/s/udouvvkxmi450h9/Trash-Butler-theme.min.css'], callback);
 };
 
+// Community Manager
+KnackInitAsync = function($, callback) {
+    LazyLoad.css(['https://dl.dropbox.com/s/sqlg3dw46rcc7ch/Community%20Manager%20Theme.css'], callback);
+};
+
+
 // Onboarding App
 KnackInitAsync = function($, callback) {
     LazyLoad.css(['https://dl.dropbox.com/s/s4kuytwvo7292kj/Onboarding-Theme.min.css'], callback);
