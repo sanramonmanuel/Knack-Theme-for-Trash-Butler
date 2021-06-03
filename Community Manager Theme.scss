@@ -208,7 +208,6 @@
 }
 /* Updates, ComHeading, Docs And Other Bottons using Details View */
 #view_3407,
-#view_3374,
 #view_3378,
 #view_3384,
 #view_3377,
@@ -234,7 +233,13 @@
                 }
             }
         }
+        i{
+            font-size: 18px;
+            padding: 0 10px 0 0;
+            vertical-align: middle;
+        }
     }
+    @include detalhe();
 }
 
 /* Control Panels */

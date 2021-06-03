@@ -2606,7 +2606,6 @@ body, p, a {
 
 /* Updates, ComHeading, Docs And Other Bottons using Details View */
 #view_3407.kn-details,
-#view_3374.kn-details,
 #view_3378.kn-details,
 #view_3384.kn-details,
 #view_3377.kn-details,
@@ -2629,6 +2628,22 @@ body, p, a {
   #view_3374.kn-details .kn-detail-body img {
     max-width: 100%;
   }
+}
+
+#view_3374.kn-details i {
+  font-size: 18px;
+  padding: 0 10px 0 0;
+  vertical-align: middle;
+}
+
+#view_3374.kn-details {
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#view_3374 h1 {
+  color: #15467a;
 }
 
 /* Control Panels */
