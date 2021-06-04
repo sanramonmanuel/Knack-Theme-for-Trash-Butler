@@ -744,7 +744,6 @@ body, p, a {
   background: white;
   border-radius: 1rem;
   padding: 2rem;
-  margin: auto auto;
   /* img{
         max-width: 100%;
         @include media ('>tablet') {
