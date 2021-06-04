@@ -2402,6 +2402,14 @@ body, p, a {
   margin-left: -220px;
 }
 
+/* Service T0day */
+.field_44 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #7AC144;
+  margin-left: 8px;
+}
+
 #view_3370.kn-list {
   background: none;
 }
