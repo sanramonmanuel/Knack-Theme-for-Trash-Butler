@@ -433,7 +433,6 @@ body, p, a{
 /*============================================================================*/
 /* Table View */
 .kn-table.kn-view{
-    @include shadows();
     background: white;
     border-radius: 1rem;
     padding: 2rem;
@@ -626,8 +625,9 @@ body, p, a{
 /*============================================================================*/
 /* List View */
 .kn-list{
-    background: none;
-    margin:auto 0;
+    background: white;
+    border-radius: 1rem;
+    margin: auto 20px;
     padding:2rem;
     .view-header{
         h2{
@@ -724,7 +724,6 @@ body, p, a{
             .columns{
                 .kn-details-column{
                     .kn-details-group{
-                        @include shadows();
                         border-radius:15px;
                         margin:auto 15px;
                         padding: 1rem;

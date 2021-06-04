@@ -750,8 +750,6 @@ body, p, a {
 /*============================================================================*/
 /* Table View */
 .kn-table.kn-view {
-  -webkit-box-shadow: 0px 5px 15px rgba(150, 158, 166, 0.2);
-          box-shadow: 0px 5px 15px rgba(150, 158, 166, 0.2);
   background: white;
   border-radius: 1rem;
   padding: 2rem;
@@ -1084,8 +1082,9 @@ body, p, a {
 /*============================================================================*/
 /* List View */
 .kn-list {
-  background: none;
-  margin: auto 0;
+  background: white;
+  border-radius: 1rem;
+  margin: auto 20px;
   padding: 2rem;
 }
 
@@ -1230,8 +1229,6 @@ body, p, a {
 }
 
 .kn-list .kn-list-content .kn-list-item-container .columns .kn-details-column .kn-details-group {
-  -webkit-box-shadow: 0px 5px 15px rgba(150, 158, 166, 0.2);
-          box-shadow: 0px 5px 15px rgba(150, 158, 166, 0.2);
   border-radius: 15px;
   margin: auto 15px;
   padding: 1rem;
