@@ -421,12 +421,12 @@ body, p, a{
                 color: $secondary;
             }
         }
-        img{
+        /* img{
             max-width: 100%;
             @include media ('>tablet') {
                 max-width: 25%;
             }
-        }
+        } */
     }
 }
 
@@ -606,12 +606,12 @@ body, p, a{
             }
         }
     }
-    img{
+    /* img{
         max-width: 100%;
         @include media ('>tablet') {
             max-width: 25%;
         }
-    }
+    } */
     .kn-button{
         &:hover,
         &:active,
@@ -749,12 +749,12 @@ body, p, a{
                 }
             }
         }
-        img{
+        /* img{
             max-width: 100%;
             @include media ('>tablet') {
                 max-width: 25%;
             }
-        }
+        } */
     }
 }
 

@@ -43,12 +43,12 @@
                         }
                     }
                 }
-                img{
+                /* img{
                     max-width: 100%;
                     @include media ('>tablet') {
                         max-width: 100%;
                     }
-                }
+                } */
             }
             .kn-detail-label{
                 background: none;
@@ -226,12 +226,12 @@
 #view_3374{
     &.kn-details{
         .kn-detail-body{
-            img{
+            /* img{
                 max-width: 100%;
                 @include media ('>tablet') {
                     max-width: 100%;
                 }
-            }
+            } */
         }
         i{
             font-size: 18px;
