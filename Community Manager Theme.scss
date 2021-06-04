@@ -30,6 +30,7 @@
 
 #view_3370{
     &.kn-list{
+        background :none;
         .kn-list-content{
             .kn-list-item-container{
                 .columns{
@@ -43,12 +44,6 @@
                         }
                     }
                 }
-                /* img{
-                    max-width: 100%;
-                    @include media ('>tablet') {
-                        max-width: 100%;
-                    }
-                } */
             }
             .kn-detail-label{
                 background: none;
@@ -82,13 +77,13 @@
     padding: 20px 0;
     margin: 10px 10px 20px -100px;
     &:hover{
-        box-shadow: 10px 0 $primary;
+        background: $prima1;
     }
 }
 
 /* Community Icon */
 #view_3370.kn-list i{
-    font-size: 120px;
+    font-size: 150px;
 }
 
 /* Dashboard UI */
@@ -111,7 +106,11 @@
     grid-column-end: 3;
 }
 
-
+/* Recent Infraction Icon */
+#view_3376.kn-list i{
+    font-size:30px;
+    margin-left: 50px;
+}
 
 #view_3378.kn-details,
 #view_3384.kn-details {
@@ -127,6 +126,7 @@
     background: none;
     border: 2px solid $primary;
     border-radius: 5px;
+    box-shadow: 5px 5px $secondary;
     color: $primary;
     font-size: 16px;
     font-weight: bold;
@@ -135,7 +135,8 @@
     text-decoration: none;
     transition: all .1s linear;
     &:hover{
-        box-shadow: 5px 5px $secondary;
+        box-shadow: none;
+        transform: translatey(5px);
     }
 }
 
@@ -240,6 +241,9 @@
         }
     }
     @include detalhe();
+    h2{
+        color: $primary;
+    }
 }
 
 /* Control Panels */
@@ -440,7 +444,123 @@ a#close_sticky{
     background:none;
 }
 
+/* Satisfactory Survey Modal */
+.view_3520.kn-form{
+    margin-left: -70px;
+    box-shadow: none;
+    background:none;
+}
+
 /* Modal - Support Ticket Details  */
 .view_3525{
     @include detalhe();
+}
+
+/* Community Profile */
+
+#kn-scene_1275.kn-scene.kn-container {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 90px 90px 90px 500px 1fr;
+  width: 98%;
+}
+
+#iew_3472.kn-details{
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+#view_3554{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  
+/* Community Icons */
+#view_3554,
+#view_3555,
+#view_3556{
+    &.kn-rich_text{
+        i{
+            color:$primary;
+            font-size: 30px;
+            margin-left: -25px;
+            margin-top: 10px;
+        }
+    }
+}
+
+  #view_3555{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  
+  #view_3556{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  
+/* Photo*/
+#view_3412{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+/* Name */
+#view_3551{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+/* Address */
+#view_3552{
+ grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+/* Phone */
+#view_3553{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+#view_3551,
+#view_3552,
+#view_3553{
+    &.kn-details{
+        @include detalhe();
+        h2{
+            color: $primary;
+        }
+    }
+}
+
+/* All Details */
+#view_3503{
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+/* Community Units */
+#view_3504.kn-table{
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+#kn-scene_1275 .kn-link-page{
+  grid-column-start: 1;
+  grid-column-end: 3;
 }

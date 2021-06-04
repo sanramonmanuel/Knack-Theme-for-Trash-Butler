@@ -700,8 +700,6 @@ body, p, a {
 /*============================================================================*/
 /*Details View */
 .kn-details {
-  -webkit-box-shadow: 0px 5px 15px rgba(150, 158, 166, 0.2);
-          box-shadow: 0px 5px 15px rgba(150, 158, 166, 0.2);
   background: white;
   border-radius: 15px;
   padding: 1rem;

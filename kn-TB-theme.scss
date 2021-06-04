@@ -395,7 +395,7 @@ body, p, a{
 /*============================================================================*/
 /*Details View */
 .kn-details{
-    @include shadows();
+    // @include shadows();
     background: white;
     border-radius:15px;
     padding: 1rem;
