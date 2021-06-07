@@ -2507,6 +2507,10 @@ body, p, a {
   color: #7AC144;
 }
 
+#view_3376.kn-list .kn-list-item-container.kn-list-container.column.is-full:nth-child(1) {
+  border-bottom: 1px solid rgba(21, 70, 122, 0.1);
+}
+
 #view_3378.kn-details,
 #view_3384.kn-details {
   text-align: center;

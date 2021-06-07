@@ -126,8 +126,10 @@ margin-left: 8px;
             color:$secondary;
         }
     }
+    .kn-list-item-container.kn-list-container.column.is-full:nth-child(1){
+        border-bottom: 1px solid $prima1;
+    }
 }
-    
 
 #view_3378.kn-details,
 #view_3384.kn-details {
