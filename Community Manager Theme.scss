@@ -519,7 +519,7 @@ a#close_sticky{
 #kn-scene_1275.kn-scene.kn-container {
     display: grid !important;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 90px 90px 90px 500px 1fr;
+    grid-template-rows: 90px 90px 90px 500px  100px 1fr;
   width: 98%;
 }
 
@@ -607,7 +607,8 @@ grid-row-end: 4;
 }
 
 /* All Details */
-#view_3503{
+#view_3503,
+#view_3567{
   grid-column-start: 1;
   grid-column-end: 4;
 }
