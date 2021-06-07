@@ -233,24 +233,18 @@ margin-left: 8px;
 }
 
 #view_3374{
-    &.kn-details{
-        .kn-detail-body{
-            /* img{
-                max-width: 100%;
-                @include media ('>tablet') {
-                    max-width: 100%;
-                }
-            } */
+        &.kn-details{
+            @include detalhe();
+            .kn-detail-body{
+            i{
+                font-size: 18px;
+                padding: 0 10px 0 0;
+                vertical-align: middle;
+            }
         }
-        i{
-            font-size: 18px;
-            padding: 0 10px 0 0;
-            vertical-align: middle;
+        h2{
+            color: $primary;
         }
-    }
-    @include detalhe();
-    h2{
-        color: $primary;
     }
 }
 
@@ -296,13 +290,14 @@ margin-left: 8px;
 
 #view_3508{
     &.kn-details{
-        .kn-detail,
-        .kn-detail-label{
-            color: $statred;
-            font-weight: bold;
+        @include detalhe();
+        i{
+            font-size: 18px;
+            padding: 0 10px 0 0;
+            vertical-align: middle;
         }
-        h2{
-            color: $statred;
+        .sv-warning-text{
+            font-weight: bold;
         }
     }
 }
