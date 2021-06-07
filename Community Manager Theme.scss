@@ -294,6 +294,19 @@ margin-left: 8px;
     @include detalhe();
 }
 
+#view_3508{
+    &.kn-details{
+        .kn-detail,
+        .kn-detail-label{
+            color: $statred;
+            font-weight: bold;
+        }
+        h2{
+            color: $statred;
+        }
+    }
+}
+
 
 /* RADAR & Units */
 #view_3465{

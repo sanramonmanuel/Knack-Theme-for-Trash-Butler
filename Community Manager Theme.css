@@ -2716,6 +2716,16 @@ body, p, a {
   color: #15467a;
 }
 
+#view_3508.kn-details .kn-detail,
+#view_3508.kn-details .kn-detail-label {
+  color: #cc0000;
+  font-weight: bold;
+}
+
+#view_3508.kn-details h2 {
+  color: #cc0000;
+}
+
 /* RADAR & Units */
 #view_3465.kn-details {
   background: none;
