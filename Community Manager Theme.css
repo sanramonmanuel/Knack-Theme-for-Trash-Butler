@@ -2498,6 +2498,15 @@ body, p, a {
   font-size: 50px;
 }
 
+#view_3376.kn-list a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#view_3376.kn-list a:hover {
+  color: #7AC144;
+}
+
 #view_3378.kn-details,
 #view_3384.kn-details {
   text-align: center;
