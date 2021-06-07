@@ -10,7 +10,7 @@ KnackInitAsync = function($, callback) {
 
 // Community Manager
 KnackInitAsync = function($, callback) {
-    LazyLoad.css(['https://dl.dropbox.com/s/sqlg3dw46rcc7ch/Community%20Manager%20Theme.css'], callback);
+    LazyLoad.css(['https://dl.dropbox.com/s/pt24adzdqgjx73y/Community%20Manager%20Theme.min.css'], callback);
 };
 
 
