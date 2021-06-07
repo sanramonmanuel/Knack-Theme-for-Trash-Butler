@@ -2855,6 +2855,16 @@ body, p, a {
 }
 
 /* Community Profile */
+#view_3385.kn-details {
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#view_3385 h1 {
+  color: #15467a;
+}
+
 /* Edit My Profile Btn Page*/
 #view_3536.kn-details {
   background: none;
