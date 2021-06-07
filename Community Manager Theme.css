@@ -2474,8 +2474,8 @@ body, p, a {
   display: grid !important;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 80px 385px 50px 1fr 250px 50px 1000px 0;
-      grid-template-rows: 80px 385px 50px 1fr 250px 50px 1000px 0;
+  -ms-grid-rows: 80px 385px 50px 1fr 250px 50px 0.5fr 0;
+      grid-template-rows: 80px 385px 50px 1fr 250px 50px 0.5fr 0;
   width: 99%;
 }
 
