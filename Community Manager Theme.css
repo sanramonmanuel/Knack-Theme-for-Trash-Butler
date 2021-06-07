@@ -2461,6 +2461,7 @@ body, p, a {
 
 #view_3370 .kn-list-item-container.kn-list-container.column.is-full:hover {
   background: rgba(21, 70, 122, 0.1);
+  cursor: pointer;
 }
 
 /* Community Icon */
