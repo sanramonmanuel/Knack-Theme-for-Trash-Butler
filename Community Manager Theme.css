@@ -2394,7 +2394,9 @@ body, p, a {
 
 /* Sidebar */
 #kn-mobile-menu {
-  background: white;
+  background-color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 /* Select A Community */
