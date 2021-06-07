@@ -2392,6 +2392,11 @@ body, p, a {
   text-decoration: none;
 }
 
+/* Sidebar */
+#kn-mobile-menu {
+  background: white;
+}
+
 /* Select A Community */
 .sv-dashboard-text {
   color: #15467a;
