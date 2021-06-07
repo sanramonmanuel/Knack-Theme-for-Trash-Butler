@@ -2409,7 +2409,7 @@ body, p, a {
   margin-left: -220px;
 }
 
-/* Service T0day */
+/* Service Today */
 .field_44 {
   font-size: 24px;
   font-weight: bold;
@@ -2937,9 +2937,18 @@ a#close_sticky:hover {
 }
 
 #view_3516.kn-form {
-  margin-left: -70px;
+  margin-left: -90px;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+/* Modal -  Recent Infraction*/
+#view_3442.kn-form,
+#view_3569.kn-form {
+  margin-left: -90px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: none;
 }
 
 /* Modal -  Addressed with Resident*/

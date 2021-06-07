@@ -34,7 +34,7 @@
     margin-left: -220px;
 }
 
-/* Service T0day */
+/* Service Today */
 .field_44 {
 font-size: 24px;
 font-weight: bold;
@@ -459,8 +459,16 @@ a#close_sticky{
 }
 
 #view_3516.kn-form{
-    margin-left: -70px;
+    margin-left: -90px;
     box-shadow: none;
+}
+
+/* Modal -  Recent Infraction*/
+#view_3442.kn-form,
+#view_3569.kn-form{
+    margin-left: -90px;
+    box-shadow: none;
+    background:none;
 }
 
 /* Modal -  Addressed with Resident*/
@@ -497,7 +505,6 @@ a#close_sticky{
 }
 
 /* Community Profile */
-
 #kn-scene_1275.kn-scene.kn-container {
     display: grid !important;
     grid-template-columns: 1fr 1fr 1fr;
@@ -531,20 +538,20 @@ a#close_sticky{
     }
 }
 
-  #view_3555{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-  
-  #view_3556{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 4;
-  }
-  
+#view_3555{
+grid-column-start: 2;
+grid-column-end: 3;
+grid-row-start: 2;
+grid-row-end: 3;
+}
+
+#view_3556{
+grid-column-start: 2;
+grid-column-end: 3;
+grid-row-start: 3;
+grid-row-end: 4;
+}
+
 /* Photo*/
 #view_3412{
   grid-column-start: 1;
