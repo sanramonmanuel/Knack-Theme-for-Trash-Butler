@@ -2599,6 +2599,10 @@ body, p, a {
   width: 20vw;
 }
 
+.sv-button-green:hover {
+  cursor: pointer;
+}
+
 .sv-button-red {
   background: #cc0000;
   border-radius: 5px;
@@ -2609,6 +2613,10 @@ body, p, a {
   font-size: 16px;
   padding: 4px 10px;
   width: 20vw;
+}
+
+.sv-button-red:hover {
+  cursor: pointer;
 }
 
 .sv-warning-text {

@@ -209,6 +209,9 @@ margin-left: 8px;
     font-size: 16px;
     padding: 7px 10px;
     width: 20vw;
+    &:hover{
+        cursor: pointer;
+    }
 }
   
 .sv-button-red{
@@ -220,6 +223,9 @@ margin-left: 8px;
     font-size: 16px;
     padding: 4px 10px;
     width: 20vw;
+    &:hover{
+        cursor: pointer;
+    }
 }
   
 .sv-warning-text{
