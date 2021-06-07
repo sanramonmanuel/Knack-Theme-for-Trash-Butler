@@ -2944,6 +2944,12 @@ a#close_sticky:hover {
   color: #15467a;
 }
 
+#view_3580.kn-form {
+  margin-left: -90px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 #view_3516.kn-form {
   margin-left: -90px;
   -webkit-box-shadow: none;
