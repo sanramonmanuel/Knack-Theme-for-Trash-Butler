@@ -17,6 +17,12 @@
         color:$primary;
     }
 }
+@mixin paper{
+    &.kn-form{
+        background:none;
+        box-shadow: none;
+    }
+}
 
 /* Sidebar */
 #kn-mobile-menu{
@@ -395,7 +401,7 @@ margin-left: 8px;
 
 /* Community Profile */
 #view_3385{
-    @include detalhe();
+    @include paper();
 }
 
 /* Edit My Profile Btn Page*/
