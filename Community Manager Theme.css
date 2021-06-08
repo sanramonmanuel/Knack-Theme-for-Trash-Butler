@@ -2726,14 +2726,16 @@ body, p, a {
 
 /* Infractions */
 #view_3462.kn-details,
-#view_3508.kn-details {
+#view_3508.kn-details,
+#view_3561.kn-details {
   background: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
 #view_3462 h1,
-#view_3508 h1 {
+#view_3508 h1,
+#view_3561 h1 {
   color: #15467a;
 }
 
@@ -2769,13 +2771,13 @@ body, p, a {
 }
 
 /* Service Hazards */
-#view_3463.kn-details {
+#view_3560.kn-details {
   background: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-#view_3463 h1 {
+#view_3560 h1 {
   color: #15467a;
 }
 
@@ -2861,6 +2863,28 @@ body, p, a {
   background: none;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+/* Radar Logs */
+#view_3587.kn-details {
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#view_3587 h1 {
+  color: #15467a;
+}
+
+/* Community Logs */
+#view_3586.kn-details {
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#view_3586 h1 {
+  color: #15467a;
 }
 
 /* Edit My Profile Btn Page*/

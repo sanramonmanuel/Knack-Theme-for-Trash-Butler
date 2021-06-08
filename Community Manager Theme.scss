@@ -316,7 +316,8 @@ margin-left: 8px;
 
 /* Infractions */
 #view_3462,
-#view_3508{
+#view_3508,
+#view_3561{
     @include detalhe();
 }
 
@@ -341,7 +342,7 @@ margin-left: 8px;
 }
 
 /* Service Hazards */
-#view_3463{
+#view_3560{
     @include detalhe();
 }
 
@@ -404,6 +405,16 @@ margin-left: 8px;
 /* Community Profile */
 #view_3385{
     @include paper();
+}
+
+/* Radar Logs */
+#view_3587{
+    @include detalhe();
+}
+
+/* Community Logs */
+#view_3586{
+    @include detalhe();
 }
 
 /* Edit My Profile Btn Page*/
