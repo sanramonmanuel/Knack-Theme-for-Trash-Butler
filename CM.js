@@ -1285,8 +1285,7 @@ $(document).on('knack-record-create.view_2788', function(event, view, record) {
 
 //Log in
 $(document).on("knack-view-render.view_3363", function(event, view, data) {
- 
-    $('head').append('<link rel="stylesheet" type="text/css" class="lazyload" href="https://dl.dropbox.com/s/sqlg3dw46rcc7ch/Community%20Manager%20Theme.css">')
+ 	$('head').append('<link rel="stylesheet" type="text/css" class="lazyload" href="https://dl.dropbox.com/s/pt24adzdqgjx73y/Community%20Manager%20Theme.min.css">')
 });
 
 //view_3369 This will add the css for the CCS
@@ -1314,11 +1313,11 @@ $(document).on("knack-view-render.view_3370", function(event, view, data) {
         window.location = $(this).find("a").attr("href"); 
         return false;
       });
-    $('head').append('<link rel="stylesheet" type="text/css" class="lazyload" href="https://dl.dropbox.com/s/sqlg3dw46rcc7ch/Community%20Manager%20Theme.css">')
+    $('head').append('<link rel="stylesheet" type="text/css" class="lazyload" href="https://dl.dropbox.com/s/pt24adzdqgjx73y/Community%20Manager%20Theme.min.css">')
 });
 
 function appendCustomMenuBottom(){
-  	$('head').append('<link rel="stylesheet" type="text/css" class="lazyload" href="https://dl.dropbox.com/s/sqlg3dw46rcc7ch/Community%20Manager%20Theme.css">')
+  	$('head').append('<link rel="stylesheet" type="text/css" class="lazyload" href="https://dl.dropbox.com/s/pt24adzdqgjx73y/Community%20Manager%20Theme.min.css">')
 	let customMenu = $('#custom_menu_id');
   
   	var myComIcon = `<i class="fa fa-building"></i>`;
@@ -1331,7 +1330,9 @@ function appendCustomMenuBottom(){
           <li><a href="#" class="kn-log-out">${logOutIcon} <span class="custom-menu-text"> Log Out</a> </span></li></ul>
     	</ul>`
     );
-    $('#kn-mobile-menu').append(customMenuBottom);
+  	var checkIfExist = document.getElementsByClassName('sv-bottom-menu');
+	if (checkIfExist.length == 0){$('#kn-mobile-menu').append(customMenuBottom);}
+    
 }
 //This will click the service Id btn on the hidden list (View And Rate Last night Service)
 $(document).on("knack-view-render.view_3397", function(event, view, data) {
@@ -1378,21 +1379,27 @@ function appendCustomMenuMain(){
     var supportTicket = `<i class="fa fa-inbox"></i>`;
     var billing = `<i class="fa fa-list-alt"></i>`;
   	var profile = `<i class="fa fa-user"></i>`;
+  	//
+  	var radarLog = `<i class="fa fa-camera"></i>`;
+  	var comLog = `<i class="fa fa-building-o"></i>`;
 
 
     var customMenu = $(`
         <ul id="custom_menu_id" style="list-style-type:none; display:none;">
-          <li><a class="sv-cm-navbar" id="com_dashboard">${dashboard} <span class="custom-menu-text"> Dashboard</span></a></li>
-          <li><a class="sv-cm-navbar" id="com_service_history">${serviceHistory} <span class="custom-menu-text"> Service History</span></a></li>
-          <li><a class="sv-cm-navbar" id="com_infractions">${infractions} <span class="custom-menu-text"> Infractions</span></a></li>
-          <li><a class="sv-cm-navbar" id="com_radar">${units}</i> <span class="custom-menu-text"> RADAR &amp; Units</span></a></li>
-          <li><a class="sv-cm-navbar" id="com_hazards">${hazards}<span class="custom-menu-text"> Service Hazards</span></a></li>
-          <li><a class="sv-cm-navbar" id="com_support_tickets">${supportTicket} <span class="custom-menu-text"> Support Tickets</span></a></li>
-          <li><a class="sv-cm-navbar" id="com_account_billing">${billing} <span class="custom-menu-text"> Account/Billing</span></a></li>
-          <li><a class="sv-cm-navbar" id="com_profile">${profile} <span class="custom-menu-text"> Community Profile</span></a></li>
+          <li id="com_dashboard"><a class="sv-cm-navbar" >${dashboard} <span class="custom-menu-text"> Dashboard</span></a></li>
+          <li id="com_service_history"><a class="sv-cm-navbar" >${serviceHistory} <span class="custom-menu-text"> Service History</span></a></li>
+          <li id="com_infractions"><a class="sv-cm-navbar" >${infractions} <span class="custom-menu-text"> Infractions</span></a></li>
+          <li id="com_radar"><a class="sv-cm-navbar" >${units}</i> <span class="custom-menu-text"> RADAR &amp; Units</span></a></li>
+          <li id="com_hazards"><a class="sv-cm-navbar" >${hazards}<span class="custom-menu-text"> Service Hazards</span></a></li>
+          <li id="com_support_tickets"><a class="sv-cm-navbar" >${supportTicket} <span class="custom-menu-text"> Support Tickets</span></a></li>
+          <li id="com_account_billing"><a class="sv-cm-navbar" >${billing} <span class="custom-menu-text"> Account/Billing</span></a></li>
+          <li id="com_profile"><a class="sv-cm-navbar" >${profile} <span class="custom-menu-text"> Community Profile</span></a></li>
+
+          <li id="com_radarLogs"><a class="sv-cm-navbar" >${radarLog} <span class="custom-menu-text"> RADAR Logs</span></a></li>
+          <li id="com_comLogs"><a class="sv-cm-navbar" >${comLog} <span class="custom-menu-text"> Community Logs</span></a></li>
     	</ul>`
     );
-    $('#kn-mobile-menu').append(customMenu);
+  	if($('#custom_menu_id').length == 0){$('#kn-mobile-menu').append(customMenu);}
   	$($('.kn-mobile-controls')[0]).on('click', function(){
       	showHideMenuText();
     })
@@ -1403,20 +1410,29 @@ function addLinkToCommunityDashboard(id){
   	appendCustomMenuBottom();
   
   	let varId = id;
-	$('#com_dashboard').attr("href", "https://chhj.knack.com/trash-butler#community-concierge-on-dev/community-dashboard/"+varId);
-  	$('#com_service_history').attr("href", "https://chhj.knack.com/trash-butler#community-concierge-on-dev/community-dashboard/"+varId+"/community-service-history/"+varId);
-  	$('#com_infractions').attr("href", "https://chhj.knack.com/trash-butler#community-concierge-on-dev/community-dashboard/"+varId+"/infractions/"+varId);
-    $('#com_radar').attr("href", "https://chhj.knack.com/trash-butler#community-concierge-on-dev/community-dashboard/"+varId+"/radar-and-units/"+varId);
-    $('#com_hazards').attr("href", "https://chhj.knack.com/trash-butler#community-concierge-on-dev/community-dashboard/"+varId+"/service-hazards/"+varId);
-    $('#com_support_tickets').attr("href", "https://chhj.knack.com/trash-butler#community-concierge-on-dev/community-dashboard/"+varId+"/community-support-tickets/"+varId);
-    $('#com_account_billing').attr("href", "https://chhj.knack.com/trash-butler#community-concierge-on-dev/community-dashboard/"+varId+"/account-billing/"+varId);
-    $('#com_profile').attr("href", "https://chhj.knack.com/trash-butler#community-concierge-on-dev/community-dashboard/"+varId+"/my-community-profile/"+varId);
+	$('#com_dashboard a').attr("href", "https://chhj.knack.com/trash-butler#community-concierge-on-dev/community-dashboard/"+varId);
+  	$('#com_service_history a').attr("href", "https://chhj.knack.com/trash-butler#community-concierge-on-dev/community-dashboard/"+varId+"/community-service-history/"+varId);
+  	$('#com_infractions a').attr("href", "https://chhj.knack.com/trash-butler#community-concierge-on-dev/community-dashboard/"+varId+"/infractions/"+varId);
+    $('#com_radar a').attr("href", "https://chhj.knack.com/trash-butler#community-concierge-on-dev/community-dashboard/"+varId+"/radar-and-units/"+varId);
+    $('#com_hazards a').attr("href", "https://chhj.knack.com/trash-butler#community-concierge-on-dev/community-dashboard/"+varId+"/service-hazards/"+varId);
+    $('#com_support_tickets a').attr("href", "https://chhj.knack.com/trash-butler#community-concierge-on-dev/community-dashboard/"+varId+"/community-support-tickets/"+varId);
+    $('#com_account_billing a').attr("href", "https://chhj.knack.com/trash-butler#community-concierge-on-dev/community-dashboard/"+varId+"/account-billing/"+varId);
+    $('#com_profile a').attr("href", "https://chhj.knack.com/trash-butler#community-concierge-on-dev/community-dashboard/"+varId+"/my-community-profile/"+varId);
+  
+  	//
+  	$('#com_radarLogs a').attr("href", "https://chhj.knack.com/trash-butler#community-concierge-on-dev/community-dashboard/"+varId+"/radar-logs/"+varId);
+    $('#com_comLogs a').attr("href", "https://chhj.knack.com/trash-butler#community-concierge-on-dev/community-dashboard/"+varId+"/community-logs/"+varId);
   	
-  	$('#custom_menu_id').css({"display": "block"});
+  	//$('#custom_menu_id').css({"display": "block"});
+  	var timeout = setTimeout(function(){
+            document.getElementById('custom_menu_id').style.display = 'block';
+            clearTimeout(timeout);
+    }, 1000);
 }
 //DASHBOARD
 $(document).on("knack-view-render.view_3374", function(event, view, data) {
   	appendCustomMenuMain();
+  	
   	addLinkToCommunityDashboard(data.id);
   	$('#com_dashboard').addClass('sv-active');
 });
@@ -1478,6 +1494,26 @@ $(document).on("knack-view-render.view_3536", function(event, view, data) {
   	appendCustomMenuMain();
   	addLinkToCommunityDashboard(data.id);
 });
+
+//view_3587 RADAR Logs
+$(document).on("knack-view-render.view_3587", function(event, view, data) {
+  	appendCustomMenuMain();
+  	addLinkToCommunityDashboard(data.id);
+});
+
+//view_3586 Community Logs
+$(document).on("knack-view-render.view_3586", function(event, view, data) {
+  	appendCustomMenuMain();
+  	addLinkToCommunityDashboard(data.id);
+});
+
+//view_3604 Maange Access Code
+$(document).on("knack-view-render.view_3604", function(event, view, data) {
+  	appendCustomMenuMain();
+  	addLinkToCommunityDashboard(data.id);
+});
+
+
 
 //Last Night Service Rating
 $(document).on("knack-view-render.view_3410", function(event, view, data) {
@@ -1688,44 +1724,105 @@ $(document).on('knack-scene-render.any', function(event, scene) {
 });
 //view_3378 Community Documents BTN
 $(document).on("knack-view-render.view_3378", function(event, view, data) {
-  	console.log(data , "documnet");
+  	//console.log(data , "documnet");
   	$('#view_3378').addClass('hideMe');
   	
   	if(!data.field_1533){
-    	 $($('.sv-document-btn')[0]).addClass('hideMe');
+    	 $($('.sv-document-btn')[0]).addClass('hideMe');//Resident Flyer
     }
   	if(!data.field_414){
-    	 $($('.sv-document-btn')[1]).addClass('hideMe');
+    	 $($('.sv-document-btn')[1]).addClass('hideMe');//Community Flyer
     }
-  	if(!data.field_1534){
-    	 $($('.sv-document-btn')[2]).addClass('hideMe');
-    }
+  	//if(!data.field_1534){
+    	// $($('.sv-document-btn')[2]).addClass('hideMe');//Certificate of Ins can be edit by the CM
+    //}
   	if(!data.field_1535){
-    	 $($('.sv-document-btn')[3]).addClass('hideMe');
+    	 $($('.sv-document-btn')[3]).addClass('hideMe');//Holiday Flyer
     }
   
-    $($('.sv-document-btn')[0]).on('click', function(){
+    $($('.sv-document-btn')[0]).on('click', function(){//Resident Flyer
       $('.field_1533 a').click();
     });
-    $($('.sv-document-btn')[1]).on('click', function(){
+    $($('.sv-document-btn')[1]).on('click', function(){//Community Flyer
       $('.field_414 a').click();
     });
-  	$($('.sv-document-btn')[2]).on('click', function(){
-		$('.field_1534 a').click();
+  	$($('.sv-document-btn')[2]).on('click', function(){//Certificate of Ins
+		$('#view_com_cert_of_ins').click();
    	});
-  	$($('.sv-document-btn')[3]).on('click', function(){
+  	$($('.sv-document-btn')[3]).on('click', function(){//Holiday Flyer
 		$('.field_1535 a').click();
    	});
   
 });
 
-//this will change the text display of the Reqeust RADAR column
-$(document).on("knack-view-render.view_3505", function(event, view, data) {
+//view_3582 Certificate of Ins POP UP - This will hide or show the form
+$(document).on("knack-view-render.view_3582", function(event, view, data) {
+  
+  //cert_of_ins_pdf_prev
+  document.getElementById('cert_of_ins_pdf_prev').style.display = 'none';
+  $('#cert_of_ins_pdf_prev').attr("src", data.field_1534_raw.url);
+ 
+  $('#view_3583 .kn-asset-close').addClass('hideMe')
+   console.log(data, "Cert of Ins");
+  	if(data.field_1534 !== ""){
+      	//show details with edit
+      	//hide form
+      
+      	//this waits for 2 seconds before showing the pdf iframe
+      	var timeout = setTimeout(function(){
+            document.getElementById('cert_of_ins_pdf_prev').style.display = 'block';
+            clearTimeout(timeout);
+        }, 2000);
+      	//field_1534
+      //hides the ins field
+      $('.field_1534').addClass('hideMe');
+      //adds href to the btn
+      $('#view_coi').attr("href", data.field_1534_raw.url);
+      $('#view_3580').addClass('hideMe');//form
+      
+      
+     
+      
+  	}else{
+    	//show form
+      	//hide details
+    }
+  	
+  	//btn - click to show the form
+    //edit
+    $('#edit_coi').on('click', function(){
+      $('#view_3580').removeClass('hideMe');//form
+      $('#edit_coi').addClass('hideMe');//form
+    });
+  	
+  	$('#view_3580 .is-primary').on("click", function(){
+    	
+       		$("#view_3583").addClass("hideMe");
+     	
+    });
+  	
+});
+
+//this will change the text display of the Reqeust RADAR column INFRACTION PAGE
+$(document).on("knack-view-render.view_3557", function(event, view, data) {
+  console.log(data)
+  for (let i = 0; i < data.length; i++) {
+      var x = document.querySelector("table").rows[i + 1].cells;
+      var link = location.href + '/community-request-radar/' + data[i].field_146_raw[0].id;
+      x[4].innerHTML = `<a href=${link}><span>Request RADAR</span></a>`;
+     //console.log(data[i].field_146_raw[0].id, "OK NAMAN");
+    }
+  
+});
+
+//view_3456 Service History
+$(document).on("knack-view-render.view_3456", function(event, view, data) {
+  console.log(data);
    for (let i = 0; i < data.length; i++) {
-      var x = document.querySelector("table").rows[i].cells;
-      //x[5].innerHTML = "Request RADAR";
-      //('Request RADAR')
-     console.log(x[5].innerHTML);
+      var x = document.querySelector("table").rows[i + 1].cells;
+      var link = location.href + '/community-request-radar/' + data[i].field_146_raw[0].id;
+      x[7].innerHTML = `<a href=${link}><span>Request RADAR</span></a>`;
+     console.log(x[7].innerHTML);
     }
 });
 
@@ -1820,4 +1917,132 @@ $(document).on("knack-view-render.view_3566", function(event, view, data) {
   	$('#saturday').addClass("not-on-sched");
   }
   
+});
+
+//Access Code - Indicator -view_3607 
+$(document).on("knack-view-render.view_3607", function(event, view, data) {
+   console.log(data);
+  $('#view_3607').addClass("hideMe");
+  if(data.field_1571 == "Yes"){
+  	$('#sunday').addClass("on-sched");
+  }
+  else{
+  	$('#sunday').addClass("not-on-sched");
+  }
+  if(data.field_1572 == "Yes"){
+  	$('#monday').addClass("on-sched");
+  }
+  else{
+  	$('#monday').addClass("not-on-sched");
+  }
+  if(data.field_1573 == "Yes"){
+  	$('#tuesday').addClass("on-sched");
+  }
+  else{
+  	$('#tuesday').addClass("not-on-sched");
+  }
+  if(data.field_1574 == "Yes"){
+  	$('#wednesday').addClass("on-sched");
+  }
+  else{
+  	$('#wednesday').addClass("not-on-sched");
+  }
+  if(data.field_1575 == "Yes"){
+  	$('#thursday').addClass("on-sched");
+  }
+  else{
+  	$('#thursday').addClass("not-on-sched");
+  }
+  if(data.field_1576 == "Yes"){
+  	$('#friday').addClass("on-sched");
+  }
+  else{
+  	$('#friday').addClass("not-on-sched");
+  }
+  if(data.field_1577 == "Yes"){
+  	$('#saturday').addClass("on-sched");
+  }
+  else{
+  	$('#saturday').addClass("not-on-sched");
+  }
+  //days_indicator
+  var timeout = setTimeout(function(){
+            document.getElementById('days_indicator').style.display = 'block';
+            clearTimeout(timeout);
+    }, 2000);
+});
+
+//view_3598 Edit Access Code
+
+$(document).on("knack-view-render.view_3598", function(event, view, data) {
+   //console.log(data);
+  $('#view_3598').addClass('hideMe');
+  if(data.field_132 == "No"){
+        $("input[type='checkbox'][name='field_1571']").attr('disabled', 'disabled');
+    }
+    if(data.field_133 == "No"){
+        $("input[type='checkbox'][name='field_1572']").attr('disabled', 'disabled');
+    }
+
+    if(data.field_134 == "No"){
+        $("input[type='checkbox'][name='field_1573']").attr('disabled', 'disabled');
+    }
+
+    if(data.field_135 == "No"){
+        $("input[type='checkbox'][name='field_1574']").attr('disabled', 'disabled');
+    }
+
+    if(data.field_136 == "No"){
+        $("input[type='checkbox'][name='field_1575']").attr('disabled', 'disabled');
+    }
+
+    if(data.field_137 == "No"){
+        $("input[type='checkbox'][name='field_1576']").attr('disabled', 'disabled');
+    }
+
+    if(data.field_138 == "No"){
+        $("input[type='checkbox'][name='field_1577']").attr('disabled', 'disabled');
+    }
+  
+});
+
+//view_3603 Add Access Code
+
+$(document).on("knack-view-render.view_3603", function(event, view, data) {
+   //console.log(data);
+  $('#view_3603').addClass('hideMe');
+  if(data.field_132 == "No"){
+        $("input[type='checkbox'][name='field_1571']").attr('disabled', 'disabled');
+    }
+    if(data.field_133 == "No"){
+        $("input[type='checkbox'][name='field_1572']").attr('disabled', 'disabled');
+    }
+
+    if(data.field_134 == "No"){
+        $("input[type='checkbox'][name='field_1573']").attr('disabled', 'disabled');
+    }
+
+    if(data.field_135 == "No"){
+        $("input[type='checkbox'][name='field_1574']").attr('disabled', 'disabled');
+    }
+
+    if(data.field_136 == "No"){
+        $("input[type='checkbox'][name='field_1575']").attr('disabled', 'disabled');
+    }
+
+    if(data.field_137 == "No"){
+        $("input[type='checkbox'][name='field_1576']").attr('disabled', 'disabled');
+    }
+
+    if(data.field_138 == "No"){
+        $("input[type='checkbox'][name='field_1577']").attr('disabled', 'disabled');
+    }
+  
+});
+
+//view_3374 Show Infraction Total Loss
+$(document).on("knack-view-render.view_3374", function(event, view, data) {
+    console.log(data);
+    $('#today-service-schedule').html(data.field_44);
+  	$('.field_44').addClass('hideMe');
 });
