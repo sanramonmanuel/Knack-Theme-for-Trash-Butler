@@ -2040,9 +2040,25 @@ $(document).on("knack-view-render.view_3603", function(event, view, data) {
   
 });
 
-//view_3374 Show Infraction Total Loss
+//view_3374 Service Schedule on Dashboard
 $(document).on("knack-view-render.view_3374", function(event, view, data) {
     console.log(data);
     $('#today-service-schedule').html(data.field_44);
   	$('.field_44').addClass('hideMe');
+});
+
+//view_3407 Updates from TB
+$(document).on("knack-view-render.view_3407", function(event, view, data) {
+    console.log(data);
+    $('#updates-from-tb-id').html(data.field_1403);
+  	$('.field_1403').addClass('hideMe');
+});
+
+//view_3374 Community Information
+$(document).on("knack-view-render.view_3374", function(event, view, data) {
+    console.log(data);
+    $('#ComAdd_ID').html(data.field_38);
+    $('#ComPhone_ID').html(data.field_39);
+  	$('.field_38').addClass('hideMe');
+  	$('.field_39').addClass('hideMe');
 });

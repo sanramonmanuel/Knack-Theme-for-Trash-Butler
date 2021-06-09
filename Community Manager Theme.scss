@@ -115,10 +115,32 @@ margin-left: 8px;
     width: 99%;
 }
 
+/* Today's Service */
+.service-schedule i{
+    color: $primary;
+    font-size: 20px;
+    margin-top: 12px;
+}
+
 /* Notification */
 #view_3407 {
     grid-column-start: 2;
     grid-column-end: 3;
+}
+
+.tb-updates{
+    color: $primary;
+    font-size: 16px;
+    i{
+        color: $primary;
+        font-size: 20px;
+        margin-top: 2px;
+        margin-right: 5px;
+    }
+}
+
+#updates-from-tb-id{
+font-weight: bold;
 }
 
 /* Hidden */
@@ -231,7 +253,7 @@ margin-left: 8px;
     color:white;
     font-size: 16px;
     padding: 7px 10px;
-    width: 20vw;
+    width: 18vw;
     &:hover{
         cursor: pointer;
     }
@@ -245,7 +267,7 @@ margin-left: 8px;
     color:white;
     font-size: 16px;
     padding: 4px 10px;
-    width: 20vw;
+    width: 18vw;
     &:hover{
         cursor: pointer;
     }
@@ -254,8 +276,16 @@ margin-left: 8px;
 .sv-warning-text{
     color: $statred;
     font-size: 16px;
-    width: 70%;
+    width: 100%;
 }
+
+/* Service Schedule */
+.service-schedule {
+	color: $primary;
+	font-weight: bold;
+	font-size: 25px;
+}
+
 /* Updates, ComHeading, Docs And Other Bottons using Details View */
 #view_3407,
 #view_3378,
@@ -508,6 +538,7 @@ a#close_sticky{
 }
 
 /* Modal -  Addressed with Resident*/
+#view_3506.kn-form,
 #view_3492.kn-form{
     margin-left: -90px;
     box-shadow: none;
@@ -521,7 +552,7 @@ a#close_sticky{
     background:none;
 }
 
-/* Modal Service hHazard Page Addressed? */
+/* Modal Service Hazard Page Addressed? */
 .view_3523.kn-form{
     margin-left: -90px;
     box-shadow: none;
