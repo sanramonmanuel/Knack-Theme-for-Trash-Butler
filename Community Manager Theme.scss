@@ -280,15 +280,17 @@ font-weight: bold;
         cursor: pointer;
     }
 }
-  
-.sv-warning-text{
-    color: $statred;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    i{
-        font-size:20px;
-        margin-top: 5px;
+
+.kn-details.kn-view.view_3374{
+    .sv-warning-text{
+        color: $statred;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        i{
+            font-size:20px;
+            margin-top: 5px;
+        }
     }
 }
 
