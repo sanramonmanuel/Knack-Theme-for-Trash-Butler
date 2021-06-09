@@ -2494,6 +2494,12 @@ body, p, a {
   margin-top: 12px;
 }
 
+.sv_community-address i,
+.sv_community-phone i {
+  margin: 5px 0 0 0;
+  font-size: 30px;
+}
+
 /* Notification */
 #view_3407 {
   -ms-grid-column: 2;
@@ -2668,7 +2674,9 @@ body, p, a {
 }
 
 /* Service Schedule */
-.service-schedule {
+.service-schedule,
+.sv_community-address,
+.sv_community-phone {
   color: #15467a;
   font-weight: bold;
   font-size: 25px;

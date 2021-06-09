@@ -122,6 +122,14 @@ margin-left: 8px;
     margin-top: 12px;
 }
 
+.sv_community-address,
+.sv_community-phone{
+    i{
+        margin:5px 0 0 0;
+        font-size:30px;
+    }
+}
+
 /* Notification */
 #view_3407 {
     grid-column-start: 2;
@@ -280,7 +288,9 @@ font-weight: bold;
 }
 
 /* Service Schedule */
-.service-schedule {
+.service-schedule,
+.sv_community-address,
+.sv_community-phone {
 	color: $primary;
 	font-weight: bold;
 	font-size: 25px;
