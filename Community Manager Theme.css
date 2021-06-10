@@ -2496,7 +2496,7 @@ body, p, a {
 
 .sv_community-address i,
 .sv_community-phone i {
-  margin: 5px 0 0 0;
+  margin: 5px 5px 0 0;
   font-size: 30px;
 }
 
@@ -2531,20 +2531,24 @@ body, p, a {
 }
 
 /* Recent Infraction Icon */
-#view_3376.kn-list i {
+#view_3376.kn-list i,
+#view_3379.kn-list i {
   font-size: 50px;
 }
 
-#view_3376.kn-list a {
+#view_3376.kn-list a,
+#view_3379.kn-list a {
   font-weight: bold;
   text-decoration: none;
 }
 
-#view_3376.kn-list a:hover {
+#view_3376.kn-list a:hover,
+#view_3379.kn-list a:hover {
   color: #7AC144;
 }
 
-#view_3376.kn-list .kn-list-item-container.kn-list-container.column.is-full:nth-child(1) {
+#view_3376.kn-list .kn-list-item-container.kn-list-container.column.is-full:nth-child(1),
+#view_3379.kn-list .kn-list-item-container.kn-list-container.column.is-full:nth-child(1) {
   border-bottom: 1px solid rgba(21, 70, 122, 0.1);
 }
 
@@ -3031,6 +3035,14 @@ a#close_sticky:hover {
   margin-left: -90px;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+/* Modal -  Quick Rating */
+#view_3568.kn-form {
+  margin-left: -90px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: none;
 }
 
 /* Modal -  Contact Trash Butler Support */

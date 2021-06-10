@@ -125,7 +125,7 @@ margin-left: 8px;
 .sv_community-address,
 .sv_community-phone{
     i{
-        margin:5px 0 0 0;
+        margin:5px 5px 0 0;
         font-size:30px;
     }
 }
@@ -158,7 +158,8 @@ font-weight: bold;
 }
 
 /* Recent Infraction Icon */
-#view_3376.kn-list{
+#view_3376.kn-list,
+#view_3379.kn-list{
     i{
         font-size:50px;
     }
@@ -543,6 +544,13 @@ a#close_sticky{
 #view_3516.kn-form{
     margin-left: -90px;
     box-shadow: none;
+}
+
+/* Modal -  Quick Rating */
+#view_3568.kn-form{
+    margin-left: -90px;
+    box-shadow: none;
+    background:none;
 }
 
 /* Modal -  Contact Trash Butler Support */
