@@ -118,15 +118,18 @@ margin-left: 8px;
 /* Today's Service */
 .service-schedule i{
     color: $primary;
-    font-size: 20px;
-    margin-top: 12px;
+    font-size: 25px;
+    margin:5px 10px 0 0;
 }
 
+/* Community Info */
 .sv_community-address,
 .sv_community-phone{
+    color: $primary;
+    font-size: 16px;
     i{
         margin:5px 5px 0 0;
-        font-size:30px;
+        font-size:20px;
     }
 }
 
@@ -296,9 +299,7 @@ font-weight: bold;
 }
 
 /* Service Schedule */
-.service-schedule,
-.sv_community-address,
-.sv_community-phone {
+.service-schedule {
 	color: $primary;
 	font-size: 20px;
 }

@@ -2490,14 +2490,21 @@ body, p, a {
 /* Today's Service */
 .service-schedule i {
   color: #15467a;
-  font-size: 20px;
-  margin-top: 12px;
+  font-size: 25px;
+  margin: 5px 10px 0 0;
+}
+
+/* Community Info */
+.sv_community-address,
+.sv_community-phone {
+  color: #15467a;
+  font-size: 16px;
 }
 
 .sv_community-address i,
 .sv_community-phone i {
   margin: 5px 5px 0 0;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 /* Notification */
@@ -2684,9 +2691,7 @@ body, p, a {
 }
 
 /* Service Schedule */
-.service-schedule,
-.sv_community-address,
-.sv_community-phone {
+.service-schedule {
   color: #15467a;
   font-size: 20px;
 }
