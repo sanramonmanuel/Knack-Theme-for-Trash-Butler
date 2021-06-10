@@ -3037,12 +3037,46 @@ a#close_sticky:hover {
           box-shadow: none;
 }
 
+/* Quick Rating - Rated*/
+/* Quick Rating */
+#view_3410.kn-form {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: none;
+}
+
+#view_3410.kn-form .kn-radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#view_3410.kn-form .kn-radio .control {
+  padding: 0 25px;
+}
+
 /* Modal -  Quick Rating */
 #view_3568.kn-form {
   margin-left: -90px;
   -webkit-box-shadow: none;
           box-shadow: none;
   background: none;
+}
+
+#view_3568.kn-form .kn-radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#view_3568.kn-form .kn-radio .control {
+  padding: 0 25px;
 }
 
 /* Modal -  Contact Trash Butler Support */

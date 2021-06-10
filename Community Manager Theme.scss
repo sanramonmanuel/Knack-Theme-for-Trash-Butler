@@ -545,12 +545,36 @@ a#close_sticky{
     margin-left: -90px;
     box-shadow: none;
 }
+/* Quick Rating - Rated*/
+#view_3473{
+    &.kn-details{}
+}
+
+/* Quick Rating */
+#view_3410.kn-form{
+    box-shadow: none;
+    background:none;
+    .kn-radio{
+        display: flex;
+        justify-content: center;
+        .control{
+            padding: 0 25px;
+        }
+    }
+}
 
 /* Modal -  Quick Rating */
 #view_3568.kn-form{
     margin-left: -90px;
     box-shadow: none;
     background:none;
+    .kn-radio{
+        display: flex;
+        justify-content: center;
+        .control{
+            padding: 0 25px;
+        }
+    }
 }
 
 /* Modal -  Contact Trash Butler Support */
