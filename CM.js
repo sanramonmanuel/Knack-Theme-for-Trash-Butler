@@ -1288,9 +1288,12 @@ $(document).on("knack-view-render.view_3363", function(event, view, data) {
  	$('head').append('<link rel="stylesheet" type="text/css" class="lazyload" href="https://dl.dropbox.com/s/pt24adzdqgjx73y/Community%20Manager%20Theme.min.css">')
 });
 
+//global value test
+
+
 //view_3369 This will add the css for the CCS
 $(document).on("knack-view-render.view_3370", function(event, view, data) {
-  	//console.log(data);
+  	console.log(data);
   	//This add the text for the SERVICE TODAY -> Time info
   	$('.kn-detail.field_141').addClass('hideMe');
   	var i;
@@ -1310,7 +1313,9 @@ $(document).on("knack-view-render.view_3370", function(event, view, data) {
   	//This makes the section clickable
   	  $(".kn-list-item-container").addClass("pointer");
       $(".kn-list-item-container").click(function() {
-        window.location = $(this).find("a").attr("href"); 
+        window.location = $(this).find("a").attr("href");
+        const testGetId = $(this).attr("id");
+        console.log(testGetId);
         return false;
       });
     $('head').append('<link rel="stylesheet" type="text/css" class="lazyload" href="https://dl.dropbox.com/s/pt24adzdqgjx73y/Community%20Manager%20Theme.min.css">')
@@ -1389,15 +1394,20 @@ function appendCustomMenuMain(){
           <li id="com_dashboard"><a class="sv-cm-navbar" >${dashboard} <span class="custom-menu-text"> Dashboard</span></a></li>
           <li id="com_service_history"><a class="sv-cm-navbar" >${serviceHistory} <span class="custom-menu-text"> Service History</span></a></li>
           <li id="com_infractions"><a class="sv-cm-navbar" >${infractions} <span class="custom-menu-text"> Infractions</span></a></li>
-          <li id="com_radar"><a class="sv-cm-navbar" >${units}</i> <span class="custom-menu-text"> RADAR &amp; Units</span></a></li>
+          
           <li id="com_hazards"><a class="sv-cm-navbar" >${hazards}<span class="custom-menu-text"> Service Hazards</span></a></li>
           <li id="com_support_tickets"><a class="sv-cm-navbar" >${supportTicket} <span class="custom-menu-text"> Support Tickets</span></a></li>
-          <li id="com_account_billing"><a class="sv-cm-navbar" >${billing} <span class="custom-menu-text"> Account/Billing</span></a></li>
+		  <li id="com_radar"><a class="sv-cm-navbar" >${units}</i> <span class="custom-menu-text"> Community Units</span></a></li>
+		  <li id="com_radarLogs"><a class="sv-cm-navbar" >${radarLog} <span class="custom-menu-text"> RADAR Logs</span></a></li>
+          <li id="com_account_billing" style="display: none;"><a class="sv-cm-navbar" >${billing} <span class="custom-menu-text"> Account/Billing</span></a></li>
           <li id="com_profile"><a class="sv-cm-navbar" >${profile} <span class="custom-menu-text"> Community Profile</span></a></li>
 
-          <li id="com_radarLogs"><a class="sv-cm-navbar" >${radarLog} <span class="custom-menu-text"> RADAR Logs</span></a></li>
-          <li id="com_comLogs"><a class="sv-cm-navbar" >${comLog} <span class="custom-menu-text"> Community Logs</span></a></li>
+          
+          <li id="com_comLogs" style="display: none;"><a class="sv-cm-navbar" >${comLog} <span class="custom-menu-text"> Community Logs</span></a></li>
     	</ul>`
+        //HIDDEN
+        //Com log
+        //Account Billing
     );
   	if($('#custom_menu_id').length == 0){$('#kn-mobile-menu').append(customMenu);}
   	$($('.kn-mobile-controls')[0]).on('click', function(){
@@ -1440,48 +1450,61 @@ $(document).on("knack-view-render.view_3374", function(event, view, data) {
 $(document).on("knack-view-render.view_3458", function(event, view, data) {
   	appendCustomMenuMain();
   	addLinkToCommunityDashboard(data.id);
+  	$('#com_service_history').addClass('sv-active');
 });
 
 //Infractions view_3561
 $(document).on("knack-view-render.view_3561", function(event, view, data) {
   	appendCustomMenuMain();
   	addLinkToCommunityDashboard(data.id);
+  	$('#com_infractions').addClass('sv-active');
 });
 //Radar and Units view_3465
 $(document).on("knack-view-render.view_3465", function(event, view, data) {
   	appendCustomMenuMain();
   	addLinkToCommunityDashboard(data.id);
+  	
+  	$('#com_radar').addClass('sv-active');
 });
 //view_3560 Service Hazards
 $(document).on("knack-view-render.view_3560", function(event, view, data) {
   	appendCustomMenuMain();
   	addLinkToCommunityDashboard(data.id);
+  	$('#com_hazards').addClass('sv-active');
 });
 
-//Service Hazards view_3463
+//Service Hazards view_3463 UNSURE
 $(document).on("knack-view-render.view_3463", function(event, view, data) {
   	appendCustomMenuMain();
   	addLinkToCommunityDashboard(data.id);
+  	
+  	
 });
 //Support Ticket view_3468
 $(document).on("knack-view-render.view_3468", function(event, view, data) {
   	appendCustomMenuMain();
   	addLinkToCommunityDashboard(data.id);
+  	//com_support_tickets
+  	$('#com_support_tickets').addClass('sv-active');
 });
 //Account Billing view_3470
 $(document).on("knack-view-render.view_3470", function(event, view, data) {
   	appendCustomMenuMain();
   	addLinkToCommunityDashboard(data.id);
+  	$('#com_account_billing').addClass('sv-active');
 });
-//Profile view_3472
+//Profile view_3472 ? UNSURE
 $(document).on("knack-view-render.view_3472", function(event, view, data) {
   	appendCustomMenuMain();
   	addLinkToCommunityDashboard(data.id);
+  	$('#com_profile').addClass('sv-active');
 });
 //view_3551 Community Profile
 $(document).on("knack-view-render.view_3551", function(event, view, data) {
   	appendCustomMenuMain();
   	addLinkToCommunityDashboard(data.id);
+  	$('#com_profile').addClass('sv-active');
+  	//console.log(testGetId);
 });
 //view_3477
 $(document).on("knack-view-render.view_3477", function(event, view, data) {
@@ -1499,6 +1522,7 @@ $(document).on("knack-view-render.view_3536", function(event, view, data) {
 $(document).on("knack-view-render.view_3587", function(event, view, data) {
   	appendCustomMenuMain();
   	addLinkToCommunityDashboard(data.id);
+  	$('#com_radarLogs').addClass('sv-active');
 });
 
 //view_3586 Community Logs
@@ -1758,16 +1782,16 @@ $(document).on("knack-view-render.view_3378", function(event, view, data) {
 //view_3582 Certificate of Ins POP UP - This will hide or show the form
 $(document).on("knack-view-render.view_3582", function(event, view, data) {
   
-  //cert_of_ins_pdf_prev
-  document.getElementById('cert_of_ins_pdf_prev').style.display = 'none';
-  $('#cert_of_ins_pdf_prev').attr("src", data.field_1534_raw.url);
+  
  
   $('#view_3583 .kn-asset-close').addClass('hideMe')
    console.log(data, "Cert of Ins");
-  	if(data.field_1534 !== ""){
+  	if(data.field_1534){
       	//show details with edit
       	//hide form
-      
+        //cert_of_ins_pdf_prev
+        document.getElementById('cert_of_ins_pdf_prev').style.display = 'none';
+        $('#cert_of_ins_pdf_prev').attr("src", data.field_1534_raw.url);
       	//this waits for 2 seconds before showing the pdf iframe
       	var timeout = setTimeout(function(){
             document.getElementById('cert_of_ins_pdf_prev').style.display = 'block';
@@ -2044,21 +2068,78 @@ $(document).on("knack-view-render.view_3603", function(event, view, data) {
 $(document).on("knack-view-render.view_3374", function(event, view, data) {
     console.log(data);
     $('#today-service-schedule').html(data.field_44);
-  	$('.field_44').addClass('hideMe');
+    $('.field_44').addClass('hideMe');
 });
-
 //view_3407 Updates from TB
 $(document).on("knack-view-render.view_3407", function(event, view, data) {
     console.log(data);
     $('#updates-from-tb-id').html(data.field_1403);
-  	$('.field_1403').addClass('hideMe');
+    $('.field_1403').addClass('hideMe');
 });
-
 //view_3374 Community Information
 $(document).on("knack-view-render.view_3374", function(event, view, data) {
     console.log(data);
     $('#ComAdd_ID').html(data.field_38);
     $('#ComPhone_ID').html(data.field_39);
-  	$('.field_38').addClass('hideMe');
-  	$('.field_39').addClass('hideMe');
+    $('.field_38').addClass('hideMe');
+    $('.field_39').addClass('hideMe');
 });
+
+//view_3374 Show Infraction Total Loss
+$(document).on("knack-view-render.view_3374", function(event, view, data) {
+    //console.log(data);
+    $('#today-service-schedule').html(data.field_44);
+  	$('.field_44').addClass('hideMe');
+});
+
+//view_3407 Updates from TB
+$(document).on("knack-view-render.view_3407", function(event, view, data) {
+    //console.log(data);
+    $('#updates-from-tb-id').html(data.field_1403);
+  	$('.field_1403').addClass('hideMe');
+});
+
+//view_3618 Add Support Ticket
+//this will hide the other option
+$(document).on("knack-view-render.view_3618", function(event, view, data) {
+      var selectId = document.getElementById("view_3618-field_306").getElementsByTagName("option");
+      selectId[7].disabled = true;
+  	  selectId[8].disabled = true;
+  	  selectId[9].disabled = true;
+  	  selectId[10].disabled = true;
+      selectId[11].style = "display: none;";
+  
+  var timeout = setTimeout(function(){
+    document.getElementById('view_3618').style.display = 'block';
+    clearTimeout(timeout);
+  }, 500);
+});
+
+//view_3621 RADAR LOGS PAGE Search Unit
+$(document).on("knack-view-render.view_3621", function(event, view, data) {
+  	$('#view_3621 button').addClass('hideMe');
+  	$('#view_3588 form').addClass('hideMe');
+  	//$('#view_3588 .search').addClass("hideMe");
+  	document.getElementById('view_3621-field_305').options[0].innerHTML = "";
+ 	
+  	$('#view_3621-field_305').on("change", function(){
+      	
+    	let test = document.getElementsByClassName("select")[0];
+  		let searchValue = '';
+      	searchValue = test.options[test.selectedIndex].text;
+      	console.log(typeof(searchValue), searchValue);
+      	$('#view_3588 input').val(searchValue).change();
+        $('#view_3588 .search').click();
+      	$('#view_3588 input').addClass('hideMe');
+  		$('#view_3588 .search').addClass("hideMe");
+      	
+      	$('#selected_com').html(searchValue)
+      
+    })
+});
+
+//view_3588 Radar Logs Table
+$(document).on("knack-view-render.view_3588", function(event, view, data) {
+  	$('#view_3588 form').addClass('hideMe');
+});
+

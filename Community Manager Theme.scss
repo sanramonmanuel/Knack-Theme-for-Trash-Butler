@@ -468,6 +468,19 @@ font-weight: bold;
 #view_3587{
     @include detalhe();
 }
+/* Service ID Details Page */
+#view_3411,
+#view_3486{
+    @include detalhe();
+}
+#view_3570,
+#view_3571,
+#view_3572,
+#view_3573{
+    &.kn-list{
+        background:none;
+    }
+}
 
 /* Community Logs */
 #view_3586{
@@ -532,6 +545,12 @@ a#close_sticky{
     }
 }
 
+/* Modal -  CANCEL Radar*/
+#view_3509{
+    margin-left: -90px;
+    box-shadow: none;
+}
+
 /* Modal -  Request Radar*/
 #view_3402{
     @include detalhe();
@@ -547,7 +566,8 @@ a#close_sticky{
 }
 /* Quick Rating - Rated*/
 #view_3473{
-    &.kn-details{}
+    @include detalhe();
+    text-align: center;
 }
 
 /* Quick Rating */
@@ -733,4 +753,21 @@ grid-row-end: 4;
 #kn-scene_1275 .kn-link-page{
   grid-column-start: 1;
   grid-column-end: 3;
+}
+
+/* Manage Access Codes*/
+#view_3604{
+    @include detalhe();
+    text-align: center;
+}
+
+/* Ratings */
+.rating-down{
+    color: $statred;
+	font-size: 30px;
+}
+
+.rating-up{
+    color: $secondary;
+	font-size: 30px;
 }

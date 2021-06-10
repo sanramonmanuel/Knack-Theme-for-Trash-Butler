@@ -2934,6 +2934,26 @@ body, p, a {
   color: #15467a;
 }
 
+/* Service ID Details Page */
+#view_3411.kn-details,
+#view_3486.kn-details {
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#view_3411 h1,
+#view_3486 h1 {
+  color: #15467a;
+}
+
+#view_3570.kn-list,
+#view_3571.kn-list,
+#view_3572.kn-list,
+#view_3573.kn-list {
+  background: none;
+}
+
 /* Community Logs */
 #view_3586.kn-details {
   background: none;
@@ -3015,6 +3035,13 @@ a#close_sticky:hover {
   color: #7AC144;
 }
 
+/* Modal -  CANCEL Radar*/
+#view_3509 {
+  margin-left: -90px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 /* Modal -  Request Radar*/
 #view_3402.kn-details {
   background: none;
@@ -3038,6 +3065,20 @@ a#close_sticky:hover {
 }
 
 /* Quick Rating - Rated*/
+#view_3473 {
+  text-align: center;
+}
+
+#view_3473.kn-details {
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#view_3473 h1 {
+  color: #15467a;
+}
+
 /* Quick Rating */
 #view_3410.kn-form {
   -webkit-box-shadow: none;
@@ -3273,4 +3314,30 @@ a#close_sticky:hover {
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 3;
+}
+
+/* Manage Access Codes*/
+#view_3604 {
+  text-align: center;
+}
+
+#view_3604.kn-details {
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#view_3604 h1 {
+  color: #15467a;
+}
+
+/* Ratings */
+.rating-down {
+  color: #cc0000;
+  font-size: 30px;
+}
+
+.rating-up {
+  color: #7AC144;
+  font-size: 30px;
 }
