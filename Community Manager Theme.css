@@ -2629,7 +2629,11 @@ body, p, a {
 }
 
 /* Support Ticket Table */
-#view_3537 {
+/* #view_3537{
+    grid-column-start: 1;
+    grid-column-end: 3;
+} */
+#view_3615 {
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 3;
@@ -3188,6 +3192,14 @@ a#close_sticky:hover {
 
 /* Satisfactory Survey Modal */
 .view_3520.kn-form {
+  margin-left: -90px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: none;
+}
+
+/* Setup Account & Billing */
+.view_3625.kn-form {
   margin-left: -90px;
   -webkit-box-shadow: none;
           box-shadow: none;
