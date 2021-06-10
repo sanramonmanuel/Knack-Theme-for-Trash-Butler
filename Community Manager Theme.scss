@@ -126,9 +126,10 @@ margin-left: 8px;
 .sv_community-address,
 .sv_community-phone{
     color: $primary;
+    display: flex;
     font-size: 16px;
     i{
-        margin:5px 5px 0 0;
+        margin:3px 25px 0 0;
         font-size:20px;
     }
 }
@@ -259,13 +260,14 @@ font-weight: bold;
 /* Headline */
 .sv-button-green{
     background: $secondary;
-    box-shadow:none;
-    border:none;
     border-radius: 5px;
+    border:none;
+    box-shadow:none;
     color:white;
     font-size: 16px;
     padding: 7px 10px;
     width: 18vw;
+    @include HideIcon();
     &:hover{
         cursor: pointer;
     }
@@ -274,12 +276,13 @@ font-weight: bold;
 .sv-button-red{
     background: $statred;
     border-radius: 5px;
-    box-shadow:none;
     border: none;
+    box-shadow:none;
     color:white;
     font-size: 16px;
     padding: 4px 10px;
     width: 18vw;
+    @include HideIcon();
     &:hover{
         cursor: pointer;
     }
@@ -760,6 +763,30 @@ grid-row-end: 4;
 #view_3604{
     @include detalhe();
     text-align: center;
+}
+
+/* Contact Trash Butler Support Btn */
+#view_3616{
+    @include detalhe();
+}
+.sv-call-tb i{
+    margin: 5px 0 0 5px;
+    transition: all 0.1s linear;
+}
+
+p.sv-call-tb{
+    background: $primary;
+    box-shadow: inset 10px 0 $secondary;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 10px 5px;
+    width:50%;
+    transition: all .1s linear;
+    @include HideIcon();
+    &:hover{
+        box-shadow:inset 10px 0 $secondary, 10px 0 $secondary;
+    }
 }
 
 /* Ratings */

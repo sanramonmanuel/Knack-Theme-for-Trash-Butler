@@ -2498,12 +2498,15 @@ body, p, a {
 .sv_community-address,
 .sv_community-phone {
   color: #15467a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 16px;
 }
 
 .sv_community-address i,
 .sv_community-phone i {
-  margin: 5px 5px 0 0;
+  margin: 3px 25px 0 0;
   font-size: 20px;
 }
 
@@ -2648,14 +2651,22 @@ body, p, a {
 /* Headline */
 .sv-button-green {
   background: #7AC144;
+  border-radius: 5px;
+  border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: none;
-  border-radius: 5px;
   color: white;
   font-size: 16px;
   padding: 7px 10px;
   width: 18vw;
+}
+
+.sv-button-green > i {
+  display: none;
+}
+
+.sv-button-green:hover > i {
+  display: inline;
 }
 
 .sv-button-green:hover {
@@ -2665,13 +2676,21 @@ body, p, a {
 .sv-button-red {
   background: #cc0000;
   border-radius: 5px;
+  border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: none;
   color: white;
   font-size: 16px;
   padding: 4px 10px;
   width: 18vw;
+}
+
+.sv-button-red > i {
+  display: none;
+}
+
+.sv-button-red:hover > i {
+  display: inline;
 }
 
 .sv-button-red:hover {
@@ -3334,6 +3353,53 @@ a#close_sticky:hover {
 
 #view_3604 h1 {
   color: #15467a;
+}
+
+/* Contact Trash Butler Support Btn */
+#view_3616.kn-details {
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#view_3616 h1 {
+  color: #15467a;
+}
+
+.sv-call-tb i {
+  margin: 5px 0 0 5px;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+
+p.sv-call-tb {
+  background: #15467a;
+  -webkit-box-shadow: inset 10px 0 #7AC144;
+          box-shadow: inset 10px 0 #7AC144;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 5px;
+  width: 50%;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+p.sv-call-tb > i {
+  display: none;
+}
+
+p.sv-call-tb:hover > i {
+  display: inline;
+}
+
+p.sv-call-tb:hover {
+  -webkit-box-shadow: inset 10px 0 #7AC144, 10px 0 #7AC144;
+          box-shadow: inset 10px 0 #7AC144, 10px 0 #7AC144;
 }
 
 /* Ratings */
