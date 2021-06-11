@@ -2843,15 +2843,27 @@ p.sv-button-red:hover {
 
 /* Infractions */
 #view_3462.kn-details,
-#view_3508.kn-details,
-#view_3561.kn-details {
+#view_3508.kn-details {
   background: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
 #view_3462 h1,
-#view_3508 h1,
+#view_3508 h1 {
+  color: #15467a;
+}
+
+#view_3561 {
+  text-align: center;
+}
+
+#view_3561.kn-details {
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 #view_3561 h1 {
   color: #15467a;
 }
@@ -2866,14 +2878,28 @@ p.sv-button-red:hover {
   color: #15467a;
 }
 
-#view_3508.kn-details i {
-  font-size: 18px;
-  padding: 0 10px 0 0;
-  vertical-align: middle;
+#view_3508.kn-details .sv-warning-text {
+  color: #cc0000;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
 }
 
-#view_3508.kn-details .sv-warning-text {
+#view_3508.kn-details .sv-warning-text i {
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+#view_3508.kn-details .sv-no-infraction {
+  color: #15467a;
+  font-size: 16px;
   font-weight: bold;
+  text-align: center;
+}
+
+#view_3508.kn-details .sv-no-infraction i {
+  font-size: 20px;
+  margin-top: 2px;
 }
 
 /* RADAR & Units */

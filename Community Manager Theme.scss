@@ -415,21 +415,37 @@ p.sv-button-red{
 
 /* Infractions */
 #view_3462,
-#view_3508,
+#view_3508{
+    @include detalhe();
+}
+
 #view_3561{
     @include detalhe();
+    text-align: center;
 }
 
 #view_3508{
     &.kn-details{
         @include detalhe();
-        i{
-            font-size: 18px;
-            padding: 0 10px 0 0;
-            vertical-align: middle;
-        }
         .sv-warning-text{
+            color: $statred;
+            font-size: 16px;
             font-weight: bold;
+            text-align: center;
+            i{
+                font-size:20px;
+                margin-top: 5px;
+            }
+        }
+        .sv-no-infraction{
+            color: $primary;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            i{
+                font-size:20px;
+                margin-top: 2px;
+            }
         }
     }
 }
