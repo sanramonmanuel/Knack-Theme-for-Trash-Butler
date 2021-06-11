@@ -277,6 +277,20 @@ p.sv-button-green{
         cursor: pointer;
     }
 }
+.sv-button-green{
+    background: $secondary;
+    border-radius: 5px;
+    border:none;
+    box-shadow:none;
+    color:white;
+    font-size: 14px;
+    padding: 5px 0;
+    text-align: center;
+    width: 15vw;
+    &:hover{
+        cursor: pointer;
+    }
+}
 
 p.sv-button-red{
     background: $statred;
@@ -302,6 +316,16 @@ p.sv-button-red{
         i{
             font-size:20px;
             margin-top: 5px;
+        }
+    }
+    .sv-no-infraction{
+        color: $primary;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        i{
+            font-size:20px;
+            margin-top: 2px;
         }
     }
 }
@@ -483,6 +507,23 @@ p.sv-button-red{
     grid-row-end: 3;
 }
 
+/* Add Access Code */
+#view_3601.kn-menu .kn-button{
+    background: none;
+    border:2px solid $primary;
+    border-radius: 0;
+    color:$primary;
+    font-weight: bold;
+    padding: 10px 20px;
+    outline:none;
+    transition: all .1s linear;
+    &:hover{
+        box-shadow: -5px 5px $secondary;
+        transform: translateY(5px);
+        transform: translateX(5px);
+    }
+}
+
 /* Setup Account Billing */
 #view_3624.kn-menu .kn-button{
     background: none;
@@ -588,9 +629,13 @@ a#close_sticky{
 }
 
 /* Modal -  Add Access Code*/
-#view_3602{
-    margin-left: -90px;
-    box-shadow: none;
+#view_3602,
+#view_3597{
+        &.kn-form{
+        margin-left: -90px;
+        box-shadow: none;
+        background:none;
+    }
 }
 
 /* Modal -  Request Radar*/
