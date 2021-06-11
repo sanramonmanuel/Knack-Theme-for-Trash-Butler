@@ -316,21 +316,21 @@ p.sv-button-red{
 .kn-details.kn-view.view_3374{
     .sv-warning-text{
         color: $statred;
-        font-size: 16px;
+        font-size: 14px;
         text-align: center;
         i{
-            font-size:20px;
-            margin-top: 5px;
+            font-size:18px;
+            margin:3px 5px 0 0;
         }
     }
     .sv-no-infraction{
         color: $primary;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: bold;
         text-align: center;
         i{
-            font-size:20px;
-            margin-top: 2px;
+            font-size:18px;
+            margin:3px 5px 0 0;
         }
     }
 }
@@ -434,7 +434,7 @@ p.sv-button-red{
             text-align: center;
             i{
                 font-size:20px;
-                margin-top: 5px;
+                margin:3px 5px 0 0;
             }
         }
         .sv-no-infraction{
@@ -444,7 +444,7 @@ p.sv-button-red{
             text-align: center;
             i{
                 font-size:20px;
-                margin-top: 2px;
+                margin:3px 5px 0 0;
             }
         }
     }

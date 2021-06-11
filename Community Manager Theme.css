@@ -2712,25 +2712,25 @@ p.sv-button-red:hover {
 
 .kn-details.kn-view.view_3374 .sv-warning-text {
   color: #cc0000;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
 }
 
 .kn-details.kn-view.view_3374 .sv-warning-text i {
-  font-size: 20px;
-  margin-top: 5px;
+  font-size: 18px;
+  margin: 3px 5px 0 0;
 }
 
 .kn-details.kn-view.view_3374 .sv-no-infraction {
   color: #15467a;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   text-align: center;
 }
 
 .kn-details.kn-view.view_3374 .sv-no-infraction i {
-  font-size: 20px;
-  margin-top: 2px;
+  font-size: 18px;
+  margin: 3px 5px 0 0;
 }
 
 /* Service Schedule */
@@ -2888,7 +2888,7 @@ p.sv-button-red:hover {
 
 #view_3508.kn-details .sv-warning-text i {
   font-size: 20px;
-  margin-top: 5px;
+  margin: 3px 5px 0 0;
 }
 
 #view_3508.kn-details .sv-no-infraction {
@@ -2900,7 +2900,7 @@ p.sv-button-red:hover {
 
 #view_3508.kn-details .sv-no-infraction i {
   font-size: 20px;
-  margin-top: 2px;
+  margin: 3px 5px 0 0;
 }
 
 /* RADAR & Units */
