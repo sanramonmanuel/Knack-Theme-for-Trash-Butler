@@ -392,6 +392,7 @@ p.sv-button-red{
         &:hover{
             box-shadow: 5px 5px $secondary;
             cursor: pointer;
+            transform: translateY(-5px);
         }
     }
 }
