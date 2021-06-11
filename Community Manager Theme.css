@@ -2582,7 +2582,7 @@ p.sv_community-phone {
   width: 50%;
   background: none;
   border: 2px solid #15467a;
-  border-radius: 5px;
+  border-radius: 0;
   -webkit-box-shadow: 5px 5px #7AC144;
           box-shadow: 5px 5px #7AC144;
   color: #15467a;
@@ -2713,7 +2713,6 @@ p.sv-button-red:hover {
 .kn-details.kn-view.view_3374 .sv-warning-text {
   color: #cc0000;
   font-size: 16px;
-  font-weight: bold;
   text-align: center;
 }
 
@@ -2790,7 +2789,7 @@ p.sv-button-red:hover {
 #view_3384 .sv-control-panel {
   background: #15467a;
   border: none;
-  border-radius: 5px;
+  border-radius: 0;
   color: white;
   font-weight: bold;
   padding: 10px 10px;

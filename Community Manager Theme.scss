@@ -198,7 +198,7 @@ font-weight: bold;
     width: 50%;
     background: none;
     border: 2px solid $primary;
-    border-radius: 5px;
+    border-radius:0;
     box-shadow: 5px 5px $secondary;
     color: $primary;
     font-size: 16px;
@@ -317,7 +317,6 @@ p.sv-button-red{
     .sv-warning-text{
         color: $statred;
         font-size: 16px;
-        font-weight: bold;
         text-align: center;
         i{
             font-size:20px;
@@ -383,7 +382,7 @@ p.sv-button-red{
     .sv-control-panel{
         background: $primary;
         border:none;
-        border-radius: 5px;
+        border-radius: 0;
         color: white;
         font-weight: bold;
         padding: 10px 10px;
