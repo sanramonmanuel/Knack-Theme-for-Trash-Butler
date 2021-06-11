@@ -269,24 +269,24 @@ font-weight: bold;
     border:none;
     box-shadow:none;
     color:white;
-    font-size: 16px;
-    padding: 7px 10px;
-    width: 18vw;
+    font-size: 14px;
+    padding: 5px 0;
+    width: 15vw;
     @include HideIcon();
     &:hover{
         cursor: pointer;
     }
 }
-  
+
 .sv-button-red{
     background: $statred;
     border-radius: 5px;
     border: none;
     box-shadow:none;
     color:white;
-    font-size: 16px;
-    padding: 4px 10px;
-    width: 18vw;
+    font-size: 14px;
+    padding: 5px 0;
+    width: 15vw;
     @include HideIcon();
     &:hover{
         cursor: pointer;
@@ -330,6 +330,8 @@ font-weight: bold;
 }
 
 #view_3374{
+    grid-row-start: 1;
+    grid-row-end: 3;
         &.kn-details{
             @include detalhe();
             .kn-detail-body{
@@ -471,6 +473,10 @@ font-weight: bold;
 /* Community Profile */
 #view_3385{
     @include paper();
+}
+/* Service Schedule on Community Profile */
+#view_3636{
+    @include detalhe();
 }
 
 /* Radar Logs */
@@ -782,7 +788,7 @@ grid-row-end: 4;
     @include detalhe();
 }
 .sv-call-tb i{
-    margin: 5px 0 0 5px;
+    margin: 3px 0 0 5px;
     transition: all 0.1s linear;
 }
 
@@ -793,7 +799,7 @@ p.sv-call-tb{
     display: flex;
     justify-content: center;
     padding: 10px 5px;
-    width:50%;
+    // width:50%;
     transition: all .1s linear;
     @include HideIcon();
     &:hover{
@@ -810,4 +816,24 @@ p.sv-call-tb{
 .rating-up{
     color: $secondary;
 	font-size: 30px;
+}
+
+/* Schedule Tabs */
+#view_3567.kn-rich_text{
+    .on-sched{
+        border: 1px solid $primary;
+        background-color: $primary;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin-left: 10px;
+    }
+    .not-on-sched{
+        border: 1px solid #e6e6e6;
+        background-color: #e6e6e6;
+        color: #bfbfbf;
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin-left: 10px;
+    }
 }

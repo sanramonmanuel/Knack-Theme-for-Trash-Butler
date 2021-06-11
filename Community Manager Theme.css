@@ -2660,9 +2660,9 @@ body, p, a {
   -webkit-box-shadow: none;
           box-shadow: none;
   color: white;
-  font-size: 16px;
-  padding: 7px 10px;
-  width: 18vw;
+  font-size: 14px;
+  padding: 5px 0;
+  width: 15vw;
 }
 
 .sv-button-green > i {
@@ -2684,9 +2684,9 @@ body, p, a {
   -webkit-box-shadow: none;
           box-shadow: none;
   color: white;
-  font-size: 16px;
-  padding: 4px 10px;
-  width: 18vw;
+  font-size: 14px;
+  padding: 5px 0;
+  width: 15vw;
 }
 
 .sv-button-red > i {
@@ -2733,6 +2733,12 @@ body, p, a {
 
 #view_3407 {
   text-align: right;
+}
+
+#view_3374 {
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 3;
 }
 
 #view_3374.kn-details.kn-details {
@@ -2949,6 +2955,17 @@ body, p, a {
   background: none;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+/* Service Schedule on Community Profile */
+#view_3636.kn-details {
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#view_3636 h1 {
+  color: #15467a;
 }
 
 /* Radar Logs */
@@ -3379,7 +3396,7 @@ a#close_sticky:hover {
 }
 
 .sv-call-tb i {
-  margin: 5px 0 0 5px;
+  margin: 3px 0 0 5px;
   -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
@@ -3396,7 +3413,6 @@ p.sv-call-tb {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 10px 5px;
-  width: 50%;
   -webkit-transition: all .1s linear;
   transition: all .1s linear;
 }
@@ -3423,4 +3439,23 @@ p.sv-call-tb:hover {
 .rating-up {
   color: #7AC144;
   font-size: 30px;
+}
+
+/* Schedule Tabs */
+#view_3567.kn-rich_text .on-sched {
+  border: 1px solid #15467a;
+  background-color: #15467a;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+#view_3567.kn-rich_text .not-on-sched {
+  border: 1px solid #e6e6e6;
+  background-color: #e6e6e6;
+  color: #bfbfbf;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 10px;
 }
