@@ -3073,6 +3073,10 @@ p.sv-button-red:hover {
 }
 
 /* Radar Logs */
+#view_3587 {
+  text-align: center;
+}
+
 #view_3587.kn-details {
   background: none;
   -webkit-box-shadow: none;
@@ -3081,6 +3085,17 @@ p.sv-button-red:hover {
 
 #view_3587 h1 {
   color: #15467a;
+}
+
+/* Selecting Building Unit */
+#view_3621.kn-form {
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#view_3621.kn-form .kn-label {
+  text-align: center;
 }
 
 /* Service ID Details Page */
@@ -3515,10 +3530,9 @@ a#close_sticky:hover {
 }
 
 p.sv-call-tb {
-  background: #15467a;
-  -webkit-box-shadow: inset 10px 0 #7AC144;
-          box-shadow: inset 10px 0 #7AC144;
-  color: white;
+  background: none;
+  border: 2px solid #15467a;
+  color: #15467a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3536,11 +3550,6 @@ p.sv-call-tb > i {
 
 p.sv-call-tb:hover > i {
   display: inline;
-}
-
-p.sv-call-tb:hover {
-  -webkit-box-shadow: inset 10px 0 #7AC144, 10px 0 #7AC144;
-          box-shadow: inset 10px 0 #7AC144, 10px 0 #7AC144;
 }
 
 /* Ratings */

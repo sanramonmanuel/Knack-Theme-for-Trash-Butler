@@ -567,7 +567,20 @@ p.sv-button-red{
 /* Radar Logs */
 #view_3587{
     @include detalhe();
+    text-align: center;
 }
+
+/* Selecting Building Unit */
+#view_3621{
+    &.kn-form{
+        background:none;
+        box-shadow: none;
+        .kn-label{
+            text-align: center;
+        }
+    }
+}
+
 /* Service ID Details Page */
 #view_3411,
 #view_3486{
@@ -888,18 +901,14 @@ grid-row-end: 4;
 }
 
 p.sv-call-tb{
-    background: $primary;
-    box-shadow: inset 10px 0 $secondary;
-    color: white;
+    background: none;
+    border:2px solid $primary;
+    color: $primary;
     display: flex;
     justify-content: center;
     padding: 10px 5px;
-    // width:50%;
     transition: all .1s linear;
     @include HideIcon();
-    &:hover{
-        box-shadow:inset 10px 0 $secondary, 10px 0 $secondary;
-    }
 }
 
 /* Ratings */
