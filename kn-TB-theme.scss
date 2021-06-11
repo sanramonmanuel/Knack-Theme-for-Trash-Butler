@@ -411,7 +411,7 @@ body, p, a{
     }
     .kn-detail-body{
         a{
-            border-bottom: 2px solid;
+            border-bottom: 2px solid $secondary;
             color: $primary;
             font-weight: bold;
             padding-bottom: 1px;
