@@ -2495,6 +2495,12 @@ body, p, a {
 }
 
 /* Community Info */
+p.sv_community-address,
+p.sv_community-phone {
+  margin: 0 0 0 10px;
+  padding: 15px 0 0 0;
+}
+
 .sv_community-address,
 .sv_community-phone {
   color: #15467a;
@@ -2754,6 +2760,10 @@ p.sv-button-red:hover {
   -ms-grid-row: 1;
       grid-row-start: 1;
   grid-row-end: 3;
+}
+
+#view_3374.kn-details {
+  padding: 0;
 }
 
 #view_3374.kn-details.kn-details {

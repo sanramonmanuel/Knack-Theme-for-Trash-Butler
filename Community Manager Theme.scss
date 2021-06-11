@@ -123,6 +123,12 @@ margin-left: 8px;
 }
 
 /* Community Info */
+p.sv_community-address,
+p.sv_community-phone{
+  margin: 0 0 0 10px;
+  padding: 15px 0 0 0;
+}
+
 .sv_community-address,
 .sv_community-phone{
     color: $primary;
@@ -358,6 +364,7 @@ p.sv-button-red{
     grid-row-end: 3;
         &.kn-details{
             @include detalhe();
+            padding: 0;
             .kn-detail-body{
             i{
                 font-size: 18px;
