@@ -2653,7 +2653,7 @@ body, p, a {
 }
 
 /* Headline */
-.sv-button-green {
+p.sv-button-green {
   background: #7AC144;
   border-radius: 5px;
   border: none;
@@ -2662,22 +2662,15 @@ body, p, a {
   color: white;
   font-size: 14px;
   padding: 5px 0;
+  text-align: center;
   width: 15vw;
 }
 
-.sv-button-green > i {
-  display: none;
-}
-
-.sv-button-green:hover > i {
-  display: inline;
-}
-
-.sv-button-green:hover {
+p.sv-button-green:hover {
   cursor: pointer;
 }
 
-.sv-button-red {
+p.sv-button-red {
   background: #cc0000;
   border-radius: 5px;
   border: none;
@@ -2686,18 +2679,11 @@ body, p, a {
   color: white;
   font-size: 14px;
   padding: 5px 0;
+  text-align: center;
   width: 15vw;
 }
 
-.sv-button-red > i {
-  display: none;
-}
-
-.sv-button-red:hover > i {
-  display: inline;
-}
-
-.sv-button-red:hover {
+p.sv-button-red:hover {
   cursor: pointer;
 }
 
@@ -2958,6 +2944,15 @@ body, p, a {
 }
 
 /* Service Schedule on Community Profile */
+#view_3636 {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 4;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 3;
+}
+
 #view_3636.kn-details {
   background: none;
   -webkit-box-shadow: none;
@@ -2966,6 +2961,28 @@ body, p, a {
 
 #view_3636 h1 {
   color: #15467a;
+}
+
+/* Setup Account Billing */
+#view_3624.kn-menu .kn-button {
+  background: none;
+  border: 2px solid #15467a;
+  border-radius: 0;
+  color: #15467a;
+  font-weight: bold;
+  padding: 10px 20px;
+  outline: none;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+#view_3624.kn-menu .kn-button:hover {
+  -webkit-box-shadow: -5px 5px #7AC144;
+          box-shadow: -5px 5px #7AC144;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
 }
 
 /* Radar Logs */
@@ -3082,6 +3099,13 @@ a#close_sticky:hover {
 
 /* Modal -  CANCEL Radar*/
 #view_3509 {
+  margin-left: -90px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/* Modal -  Add Access Code*/
+#view_3602 {
   margin-left: -90px;
   -webkit-box-shadow: none;
           box-shadow: none;

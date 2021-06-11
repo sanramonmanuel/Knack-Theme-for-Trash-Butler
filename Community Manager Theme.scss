@@ -263,7 +263,7 @@ font-weight: bold;
 }
 
 /* Headline */
-.sv-button-green{
+p.sv-button-green{
     background: $secondary;
     border-radius: 5px;
     border:none;
@@ -271,14 +271,14 @@ font-weight: bold;
     color:white;
     font-size: 14px;
     padding: 5px 0;
+    text-align: center;
     width: 15vw;
-    @include HideIcon();
     &:hover{
         cursor: pointer;
     }
 }
 
-.sv-button-red{
+p.sv-button-red{
     background: $statred;
     border-radius: 5px;
     border: none;
@@ -286,8 +286,8 @@ font-weight: bold;
     color:white;
     font-size: 14px;
     padding: 5px 0;
+    text-align: center;
     width: 15vw;
-    @include HideIcon();
     &:hover{
         cursor: pointer;
     }
@@ -477,6 +477,27 @@ font-weight: bold;
 /* Service Schedule on Community Profile */
 #view_3636{
     @include detalhe();
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+/* Setup Account Billing */
+#view_3624.kn-menu .kn-button{
+    background: none;
+    border:2px solid $primary;
+    border-radius: 0;
+    color:$primary;
+    font-weight: bold;
+    padding: 10px 20px;
+    outline:none;
+    transition: all .1s linear;
+    &:hover{
+        box-shadow: -5px 5px $secondary;
+        transform: translateY(5px);
+        transform: translateX(5px);
+    }
 }
 
 /* Radar Logs */
@@ -562,6 +583,12 @@ a#close_sticky{
 
 /* Modal -  CANCEL Radar*/
 #view_3509{
+    margin-left: -90px;
+    box-shadow: none;
+}
+
+/* Modal -  Add Access Code*/
+#view_3602{
     margin-left: -90px;
     box-shadow: none;
 }
