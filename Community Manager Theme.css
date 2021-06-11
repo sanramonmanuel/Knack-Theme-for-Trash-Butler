@@ -3513,13 +3513,6 @@ a#close_sticky:hover {
   color: #15467a;
 }
 
-/* Contact Trash Butler Support Btn */
-.kn-details-link.field_1295 {
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-}
-
 #view_3616.kn-details {
   background: none;
   -webkit-box-shadow: none;
