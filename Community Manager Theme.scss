@@ -711,6 +711,22 @@ a#close_sticky{
   grid-column-end: 3;
 }
 
+/* Current Rating Btn */
+#edit-rating-id{
+    background: none;
+    border:2px solid $primary;
+    color: $primary;
+    padding: 5px 15px;
+    text-align: center;
+    transition: all .1s linear;
+    &:hover{ 
+        box-shadow: -5px 5px $secondary;
+    }
+    i{
+        margin: 5px auto;
+    }
+}
+
 /* Quick Rating - Rated*/
 #view_3473{
     @include detalhe();

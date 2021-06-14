@@ -3263,6 +3263,26 @@ a#close_sticky:hover {
   grid-column-end: 3;
 }
 
+/* Current Rating Btn */
+#edit-rating-id {
+  background: none;
+  border: 2px solid #15467a;
+  color: #15467a;
+  padding: 5px 15px;
+  text-align: center;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+#edit-rating-id:hover {
+  -webkit-box-shadow: -5px 5px #7AC144;
+          box-shadow: -5px 5px #7AC144;
+}
+
+#edit-rating-id i {
+  margin: 5px auto;
+}
+
 /* Quick Rating - Rated*/
 #view_3473 {
   text-align: center;
