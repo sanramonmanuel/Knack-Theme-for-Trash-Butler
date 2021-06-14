@@ -110,9 +110,35 @@ margin-left: 8px;
 /* Dashboard UI */
 #kn-scene_1255.kn-scene.kn-container {
     display: grid !important;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px 385px 50px 1fr 250px 50px 0.5fr 0;
-    width: 99%;
+    grid-auto-flow: row;
+}
+  
+#view_3372,
+#view_3397,
+#view_3615,
+#view_3514,
+#view_3378,
+#view_3539,
+#view_3517{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#view_3374,
+#view_3377,
+#view_3376,
+#view_3543{
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+#view_3407,
+#view_3393,
+#view_3388,
+#view_3379,
+#view_3384 {
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 
 /* Today's Service */
@@ -140,12 +166,6 @@ p.sv_community-phone{
     }
 }
 
-/* Notification */
-#view_3407 {
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-
 .tb-updates{
     color: $primary;
     font-size: 16px;
@@ -159,12 +179,6 @@ p.sv_community-phone{
 
 #updates-from-tb-id{
 font-weight: bold;
-}
-
-/* Hidden */
-#view_3517{
-    grid-column-start: 1;
-    grid-column-end: 3;
 }
 
 /* Recent Infraction Icon */
@@ -234,23 +248,6 @@ font-weight: bold;
     button {
         width: 50%;
     }
-}
-
-/* Support Ticket Btn */
-#view_3539{
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-  
-/* Support Ticket Table */
-/* #view_3537{
-    grid-column-start: 1;
-    grid-column-end: 3;
-} */
-
-#view_3615{
-    grid-column-start: 1;
-    grid-column-end: 3;
 }
 
 #view_3379.kn-list {
@@ -359,8 +356,6 @@ p.sv-button-red{
 }
 
 #view_3374{
-    grid-row-start: 1;
-    grid-row-end: 3;
         &.kn-details{
             @include detalhe();
             padding: 0;
@@ -400,6 +395,7 @@ p.sv-button-red{
 /* Service Ratings Details */
 #view_3477{
     @include detalhe();
+    text-align: center;
 }
 
 /* Recent Infraction Unit Details */
@@ -687,6 +683,34 @@ a#close_sticky{
     margin-left: -90px;
     box-shadow: none;
 }
+/* Rate Last Night Service UI*/
+#kn-scene_1269.kn-scene.kn-container {
+    display: grid !important;
+    grid-auto-flow: row;
+}
+  
+#view_3477,
+#view_3410,
+#view_3473,
+#view_3486,
+#view_3484,
+#view_3456{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#view_3570,
+#view_3572{
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+#view_3571,
+#view_353{
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
 /* Quick Rating - Rated*/
 #view_3473{
     @include detalhe();
@@ -909,11 +933,14 @@ p.sv-call-tb{
     background: none;
     border:2px solid $primary;
     color: $primary;
-    display: flex;
-    justify-content: center;
-    padding: 10px 5px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
     transition: all .1s linear;
-    @include HideIcon();
+    width: 40%;
+    &:hover{ 
+        box-shadow: -5px 5px $secondary;
+    }
 }
 
 /* Ratings */

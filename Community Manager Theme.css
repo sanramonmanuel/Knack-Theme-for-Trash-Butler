@@ -2480,11 +2480,38 @@ body, p, a {
 #kn-scene_1255.kn-scene.kn-container {
   display: -ms-grid !important;
   display: grid !important;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 80px 385px 50px 1fr 250px 50px 0.5fr 0;
-      grid-template-rows: 80px 385px 50px 1fr 250px 50px 0.5fr 0;
-  width: 99%;
+  grid-auto-flow: row;
+}
+
+#view_3372,
+#view_3397,
+#view_3615,
+#view_3514,
+#view_3378,
+#view_3539,
+#view_3517 {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#view_3374,
+#view_3377,
+#view_3376,
+#view_3543 {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+#view_3407,
+#view_3393,
+#view_3388,
+#view_3379,
+#view_3384 {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 3;
 }
 
 /* Today's Service */
@@ -2516,13 +2543,6 @@ p.sv_community-phone {
   font-size: 20px;
 }
 
-/* Notification */
-#view_3407 {
-  -ms-grid-column: 2;
-      grid-column-start: 2;
-  grid-column-end: 3;
-}
-
 .tb-updates {
   color: #15467a;
   font-size: 16px;
@@ -2537,13 +2557,6 @@ p.sv_community-phone {
 
 #updates-from-tb-id {
   font-weight: bold;
-}
-
-/* Hidden */
-#view_3517 {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-  grid-column-end: 3;
 }
 
 /* Recent Infraction Icon */
@@ -2625,24 +2638,6 @@ p.sv_community-phone {
 
 #view_3384.kn-details button {
   width: 50%;
-}
-
-/* Support Ticket Btn */
-#view_3539 {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-/* Support Ticket Table */
-/* #view_3537{
-    grid-column-start: 1;
-    grid-column-end: 3;
-} */
-#view_3615 {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-  grid-column-end: 3;
 }
 
 #view_3379.kn-list {
@@ -2755,12 +2750,6 @@ p.sv-button-red:hover {
   text-align: right;
 }
 
-#view_3374 {
-  -ms-grid-row: 1;
-      grid-row-start: 1;
-  grid-row-end: 3;
-}
-
 #view_3374.kn-details {
   padding: 0;
 }
@@ -2808,6 +2797,10 @@ p.sv-button-red:hover {
 }
 
 /* Service Ratings Details */
+#view_3477 {
+  text-align: center;
+}
+
 #view_3477.kn-details {
   background: none;
   -webkit-box-shadow: none;
@@ -3238,6 +3231,38 @@ a#close_sticky:hover {
           box-shadow: none;
 }
 
+/* Rate Last Night Service UI*/
+#kn-scene_1269.kn-scene.kn-container {
+  display: -ms-grid !important;
+  display: grid !important;
+  grid-auto-flow: row;
+}
+
+#view_3477,
+#view_3410,
+#view_3473,
+#view_3486,
+#view_3484,
+#view_3456 {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#view_3570,
+#view_3572 {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+#view_3571,
+#view_353 {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 3;
+}
+
 /* Quick Rating - Rated*/
 #view_3473 {
   text-align: center;
@@ -3533,23 +3558,17 @@ p.sv-call-tb {
   background: none;
   border: 2px solid #15467a;
   color: #15467a;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 10px 5px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
   -webkit-transition: all .1s linear;
   transition: all .1s linear;
+  width: 40%;
 }
 
-p.sv-call-tb > i {
-  display: none;
-}
-
-p.sv-call-tb:hover > i {
-  display: inline;
+p.sv-call-tb:hover {
+  -webkit-box-shadow: -5px 5px #7AC144;
+          box-shadow: -5px 5px #7AC144;
 }
 
 /* Ratings */

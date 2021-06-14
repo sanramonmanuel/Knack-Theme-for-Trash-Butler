@@ -1293,7 +1293,7 @@ $(document).on("knack-view-render.view_3363", function(event, view, data) {
 
 //view_3369 This will add the css for the CCS
 $(document).on("knack-view-render.view_3370", function(event, view, data) {
-  	console.log(data);
+  	//console.log(data);
   	//This add the text for the SERVICE TODAY -> Time info
   	$('.kn-detail.field_141').addClass('hideMe');
   	var i;
@@ -1314,8 +1314,8 @@ $(document).on("knack-view-render.view_3370", function(event, view, data) {
   	  $(".kn-list-item-container").addClass("pointer");
       $(".kn-list-item-container").click(function() {
         window.location = $(this).find("a").attr("href");
-        const testGetId = $(this).attr("id");
-        console.log(testGetId);
+        //const testGetId = $(this).attr("id");
+        //console.log(testGetId);
         return false;
       });
     $('head').append('<link rel="stylesheet" type="text/css" class="lazyload" href="https://dl.dropbox.com/s/pt24adzdqgjx73y/Community%20Manager%20Theme.min.css">')
@@ -1341,20 +1341,20 @@ function appendCustomMenuBottom(){
 }
 //This will click the service Id btn on the hidden list (View And Rate Last night Service)
 $(document).on("knack-view-render.view_3397", function(event, view, data) {
-    console.log("view_3397 is loaded");
+    //console.log("view_3397 is loaded");
     $('#view_3397').addClass("hideMe");
+  //this will hide the rate last night btn if there no exising service last night;
     if(data.length === 0){
         $('#view_last_night_service_btn').addClass("hideMe");
     }
 
     $('#view_last_night_service_btn').on('click', function () {
-        console.log("view_last_night_service_btn is clicked")
           $('#last_night_service_id').click();
     });
 });
 function showHideMenuText(){
 	if($(".minimizedMenu")[0]){
-      console.log('addClass')
+      //console.log('addClass')
       $('.custom-menu-text').addClass('hideMe');
       $('#custom_menu_id li').addClass('bigger-icon');
       $('.sv-bottom-menu').addClass('bigger-icon');
@@ -1362,7 +1362,7 @@ function showHideMenuText(){
      
     }
     else{
-      console.log('removeClass');
+      //console.log('removeClass');
       $('.custom-menu-text').removeClass('hideMe');
       $('#custom_menu_id li').removeClass('bigger-icon');
       $('.sv-bottom-menu').removeClass('bigger-icon');
@@ -1409,17 +1409,27 @@ function appendCustomMenuMain(){
         //Com log
         //Account Billing
     );
+  	
   	if($('#custom_menu_id').length == 0){$('#kn-mobile-menu').append(customMenu);}
   	$($('.kn-mobile-controls')[0]).on('click', function(){
       	showHideMenuText();
     })
+  
+  	var backButtonTop = `<div id="sv-top-back" class="kn-view kn-back-link sv-top-back"><a class="ang-link">Back to Community Dashboard</a></div>`;
+  	if($('.sv-top-back').length == 0 ) {$('#knack-dist_1').append(backButtonTop);}
+  	if($('#kn-scene_1255').length > 0){ $('#sv-top-back').remove(); }
 }
 //add href to the navbar
-function addLinkToCommunityDashboard(id){
-  
+function addLinkToCommunityDashboard(data){
+  	console.log(data.field_1629, "sidebar data")
   	appendCustomMenuBottom();
+  	$('.field_1629').hide();
+  	//Show Account Billing Menu if data exist;
+  	if(data.field_1629){
+      $('#com_account_billing').css('display', 'block');
+    }
   
-  	let varId = id;
+  	let varId = data.id;
 	$('#com_dashboard a').attr("href", "https://chhj.knack.com/trash-butler#community-concierge-on-dev/community-dashboard/"+varId);
   	$('#com_service_history a').attr("href", "https://chhj.knack.com/trash-butler#community-concierge-on-dev/community-dashboard/"+varId+"/community-service-history/"+varId);
   	$('#com_infractions a').attr("href", "https://chhj.knack.com/trash-butler#community-concierge-on-dev/community-dashboard/"+varId+"/infractions/"+varId);
@@ -1432,6 +1442,8 @@ function addLinkToCommunityDashboard(id){
   	//
   	$('#com_radarLogs a').attr("href", "https://chhj.knack.com/trash-butler#community-concierge-on-dev/community-dashboard/"+varId+"/radar-logs/"+varId);
     $('#com_comLogs a').attr("href", "https://chhj.knack.com/trash-butler#community-concierge-on-dev/community-dashboard/"+varId+"/community-logs/"+varId);
+  	//back_to_dashboard
+  	$('#sv-top-back a').attr("href", "https://chhj.knack.com/trash-butler#community-concierge-on-dev/community-dashboard/"+varId);
   	
   	//$('#custom_menu_id').css({"display": "block"});
   	var timeout = setTimeout(function(){
@@ -1439,105 +1451,112 @@ function addLinkToCommunityDashboard(id){
             clearTimeout(timeout);
     }, 1000);
 }
+//SIDE BAR
 //DASHBOARD
 $(document).on("knack-view-render.view_3374", function(event, view, data) {
   	appendCustomMenuMain();
-  	
-  	addLinkToCommunityDashboard(data.id);
+  	addLinkToCommunityDashboard(data);
   	$('#com_dashboard').addClass('sv-active');
 });
 
 $(document).on("knack-view-render.view_3458", function(event, view, data) {
   	appendCustomMenuMain();
-  	addLinkToCommunityDashboard(data.id);
+  	addLinkToCommunityDashboard(data);
   	$('#com_service_history').addClass('sv-active');
 });
 
 //Infractions view_3561
 $(document).on("knack-view-render.view_3561", function(event, view, data) {
   	appendCustomMenuMain();
-  	addLinkToCommunityDashboard(data.id);
+  	addLinkToCommunityDashboard(data);
   	$('#com_infractions').addClass('sv-active');
 });
 //Radar and Units view_3465
 $(document).on("knack-view-render.view_3465", function(event, view, data) {
   	appendCustomMenuMain();
-  	addLinkToCommunityDashboard(data.id);
+  	addLinkToCommunityDashboard(data);
   	
   	$('#com_radar').addClass('sv-active');
 });
 //view_3560 Service Hazards
 $(document).on("knack-view-render.view_3560", function(event, view, data) {
   	appendCustomMenuMain();
-  	addLinkToCommunityDashboard(data.id);
+  	addLinkToCommunityDashboard(data);
   	$('#com_hazards').addClass('sv-active');
 });
 
 //Service Hazards view_3463 UNSURE
 $(document).on("knack-view-render.view_3463", function(event, view, data) {
   	appendCustomMenuMain();
-  	addLinkToCommunityDashboard(data.id);
+  	addLinkToCommunityDashboard(data);
   	
   	
 });
 //Support Ticket view_3468
 $(document).on("knack-view-render.view_3468", function(event, view, data) {
   	appendCustomMenuMain();
-  	addLinkToCommunityDashboard(data.id);
+  	addLinkToCommunityDashboard(data);
   	//com_support_tickets
   	$('#com_support_tickets').addClass('sv-active');
 });
 //Account Billing view_3470
 $(document).on("knack-view-render.view_3470", function(event, view, data) {
   	appendCustomMenuMain();
-  	addLinkToCommunityDashboard(data.id);
+  	addLinkToCommunityDashboard(data);
   	$('#com_account_billing').addClass('sv-active');
 });
 //Profile view_3472 ? UNSURE
 $(document).on("knack-view-render.view_3472", function(event, view, data) {
   	appendCustomMenuMain();
-  	addLinkToCommunityDashboard(data.id);
+  	addLinkToCommunityDashboard(data);
   	$('#com_profile').addClass('sv-active');
 });
 //view_3551 Community Profile
 $(document).on("knack-view-render.view_3551", function(event, view, data) {
   	appendCustomMenuMain();
-  	addLinkToCommunityDashboard(data.id);
+  	addLinkToCommunityDashboard(data);
   	$('#com_profile').addClass('sv-active');
   	//console.log(testGetId);
 });
 //view_3477
 $(document).on("knack-view-render.view_3477", function(event, view, data) {
   	appendCustomMenuMain();
-  	addLinkToCommunityDashboard(data.id);
+  	addLinkToCommunityDashboard(data);
 });
 
 //view_3536 Edit Community Profile
 $(document).on("knack-view-render.view_3536", function(event, view, data) {
   	appendCustomMenuMain();
-  	addLinkToCommunityDashboard(data.id);
+  	addLinkToCommunityDashboard(data);
 });
 
 //view_3587 RADAR Logs
 $(document).on("knack-view-render.view_3587", function(event, view, data) {
   	appendCustomMenuMain();
-  	addLinkToCommunityDashboard(data.id);
+  	addLinkToCommunityDashboard(data);
   	$('#com_radarLogs').addClass('sv-active');
 });
 
 //view_3586 Community Logs
 $(document).on("knack-view-render.view_3586", function(event, view, data) {
   	appendCustomMenuMain();
-  	addLinkToCommunityDashboard(data.id);
+  	addLinkToCommunityDashboard(data);
 });
 
 //view_3604 Maange Access Code
 $(document).on("knack-view-render.view_3604", function(event, view, data) {
   	appendCustomMenuMain();
-  	addLinkToCommunityDashboard(data.id);
+  	addLinkToCommunityDashboard(data);
 });
 
+//Community Units - view_3512
+$(document).on("knack-view-render.view_3512", function(event, view, data) {
+  appendCustomMenuMain();
+  addLinkToCommunityDashboard(data);
+  
+});
 
+//END SIDE BAR
 
 //Last Night Service Rating
 $(document).on("knack-view-render.view_3410", function(event, view, data) {
@@ -1604,28 +1623,35 @@ $(document).on("knack-view-render.view_3473", function(event, view, data) {
     });
 });
 
-//Community Units - view_3512
-$(document).on("knack-view-render.view_3512", function(event, view, data) {
-  appendCustomMenuMain();
-  addLinkToCommunityDashboard(data.id);
-  
-});
+function showInfractionLoss(data){
+  	$('.field_1630').addClass('hideMe');
+    $('.field_1487').addClass('hideMe');
+  	//
+  	var totalNumberInfractions = data.field_1630;
+  	var totalLoss = data.field_1487;
+  	var warningIcon = `<i class="fa fa-exclamation-triangle"></i>`;
+  	var goodIcon = `<i class="fa fa-check-square-o"></i>`;
+  	var warningText = `${warningIcon}You currently have ${totalLoss} in lost revenue from ${totalNumberInfractions} unaddressed infractions for the last 30 days.`;
+  	var goodText = `${goodIcon} All infractions has been addressed for the last 30 days`;
+  	
+  	if(totalNumberInfractions > 0){
+    	$('#infraction_warning').html(warningText);
+      	$('#infraction_warning').addClass('sv-warning-text');
+    }
+  	else{
+    	$('#infraction_warning').html(goodText);
+      	$('#infraction_warning').addClass('sv-no-infraction');
+      	//$('#infraction_warning').hide();
+    }
+}
 
 //view_3374 Show Infraction Total Loss
 $(document).on("knack-view-render.view_3374", function(event, view, data) {
-    console.log(data);
-    $('#infraction_total_number_id').html(data.field_1415);
-    $('#infraction_cost_id').html(data.field_1487);
-  	$('.field_1415').addClass('hideMe');
-    $('.field_1487').addClass('hideMe');
+    showInfractionLoss(data);
 });
 //view_3508 Show Infraction Total Loss on Infraction Page
 $(document).on("knack-view-render.view_3508", function(event, view, data) {
-    console.log(data);
-    $('#infraction_total_number_id').html(data.field_1415);
-    $('#infraction_cost_id').html(data.field_1487);
-  	$('.field_1415').addClass('hideMe');
-    $('.field_1487').addClass('hideMe');
+    showInfractionLoss(data);
 });
 //Get what quarter
 $(document).on("knack-view-render.view_3514", function(event, view, data) {
@@ -2102,11 +2128,13 @@ $(document).on("knack-view-render.view_3407", function(event, view, data) {
 //view_3618 Add Support Ticket
 //this will hide the other option
 $(document).on("knack-view-render.view_3618", function(event, view, data) {
+  	  $('#kn-input-field_309 .kn-datetime').hide();
+  	  $('#kn-input-field_309 label').hide();
       var selectId = document.getElementById("view_3618-field_306").getElementsByTagName("option");
-      selectId[7].disabled = true;
-  	  selectId[8].disabled = true;
-  	  selectId[9].disabled = true;
-  	  selectId[10].disabled = true;
+      selectId[7].style = "display: none;";
+  	  selectId[8].style = "display: none;";
+  	  selectId[9].style = "display: none;";
+  	  selectId[10].style = "display: none;";
       selectId[11].style = "display: none;";
   
   var timeout = setTimeout(function(){
